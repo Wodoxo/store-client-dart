@@ -1,0 +1,127 @@
+{
+    "collections": [
+        {
+            "id": "pcol_01H398NNYXTP6M8RJ43500RN9B",
+            "created_at": "2023-06-19T07:24:54.619Z",
+            "updated_at": "2023-06-19T07:24:54.619Z",
+            "deleted_at": null,
+            "title": "Yogurt",
+            "handle": "yogurt",
+            "metadata": {
+                "googleTaxonomy": "1954"
+            },
+            "product_collection_parent_id": "pcol_01H398NNKHSWMFK1XTEANAF7TJ"
+        },
+        {
+            "id": "pcol_01H398NNYR7GAP5956A17BVA9F",
+            "created_at": "2023-06-19T07:24:54.615Z",
+            "updated_at": "2023-06-19T07:24:54.615Z",
+            "deleted_at": null,
+            "title": "Tools",
+            "handle": "tools",
+            "metadata": {
+                "googleTaxonomy": "3173"
+            },
+            "product_collection_parent_id": "pcol_01H398NNKE6WFRGN9Q535819R3"
+        },
+        {
+            "id": "pcol_01H398NNYC80D2E7Z85FMNVZ6Y",
+            "created_at": "2023-06-19T07:24:54.602Z",
+            "updated_at": "2023-06-19T07:24:54.602Z",
+            "deleted_at": null,
+            "title": "Shoots and Tubers",
+            "handle": "shoots-and-tubers",
+            "metadata": {
+                "googleTaxonomy": "5793"
+            },
+            "product_collection_parent_id": "pcol_01H398NNNZP65T366M4TFNQ2DJ"
+        },
+        {
+            "id": "pcol_01H398NNY62TM3FYE2QAB2ZVTZ",
+            "created_at": "2023-06-19T07:24:54.597Z",
+            "updated_at": "2023-06-19T07:24:54.597Z",
+            "deleted_at": null,
+            "title": "Seeds",
+            "handle": "seeds",
+            "metadata": {
+                "googleTaxonomy": "2802"
+            },
+            "product_collection_parent_id": "pcol_01H398NNKE6WFRGN9Q535819R3"
+        },
+        {
+            "id": "pcol_01H398NNXYSKN5F2DRTF6G84J5",
+            "created_at": "2023-06-19T07:24:54.588Z",
+            "updated_at": "2023-06-19T07:24:54.588Z",
+            "deleted_at": null,
+            "title": "Sea Vegetables",
+            "handle": "sea-vegetables",
+            "metadata": {
+                "googleTaxonomy": "5793"
+            },
+            "product_collection_parent_id": "pcol_01H398NNNZP65T366M4TFNQ2DJ"
+        },
+        {
+            "id": "pcol_01H398NNXNHV8QS49F0QR62K4M",
+            "created_at": "2023-06-19T07:24:54.579Z",
+            "updated_at": "2023-06-19T07:24:54.579Z",
+            "deleted_at": null,
+            "title": "Roots",
+            "handle": "roots",
+            "metadata": {
+                "googleTaxonomy": "5793"
+            },
+            "product_collection_parent_id": "pcol_01H398NNNZP65T366M4TFNQ2DJ"
+        },
+        {
+            "id": "pcol_01H398NNXB3Z4B5M6NNGEF4SPG",
+            "created_at": "2023-06-19T07:24:54.569Z",
+            "updated_at": "2023-06-19T07:24:54.569Z",
+            "deleted_at": null,
+            "title": "Other Veggies",
+            "handle": "other-veggies",
+            "metadata": {
+                "googleTaxonomy": "5793"
+            },
+            "product_collection_parent_id": "pcol_01H398NNNZP65T366M4TFNQ2DJ"
+        },
+        {
+            "id": "pcol_01H398NNX1SQCF63123K0EV7EG",
+            "created_at": "2023-06-19T07:24:54.558Z",
+            "updated_at": "2023-06-19T07:24:54.558Z",
+            "deleted_at": null,
+            "title": "Other Seafood",
+            "handle": "other-seafood",
+            "metadata": {
+                "googleTaxonomy": "5812"
+            },
+            "product_collection_parent_id": "pcol_01H398NNP84G1AVT3PF1YQGDSR"
+        },
+        {
+            "id": "pcol_01H398NNWQXHYV1JCJ7R67RKZF",
+            "created_at": "2023-06-19T07:24:54.549Z",
+            "updated_at": "2023-06-19T07:24:54.549Z",
+            "deleted_at": null,
+            "title": "Nuts",
+            "handle": "nuts",
+            "metadata": {
+                "googleTaxonomy": "433"
+            },
+            "product_collection_parent_id": "pcol_01H398NNNZP65T366M4TFNQ2DJ"
+        },
+        {
+            "id": "pcol_01H398NNWH63XGQBH4KEN3VHBD",
+            "created_at": "2023-06-19T07:24:54.543Z",
+            "updated_at": "2023-06-19T07:24:54.543Z",
+            "deleted_at": null,
+            "title": "Nursery Plants",
+            "handle": "nursery-plants",
+            "metadata": {
+                "googleTaxonomy": "6762"
+            },
+            "product_collection_parent_id": "pcol_01H398NNKE6WFRGN9Q535819R3"
+        }
+    ],
+    "count": 59,
+    "limit": 10,
+    "offset": 0
+}

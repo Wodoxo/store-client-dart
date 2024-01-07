@@ -1,0 +1,62 @@
+{
+    "regions": [
+        {
+            "id": "reg_01H398E403RYPWKZSYW1Z10HZD",
+            "created_at": "2023-06-19T07:20:46.803Z",
+            "updated_at": "2023-06-19T07:20:46.803Z",
+            "deleted_at": null,
+            "name": "NA",
+            "currency_code": "usd",
+            "tax_rate": 0,
+            "tax_code": null,
+            "gift_cards_taxable": true,
+            "automatic_taxes": true,
+            "tax_provider_id": null,
+            "metadata": null,
+            "countries": [
+                {
+                    "id": 236,
+                    "iso_2": "us",
+                    "iso_3": "usa",
+                    "num_code": 840,
+                    "name": "UNITED STATES",
+                    "display_name": "United States",
+                    "region_id": "reg_01H398E403RYPWKZSYW1Z10HZD"
+                },
+                {
+                    "id": 39,
+                    "iso_2": "ca",
+                    "iso_3": "can",
+                    "num_code": 124,
+                    "name": "CANADA",
+                    "display_name": "Canada",
+                    "region_id": "reg_01H398E403RYPWKZSYW1Z10HZD"
+                }
+            ],
+            "payment_providers": [
+                {
+                    "id": "stripe",
+                    "is_installed": true
+                }
+            ],
+            "fulfillment_providers": [
+                {
+                    "id": "flat-rate",
+                    "is_installed": true
+                },
+                {
+                    "id": "shippo",
+                    "is_installed": true
+                },
+                {
+                    "id": "local-pickup",
+                    "is_installed": true
+                },
+                {
+                    "id": "free-shipping",
+                    "is_installed": true
+                }
+            ]
+        }
+    ]
+}
