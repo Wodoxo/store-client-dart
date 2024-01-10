@@ -1,3 +1,4 @@
+import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'collection.dart';
@@ -5,13 +6,12 @@ import 'image.dart';
 import 'metadata.dart';
 import 'option.dart';
 import 'variant.dart';
-import 'package:vexana/vexana.dart';
 
 part 'product.freezed.dart';
 part 'product.g.dart';
 
 @freezed
-class Product extends INetworkModel<Product> with _$Product {
+class Product with _$Product {
 	factory Product({
 		String? id,
 		String? title,
@@ -55,9 +55,4 @@ class Product extends INetworkModel<Product> with _$Product {
 	}) = _Product;
 
 	factory Product.fromJson(Map<String, dynamic> json) => _$ProductFromJson(json);
-  
-   @override
-   Product fromJson(Map<String, dynamic> json) {
-     throw Product.fromJson(json);
-   }
 }

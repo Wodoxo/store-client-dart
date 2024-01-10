@@ -947,11 +947,6 @@ class _$ProductImpl implements _Product {
       this,
     );
   }
-  
-  @override
-  Product fromJson(Map<String, dynamic> json) {
-    throw Product.fromJson(json);
-  }
 }
 
 abstract class _Product implements Product {
