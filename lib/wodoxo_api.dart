@@ -41,7 +41,7 @@ class WodoxoAPI {
   /// Default is true.
   ///
   WodoxoAPI({
-    String baseUrl = '31.220.86.10:9000/store',
+    String baseUrl = 'http://31.220.86.10:9000/store',
     Duration connectTimeout = const Duration(seconds: 30),
     Duration receiveTimeout = const Duration(seconds: 10),
     bool? rateLimitManagement = false,

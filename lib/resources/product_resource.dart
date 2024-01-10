@@ -10,17 +10,13 @@ class ProductResource {
   const ProductResource(this._dio);
 
 
-  Future<WodoxoResult<ProductModel>> list({
-    bool includePlatforms = false,
-  }) async {
+  Future<WodoxoResult<ProductModel>> list({Map<String, dynamic>? queryParameters = null}) async {
     final response = await _dio.get(
-      '/coins/list',
-      queryParameters: {
-        'include_platform': includePlatforms,
-      },
+      '/products',
+      queryParameters: queryParameters
     );
     if (response.statusCode == 200) {
-      return WodoxoResult(ProductModel.fromJson(response.data as Map<String,String>));
+      return WodoxoResult(ProductModel.fromJson(response.data as Map<String,dynamic>));
       
     } else {
       return WodoxoResult(
