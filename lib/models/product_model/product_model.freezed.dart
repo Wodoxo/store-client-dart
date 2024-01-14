@@ -20,10 +20,7 @@ ProductModel _$ProductModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ProductModel {
-  List<Product>? get products => throw _privateConstructorUsedError;
-  int? get count => throw _privateConstructorUsedError;
-  int? get offset => throw _privateConstructorUsedError;
-  int? get limit => throw _privateConstructorUsedError;
+  Product? get product => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -37,7 +34,9 @@ abstract class $ProductModelCopyWith<$Res> {
           ProductModel value, $Res Function(ProductModel) then) =
       _$ProductModelCopyWithImpl<$Res, ProductModel>;
   @useResult
-  $Res call({List<Product>? products, int? count, int? offset, int? limit});
+  $Res call({Product? product});
+
+  $ProductCopyWith<$Res>? get product;
 }
 
 /// @nodoc
@@ -53,29 +52,26 @@ class _$ProductModelCopyWithImpl<$Res, $Val extends ProductModel>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? products = freezed,
-    Object? count = freezed,
-    Object? offset = freezed,
-    Object? limit = freezed,
+    Object? product = freezed,
   }) {
     return _then(_value.copyWith(
-      products: freezed == products
-          ? _value.products
-          : products // ignore: cast_nullable_to_non_nullable
-              as List<Product>?,
-      count: freezed == count
-          ? _value.count
-          : count // ignore: cast_nullable_to_non_nullable
-              as int?,
-      offset: freezed == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
+      product: freezed == product
+          ? _value.product
+          : product // ignore: cast_nullable_to_non_nullable
+              as Product?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $ProductCopyWith<$Res>? get product {
+    if (_value.product == null) {
+      return null;
+    }
+
+    return $ProductCopyWith<$Res>(_value.product!, (value) {
+      return _then(_value.copyWith(product: value) as $Val);
+    });
   }
 }
 
@@ -87,7 +83,10 @@ abstract class _$$ProductModelImplCopyWith<$Res>
       __$$ProductModelImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<Product>? products, int? count, int? offset, int? limit});
+  $Res call({Product? product});
+
+  @override
+  $ProductCopyWith<$Res>? get product;
 }
 
 /// @nodoc
@@ -101,28 +100,13 @@ class __$$ProductModelImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? products = freezed,
-    Object? count = freezed,
-    Object? offset = freezed,
-    Object? limit = freezed,
+    Object? product = freezed,
   }) {
     return _then(_$ProductModelImpl(
-      products: freezed == products
-          ? _value._products
-          : products // ignore: cast_nullable_to_non_nullable
-              as List<Product>?,
-      count: freezed == count
-          ? _value.count
-          : count // ignore: cast_nullable_to_non_nullable
-              as int?,
-      offset: freezed == offset
-          ? _value.offset
-          : offset // ignore: cast_nullable_to_non_nullable
-              as int?,
-      limit: freezed == limit
-          ? _value.limit
-          : limit // ignore: cast_nullable_to_non_nullable
-              as int?,
+      product: freezed == product
+          ? _value.product
+          : product // ignore: cast_nullable_to_non_nullable
+              as Product?,
     ));
   }
 }
@@ -130,33 +114,17 @@ class __$$ProductModelImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$ProductModelImpl implements _ProductModel {
-  _$ProductModelImpl(
-      {final List<Product>? products, this.count, this.offset, this.limit})
-      : _products = products;
+  _$ProductModelImpl({this.product});
 
   factory _$ProductModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$ProductModelImplFromJson(json);
 
-  final List<Product>? _products;
   @override
-  List<Product>? get products {
-    final value = _products;
-    if (value == null) return null;
-    if (_products is EqualUnmodifiableListView) return _products;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final int? count;
-  @override
-  final int? offset;
-  @override
-  final int? limit;
+  final Product? product;
 
   @override
   String toString() {
-    return 'ProductModel(products: $products, count: $count, offset: $offset, limit: $limit)';
+    return 'ProductModel(product: $product)';
   }
 
   @override
@@ -164,16 +132,12 @@ class _$ProductModelImpl implements _ProductModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProductModelImpl &&
-            const DeepCollectionEquality().equals(other._products, _products) &&
-            (identical(other.count, count) || other.count == count) &&
-            (identical(other.offset, offset) || other.offset == offset) &&
-            (identical(other.limit, limit) || other.limit == limit));
+            (identical(other.product, product) || other.product == product));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(_products), count, offset, limit);
+  int get hashCode => Object.hash(runtimeType, product);
 
   @JsonKey(ignore: true)
   @override
@@ -190,23 +154,13 @@ class _$ProductModelImpl implements _ProductModel {
 }
 
 abstract class _ProductModel implements ProductModel {
-  factory _ProductModel(
-      {final List<Product>? products,
-      final int? count,
-      final int? offset,
-      final int? limit}) = _$ProductModelImpl;
+  factory _ProductModel({final Product? product}) = _$ProductModelImpl;
 
   factory _ProductModel.fromJson(Map<String, dynamic> json) =
       _$ProductModelImpl.fromJson;
 
   @override
-  List<Product>? get products;
-  @override
-  int? get count;
-  @override
-  int? get offset;
-  @override
-  int? get limit;
+  Product? get product;
   @override
   @JsonKey(ignore: true)
   _$$ProductModelImplCopyWith<_$ProductModelImpl> get copyWith =>

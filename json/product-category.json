@@ -1,0 +1,26 @@
+
+{
+    "product_category": {
+        "created_at": "2024-01-07T22:47:58.224Z",
+        "description": "",
+        "handle": "4-k-monitors",
+        "id": "pcat_01HKK1S1GT0MQ9G3YVG43TA8SJ",
+        "metadata": null,
+        "name": "\t\t\t\t4K Monitors",
+        "parent_category_id": "pcat_01HKK1JFH0TV9315VDEKN3JBWM",
+        "rank": 0,
+        "updated_at": "2024-01-07T22:47:58.224Z",
+        "category_children": [],
+        "parent_category": {
+            "created_at": "2024-01-07T22:44:23.196Z",
+            "description": "",
+            "handle": "monitors",
+            "id": "pcat_01HKK1JFH0TV9315VDEKN3JBWM",
+            "metadata": null,
+            "name": "Monitors",
+            "parent_category_id": "pcat_01HKK1FV4Z5F7MD18Y7SGNJ9X2",
+            "rank": 1,
+            "updated_at": "2024-01-07T22:44:23.196Z"
+        }
+    }
+}

@@ -42,7 +42,7 @@ _$ProductImpl _$$ProductImplFromJson(Map<String, dynamic> json) =>
       daysToPrepare: json['days_to_prepare'] as int?,
       referenceNumber: json['reference_number'] as int?,
       orderQuantityMin: json['order_quantity_min'],
-      orderQuantityMax: json['order_quantity_max'] as int?,
+      orderQuantityMax: json['order_quantity_max'],
       localPickup: json['local_pickup'] as bool?,
       fulfillmentProviderId: json['fulfillment_provider_id'] as String?,
       averageReviewRating: json['average_review_rating'],

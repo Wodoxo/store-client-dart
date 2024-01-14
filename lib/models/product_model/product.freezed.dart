@@ -63,7 +63,7 @@ mixin _$Product {
   @JsonKey(name: 'order_quantity_min')
   dynamic get orderQuantityMin => throw _privateConstructorUsedError;
   @JsonKey(name: 'order_quantity_max')
-  int? get orderQuantityMax => throw _privateConstructorUsedError;
+  dynamic get orderQuantityMax => throw _privateConstructorUsedError;
   @JsonKey(name: 'local_pickup')
   bool? get localPickup => throw _privateConstructorUsedError;
   @JsonKey(name: 'fulfillment_provider_id')
@@ -118,7 +118,7 @@ abstract class $ProductCopyWith<$Res> {
       @JsonKey(name: 'days_to_prepare') int? daysToPrepare,
       @JsonKey(name: 'reference_number') int? referenceNumber,
       @JsonKey(name: 'order_quantity_min') dynamic orderQuantityMin,
-      @JsonKey(name: 'order_quantity_max') int? orderQuantityMax,
+      @JsonKey(name: 'order_quantity_max') dynamic orderQuantityMax,
       @JsonKey(name: 'local_pickup') bool? localPickup,
       @JsonKey(name: 'fulfillment_provider_id') String? fulfillmentProviderId,
       @JsonKey(name: 'average_review_rating') dynamic averageReviewRating,
@@ -303,7 +303,7 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
       orderQuantityMax: freezed == orderQuantityMax
           ? _value.orderQuantityMax
           : orderQuantityMax // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as dynamic,
       localPickup: freezed == localPickup
           ? _value.localPickup
           : localPickup // ignore: cast_nullable_to_non_nullable
@@ -408,7 +408,7 @@ abstract class _$$ProductImplCopyWith<$Res> implements $ProductCopyWith<$Res> {
       @JsonKey(name: 'days_to_prepare') int? daysToPrepare,
       @JsonKey(name: 'reference_number') int? referenceNumber,
       @JsonKey(name: 'order_quantity_min') dynamic orderQuantityMin,
-      @JsonKey(name: 'order_quantity_max') int? orderQuantityMax,
+      @JsonKey(name: 'order_quantity_max') dynamic orderQuantityMax,
       @JsonKey(name: 'local_pickup') bool? localPickup,
       @JsonKey(name: 'fulfillment_provider_id') String? fulfillmentProviderId,
       @JsonKey(name: 'average_review_rating') dynamic averageReviewRating,
@@ -593,7 +593,7 @@ class __$$ProductImplCopyWithImpl<$Res>
       orderQuantityMax: freezed == orderQuantityMax
           ? _value.orderQuantityMax
           : orderQuantityMax // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as dynamic,
       localPickup: freezed == localPickup
           ? _value.localPickup
           : localPickup // ignore: cast_nullable_to_non_nullable
@@ -761,7 +761,7 @@ class _$ProductImpl implements _Product {
   final dynamic orderQuantityMin;
   @override
   @JsonKey(name: 'order_quantity_max')
-  final int? orderQuantityMax;
+  final dynamic orderQuantityMax;
   @override
   @JsonKey(name: 'local_pickup')
   final bool? localPickup;
@@ -871,8 +871,8 @@ class _$ProductImpl implements _Product {
                 other.referenceNumber == referenceNumber) &&
             const DeepCollectionEquality()
                 .equals(other.orderQuantityMin, orderQuantityMin) &&
-            (identical(other.orderQuantityMax, orderQuantityMax) ||
-                other.orderQuantityMax == orderQuantityMax) &&
+            const DeepCollectionEquality()
+                .equals(other.orderQuantityMax, orderQuantityMax) &&
             (identical(other.localPickup, localPickup) ||
                 other.localPickup == localPickup) &&
             (identical(other.fulfillmentProviderId, fulfillmentProviderId) ||
@@ -922,7 +922,7 @@ class _$ProductImpl implements _Product {
         daysToPrepare,
         referenceNumber,
         const DeepCollectionEquality().hash(orderQuantityMin),
-        orderQuantityMax,
+        const DeepCollectionEquality().hash(orderQuantityMax),
         localPickup,
         fulfillmentProviderId,
         const DeepCollectionEquality().hash(averageReviewRating),
@@ -979,7 +979,7 @@ abstract class _Product implements Product {
       @JsonKey(name: 'days_to_prepare') final int? daysToPrepare,
       @JsonKey(name: 'reference_number') final int? referenceNumber,
       @JsonKey(name: 'order_quantity_min') final dynamic orderQuantityMin,
-      @JsonKey(name: 'order_quantity_max') final int? orderQuantityMax,
+      @JsonKey(name: 'order_quantity_max') final dynamic orderQuantityMax,
       @JsonKey(name: 'local_pickup') final bool? localPickup,
       @JsonKey(name: 'fulfillment_provider_id')
       final String? fulfillmentProviderId,
@@ -1066,7 +1066,7 @@ abstract class _Product implements Product {
   dynamic get orderQuantityMin;
   @override
   @JsonKey(name: 'order_quantity_max')
-  int? get orderQuantityMax;
+  dynamic get orderQuantityMax;
   @override
   @JsonKey(name: 'local_pickup')
   bool? get localPickup;

@@ -2,7 +2,10 @@ library wodoxo_api;
 
 import 'package:dio/dio.dart';
 import 'package:wodoxo_api/helpers/wodoxo_rate_limit_exception.dart';
+import 'package:wodoxo_api/resources/cart_resource.dart';
+import 'package:wodoxo_api/resources/product_category_resource.dart';
 import 'package:wodoxo_api/resources/product_resource.dart';
+import 'package:wodoxo_api/resources/region_resource.dart';
 
 /// Client calls of the Open Food Facts API
 class WodoxoAPI {
@@ -12,10 +15,16 @@ class WodoxoAPI {
 
   //
   late ProductResource _products;
+  late ProductCategoryResource _productCategories;
+  late RegionResource _regions;
+  late CartResource _carts;
 
 
   /// The section that brings together the requests that are related to coins
   ProductResource get products => _products;
+  ProductCategoryResource get productCategories => _productCategories;
+  RegionResource get regions => _regions;
+  CartResource get carts => _carts;
 
 
 
@@ -53,7 +62,6 @@ class WodoxoAPI {
         connectTimeout: connectTimeout,
         receiveTimeout: receiveTimeout,
         validateStatus: (code) => true,
-        responseType: ResponseType.json,
       ),
     );
     if (rateLimitManagement != null) {
@@ -89,6 +97,9 @@ class WodoxoAPI {
       );
     }
    _products = ProductResource(_dio);
+   _productCategories = ProductCategoryResource(_dio);
+   _regions = RegionResource(_dio);
+   _carts = CartResource(_dio);
   }
  
 }

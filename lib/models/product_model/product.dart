@@ -41,7 +41,7 @@ class Product with _$Product {
 		@JsonKey(name: 'days_to_prepare') int? daysToPrepare,
 		@JsonKey(name: 'reference_number') int? referenceNumber,
 		@JsonKey(name: 'order_quantity_min') dynamic orderQuantityMin,
-		@JsonKey(name: 'order_quantity_max') int? orderQuantityMax,
+		@JsonKey(name: 'order_quantity_max') dynamic orderQuantityMax,
 		@JsonKey(name: 'local_pickup') bool? localPickup,
 		@JsonKey(name: 'fulfillment_provider_id') String? fulfillmentProviderId,
 		@JsonKey(name: 'average_review_rating') dynamic averageReviewRating,
