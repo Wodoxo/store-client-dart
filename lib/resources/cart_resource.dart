@@ -52,7 +52,7 @@ class CartResource {
 
   Future<WodoxoResult<CardModel>> addLineItem(String id, AddLineItemRequestModel data , {  Map<String, dynamic>? queryParameters = null}) async {
     final response = await _dio.post(
-      '$path/$id',
+      '$path/$id/line-items',
       data: data,
       queryParameters: queryParameters
     );

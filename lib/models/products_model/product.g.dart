@@ -18,15 +18,14 @@ _$ProductImpl _$$ProductImplFromJson(Map<String, dynamic> json) =>
       isGiftcard: json['is_giftcard'] as bool?,
       discountable: json['discountable'] as bool?,
       thumbnail: json['thumbnail'] as String?,
-      profileId: json['profile_id'] as String?,
-      collectionId: json['collection_id'] as String?,
+      collectionId: json['collection_id'],
       typeId: json['type_id'],
-      weight: json['weight'],
-      length: json['length'],
-      height: json['height'],
-      width: json['width'],
+      weight: json['weight'] as int?,
+      length: json['length'] as int?,
+      height: json['height'] as int?,
+      width: json['width'] as int?,
       hsCode: json['hs_code'],
-      originCountry: json['origin_country'],
+      originCountry: json['origin_country'] as String?,
       midCode: json['mid_code'],
       material: json['material'],
       createdAt: json['created_at'] == null
@@ -39,28 +38,24 @@ _$ProductImpl _$$ProductImplFromJson(Map<String, dynamic> json) =>
       metadata: json['metadata'] == null
           ? null
           : Metadata.fromJson(json['metadata'] as Map<String, dynamic>),
-      daysToPrepare: json['days_to_prepare'] as int?,
-      referenceNumber: json['reference_number'] as int?,
-      orderQuantityMin: json['order_quantity_min'],
-      orderQuantityMax: json['order_quantity_max'] as int?,
-      localPickup: json['local_pickup'] as bool?,
-      fulfillmentProviderId: json['fulfillment_provider_id'] as String?,
-      averageReviewRating: json['average_review_rating'],
-      reviewCount: json['review_count'],
-      variants: (json['variants'] as List<dynamic>?)
-          ?.map((e) => Variant.fromJson(e as Map<String, dynamic>))
+      profileId: json['profile_id'] as String?,
+      collection: json['collection'],
+      images: (json['images'] as List<dynamic>?)
+          ?.map((e) => Image.fromJson(e as Map<String, dynamic>))
           .toList(),
       options: (json['options'] as List<dynamic>?)
           ?.map((e) => Option.fromJson(e as Map<String, dynamic>))
           .toList(),
-      images: (json['images'] as List<dynamic>?)
-          ?.map((e) => Image.fromJson(e as Map<String, dynamic>))
+      profiles: (json['profiles'] as List<dynamic>?)
+          ?.map((e) => Profile.fromJson(e as Map<String, dynamic>))
           .toList(),
-      tags: json['tags'] as List<dynamic>?,
-      collection: json['collection'] == null
-          ? null
-          : Collection.fromJson(json['collection'] as Map<String, dynamic>),
+      tags: (json['tags'] as List<dynamic>?)
+          ?.map((e) => Tag.fromJson(e as Map<String, dynamic>))
+          .toList(),
       type: json['type'],
+      variants: (json['variants'] as List<dynamic>?)
+          ?.map((e) => Variant.fromJson(e as Map<String, dynamic>))
+          .toList(),
     );
 
 Map<String, dynamic> _$$ProductImplToJson(_$ProductImpl instance) =>
@@ -75,7 +70,6 @@ Map<String, dynamic> _$$ProductImplToJson(_$ProductImpl instance) =>
       'is_giftcard': instance.isGiftcard,
       'discountable': instance.discountable,
       'thumbnail': instance.thumbnail,
-      'profile_id': instance.profileId,
       'collection_id': instance.collectionId,
       'type_id': instance.typeId,
       'weight': instance.weight,
@@ -90,18 +84,12 @@ Map<String, dynamic> _$$ProductImplToJson(_$ProductImpl instance) =>
       'updated_at': instance.updatedAt?.toIso8601String(),
       'deleted_at': instance.deletedAt,
       'metadata': instance.metadata,
-      'days_to_prepare': instance.daysToPrepare,
-      'reference_number': instance.referenceNumber,
-      'order_quantity_min': instance.orderQuantityMin,
-      'order_quantity_max': instance.orderQuantityMax,
-      'local_pickup': instance.localPickup,
-      'fulfillment_provider_id': instance.fulfillmentProviderId,
-      'average_review_rating': instance.averageReviewRating,
-      'review_count': instance.reviewCount,
-      'variants': instance.variants,
-      'options': instance.options,
-      'images': instance.images,
-      'tags': instance.tags,
+      'profile_id': instance.profileId,
       'collection': instance.collection,
+      'images': instance.images,
+      'options': instance.options,
+      'profiles': instance.profiles,
+      'tags': instance.tags,
       'type': instance.type,
+      'variants': instance.variants,
     };

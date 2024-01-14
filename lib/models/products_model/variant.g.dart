@@ -22,6 +22,7 @@ _$VariantImpl _$$VariantImplFromJson(Map<String, dynamic> json) =>
       barcode: json['barcode'],
       ean: json['ean'],
       upc: json['upc'],
+      variantRank: json['variant_rank'] as int?,
       inventoryQuantity: json['inventory_quantity'] as int?,
       allowBackorder: json['allow_backorder'] as bool?,
       manageInventory: json['manage_inventory'] as bool?,
@@ -34,14 +35,17 @@ _$VariantImpl _$$VariantImplFromJson(Map<String, dynamic> json) =>
       height: json['height'],
       width: json['width'],
       metadata: json['metadata'],
-      prices: (json['prices'] as List<dynamic>?)
-          ?.map((e) => Price.fromJson(e as Map<String, dynamic>))
-          .toList(),
       options: (json['options'] as List<dynamic>?)
           ?.map((e) => Option.fromJson(e as Map<String, dynamic>))
           .toList(),
+      prices: (json['prices'] as List<dynamic>?)
+          ?.map((e) => Price.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      purchasable: json['purchasable'] as bool?,
       originalPrice: json['original_price'],
       calculatedPrice: json['calculated_price'],
+      originalPriceIncludesTax: json['original_price_includes_tax'],
+      calculatedPriceIncludesTax: json['calculated_price_includes_tax'],
       originalPriceInclTax: json['original_price_incl_tax'],
       calculatedPriceInclTax: json['calculated_price_incl_tax'],
       originalTax: json['original_tax'],
@@ -61,6 +65,7 @@ Map<String, dynamic> _$$VariantImplToJson(_$VariantImpl instance) =>
       'barcode': instance.barcode,
       'ean': instance.ean,
       'upc': instance.upc,
+      'variant_rank': instance.variantRank,
       'inventory_quantity': instance.inventoryQuantity,
       'allow_backorder': instance.allowBackorder,
       'manage_inventory': instance.manageInventory,
@@ -73,10 +78,13 @@ Map<String, dynamic> _$$VariantImplToJson(_$VariantImpl instance) =>
       'height': instance.height,
       'width': instance.width,
       'metadata': instance.metadata,
-      'prices': instance.prices,
       'options': instance.options,
+      'prices': instance.prices,
+      'purchasable': instance.purchasable,
       'original_price': instance.originalPrice,
       'calculated_price': instance.calculatedPrice,
+      'original_price_includes_tax': instance.originalPriceIncludesTax,
+      'calculated_price_includes_tax': instance.calculatedPriceIncludesTax,
       'original_price_incl_tax': instance.originalPriceInclTax,
       'calculated_price_incl_tax': instance.calculatedPriceInclTax,
       'original_tax': instance.originalTax,

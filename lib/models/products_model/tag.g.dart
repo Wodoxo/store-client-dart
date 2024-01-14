@@ -1,12 +1,12 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'option.dart';
+part of 'tag.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$OptionImpl _$$OptionImplFromJson(Map<String, dynamic> json) => _$OptionImpl(
+_$TagImpl _$$TagImplFromJson(Map<String, dynamic> json) => _$TagImpl(
       id: json['id'] as String?,
       createdAt: json['created_at'] == null
           ? null
@@ -15,22 +15,15 @@ _$OptionImpl _$$OptionImplFromJson(Map<String, dynamic> json) => _$OptionImpl(
           ? null
           : DateTime.parse(json['updated_at'] as String),
       deletedAt: json['deleted_at'],
-      title: json['title'] as String?,
-      productId: json['product_id'] as String?,
+      value: json['value'] as String?,
       metadata: json['metadata'],
-      values: (json['values'] as List<dynamic>?)
-          ?.map((e) => Value.fromJson(e as Map<String, dynamic>))
-          .toList(),
     );
 
-Map<String, dynamic> _$$OptionImplToJson(_$OptionImpl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$$TagImplToJson(_$TagImpl instance) => <String, dynamic>{
       'id': instance.id,
       'created_at': instance.createdAt?.toIso8601String(),
       'updated_at': instance.updatedAt?.toIso8601String(),
       'deleted_at': instance.deletedAt,
-      'title': instance.title,
-      'product_id': instance.productId,
+      'value': instance.value,
       'metadata': instance.metadata,
-      'values': instance.values,
     };

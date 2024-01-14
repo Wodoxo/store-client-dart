@@ -1,23 +1,20 @@
 import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'value.dart';
-
-part 'option.freezed.dart';
-part 'option.g.dart';
+part 'profile.freezed.dart';
+part 'profile.g.dart';
 
 @freezed
-class Option with _$Option {
-	factory Option({
+class Profile with _$Profile {
+	factory Profile({
 		String? id,
 		@JsonKey(name: 'created_at') DateTime? createdAt,
 		@JsonKey(name: 'updated_at') DateTime? updatedAt,
 		@JsonKey(name: 'deleted_at') dynamic deletedAt,
-		String? title,
-		@JsonKey(name: 'product_id') String? productId,
+		String? name,
+		String? type,
 		dynamic metadata,
-		List<Value>? values,
-	}) = _Option;
+	}) = _Profile;
 
-	factory Option.fromJson(Map<String, dynamic> json) => _$OptionFromJson(json);
+	factory Profile.fromJson(Map<String, dynamic> json) => _$ProfileFromJson(json);
 }

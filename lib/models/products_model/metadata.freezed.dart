@@ -20,19 +20,8 @@ Metadata _$MetadataFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Metadata {
-  List<Price>? get price => throw _privateConstructorUsedError;
-  @JsonKey(name: 'product_usage')
-  String? get productUsage => throw _privateConstructorUsedError;
-  @JsonKey(name: 'price_per_unit')
-  String? get pricePerUnit => throw _privateConstructorUsedError;
-  @JsonKey(name: 'product_arrival')
-  String? get productArrival => throw _privateConstructorUsedError;
-  @JsonKey(name: 'product_storage')
-  String? get productStorage => throw _privateConstructorUsedError;
-  @JsonKey(name: 'price_per_amount')
-  int? get pricePerAmount => throw _privateConstructorUsedError;
-  @JsonKey(name: 'inventory_quantity')
-  int? get inventoryQuantity => throw _privateConstructorUsedError;
+  @JsonKey(name: 'Key ')
+  String? get key => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -45,14 +34,7 @@ abstract class $MetadataCopyWith<$Res> {
   factory $MetadataCopyWith(Metadata value, $Res Function(Metadata) then) =
       _$MetadataCopyWithImpl<$Res, Metadata>;
   @useResult
-  $Res call(
-      {List<Price>? price,
-      @JsonKey(name: 'product_usage') String? productUsage,
-      @JsonKey(name: 'price_per_unit') String? pricePerUnit,
-      @JsonKey(name: 'product_arrival') String? productArrival,
-      @JsonKey(name: 'product_storage') String? productStorage,
-      @JsonKey(name: 'price_per_amount') int? pricePerAmount,
-      @JsonKey(name: 'inventory_quantity') int? inventoryQuantity});
+  $Res call({@JsonKey(name: 'Key ') String? key});
 }
 
 /// @nodoc
@@ -68,43 +50,13 @@ class _$MetadataCopyWithImpl<$Res, $Val extends Metadata>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? price = freezed,
-    Object? productUsage = freezed,
-    Object? pricePerUnit = freezed,
-    Object? productArrival = freezed,
-    Object? productStorage = freezed,
-    Object? pricePerAmount = freezed,
-    Object? inventoryQuantity = freezed,
+    Object? key = freezed,
   }) {
     return _then(_value.copyWith(
-      price: freezed == price
-          ? _value.price
-          : price // ignore: cast_nullable_to_non_nullable
-              as List<Price>?,
-      productUsage: freezed == productUsage
-          ? _value.productUsage
-          : productUsage // ignore: cast_nullable_to_non_nullable
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
               as String?,
-      pricePerUnit: freezed == pricePerUnit
-          ? _value.pricePerUnit
-          : pricePerUnit // ignore: cast_nullable_to_non_nullable
-              as String?,
-      productArrival: freezed == productArrival
-          ? _value.productArrival
-          : productArrival // ignore: cast_nullable_to_non_nullable
-              as String?,
-      productStorage: freezed == productStorage
-          ? _value.productStorage
-          : productStorage // ignore: cast_nullable_to_non_nullable
-              as String?,
-      pricePerAmount: freezed == pricePerAmount
-          ? _value.pricePerAmount
-          : pricePerAmount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      inventoryQuantity: freezed == inventoryQuantity
-          ? _value.inventoryQuantity
-          : inventoryQuantity // ignore: cast_nullable_to_non_nullable
-              as int?,
     ) as $Val);
   }
 }
@@ -117,14 +69,7 @@ abstract class _$$MetadataImplCopyWith<$Res>
       __$$MetadataImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {List<Price>? price,
-      @JsonKey(name: 'product_usage') String? productUsage,
-      @JsonKey(name: 'price_per_unit') String? pricePerUnit,
-      @JsonKey(name: 'product_arrival') String? productArrival,
-      @JsonKey(name: 'product_storage') String? productStorage,
-      @JsonKey(name: 'price_per_amount') int? pricePerAmount,
-      @JsonKey(name: 'inventory_quantity') int? inventoryQuantity});
+  $Res call({@JsonKey(name: 'Key ') String? key});
 }
 
 /// @nodoc
@@ -138,43 +83,13 @@ class __$$MetadataImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? price = freezed,
-    Object? productUsage = freezed,
-    Object? pricePerUnit = freezed,
-    Object? productArrival = freezed,
-    Object? productStorage = freezed,
-    Object? pricePerAmount = freezed,
-    Object? inventoryQuantity = freezed,
+    Object? key = freezed,
   }) {
     return _then(_$MetadataImpl(
-      price: freezed == price
-          ? _value._price
-          : price // ignore: cast_nullable_to_non_nullable
-              as List<Price>?,
-      productUsage: freezed == productUsage
-          ? _value.productUsage
-          : productUsage // ignore: cast_nullable_to_non_nullable
+      key: freezed == key
+          ? _value.key
+          : key // ignore: cast_nullable_to_non_nullable
               as String?,
-      pricePerUnit: freezed == pricePerUnit
-          ? _value.pricePerUnit
-          : pricePerUnit // ignore: cast_nullable_to_non_nullable
-              as String?,
-      productArrival: freezed == productArrival
-          ? _value.productArrival
-          : productArrival // ignore: cast_nullable_to_non_nullable
-              as String?,
-      productStorage: freezed == productStorage
-          ? _value.productStorage
-          : productStorage // ignore: cast_nullable_to_non_nullable
-              as String?,
-      pricePerAmount: freezed == pricePerAmount
-          ? _value.pricePerAmount
-          : pricePerAmount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      inventoryQuantity: freezed == inventoryQuantity
-          ? _value.inventoryQuantity
-          : inventoryQuantity // ignore: cast_nullable_to_non_nullable
-              as int?,
     ));
   }
 }
@@ -182,51 +97,18 @@ class __$$MetadataImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$MetadataImpl implements _Metadata {
-  _$MetadataImpl(
-      {final List<Price>? price,
-      @JsonKey(name: 'product_usage') this.productUsage,
-      @JsonKey(name: 'price_per_unit') this.pricePerUnit,
-      @JsonKey(name: 'product_arrival') this.productArrival,
-      @JsonKey(name: 'product_storage') this.productStorage,
-      @JsonKey(name: 'price_per_amount') this.pricePerAmount,
-      @JsonKey(name: 'inventory_quantity') this.inventoryQuantity})
-      : _price = price;
+  _$MetadataImpl({@JsonKey(name: 'Key ') this.key});
 
   factory _$MetadataImpl.fromJson(Map<String, dynamic> json) =>
       _$$MetadataImplFromJson(json);
 
-  final List<Price>? _price;
   @override
-  List<Price>? get price {
-    final value = _price;
-    if (value == null) return null;
-    if (_price is EqualUnmodifiableListView) return _price;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  @JsonKey(name: 'product_usage')
-  final String? productUsage;
-  @override
-  @JsonKey(name: 'price_per_unit')
-  final String? pricePerUnit;
-  @override
-  @JsonKey(name: 'product_arrival')
-  final String? productArrival;
-  @override
-  @JsonKey(name: 'product_storage')
-  final String? productStorage;
-  @override
-  @JsonKey(name: 'price_per_amount')
-  final int? pricePerAmount;
-  @override
-  @JsonKey(name: 'inventory_quantity')
-  final int? inventoryQuantity;
+  @JsonKey(name: 'Key ')
+  final String? key;
 
   @override
   String toString() {
-    return 'Metadata(price: $price, productUsage: $productUsage, pricePerUnit: $pricePerUnit, productArrival: $productArrival, productStorage: $productStorage, pricePerAmount: $pricePerAmount, inventoryQuantity: $inventoryQuantity)';
+    return 'Metadata(key: $key)';
   }
 
   @override
@@ -234,32 +116,12 @@ class _$MetadataImpl implements _Metadata {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$MetadataImpl &&
-            const DeepCollectionEquality().equals(other._price, _price) &&
-            (identical(other.productUsage, productUsage) ||
-                other.productUsage == productUsage) &&
-            (identical(other.pricePerUnit, pricePerUnit) ||
-                other.pricePerUnit == pricePerUnit) &&
-            (identical(other.productArrival, productArrival) ||
-                other.productArrival == productArrival) &&
-            (identical(other.productStorage, productStorage) ||
-                other.productStorage == productStorage) &&
-            (identical(other.pricePerAmount, pricePerAmount) ||
-                other.pricePerAmount == pricePerAmount) &&
-            (identical(other.inventoryQuantity, inventoryQuantity) ||
-                other.inventoryQuantity == inventoryQuantity));
+            (identical(other.key, key) || other.key == key));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(_price),
-      productUsage,
-      pricePerUnit,
-      productArrival,
-      productStorage,
-      pricePerAmount,
-      inventoryQuantity);
+  int get hashCode => Object.hash(runtimeType, key);
 
   @JsonKey(ignore: true)
   @override
@@ -276,39 +138,15 @@ class _$MetadataImpl implements _Metadata {
 }
 
 abstract class _Metadata implements Metadata {
-  factory _Metadata(
-          {final List<Price>? price,
-          @JsonKey(name: 'product_usage') final String? productUsage,
-          @JsonKey(name: 'price_per_unit') final String? pricePerUnit,
-          @JsonKey(name: 'product_arrival') final String? productArrival,
-          @JsonKey(name: 'product_storage') final String? productStorage,
-          @JsonKey(name: 'price_per_amount') final int? pricePerAmount,
-          @JsonKey(name: 'inventory_quantity') final int? inventoryQuantity}) =
+  factory _Metadata({@JsonKey(name: 'Key ') final String? key}) =
       _$MetadataImpl;
 
   factory _Metadata.fromJson(Map<String, dynamic> json) =
       _$MetadataImpl.fromJson;
 
   @override
-  List<Price>? get price;
-  @override
-  @JsonKey(name: 'product_usage')
-  String? get productUsage;
-  @override
-  @JsonKey(name: 'price_per_unit')
-  String? get pricePerUnit;
-  @override
-  @JsonKey(name: 'product_arrival')
-  String? get productArrival;
-  @override
-  @JsonKey(name: 'product_storage')
-  String? get productStorage;
-  @override
-  @JsonKey(name: 'price_per_amount')
-  int? get pricePerAmount;
-  @override
-  @JsonKey(name: 'inventory_quantity')
-  int? get inventoryQuantity;
+  @JsonKey(name: 'Key ')
+  String? get key;
   @override
   @JsonKey(ignore: true)
   _$$MetadataImplCopyWith<_$MetadataImpl> get copyWith =>

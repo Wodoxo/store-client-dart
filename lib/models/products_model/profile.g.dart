@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'collection.dart';
+part of 'profile.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$CollectionImpl _$$CollectionImplFromJson(Map<String, dynamic> json) =>
-    _$CollectionImpl(
+_$ProfileImpl _$$ProfileImplFromJson(Map<String, dynamic> json) =>
+    _$ProfileImpl(
       id: json['id'] as String?,
       createdAt: json['created_at'] == null
           ? null
@@ -16,23 +16,18 @@ _$CollectionImpl _$$CollectionImplFromJson(Map<String, dynamic> json) =>
           ? null
           : DateTime.parse(json['updated_at'] as String),
       deletedAt: json['deleted_at'],
-      title: json['title'] as String?,
-      handle: json['handle'] as String?,
-      metadata: json['metadata'] == null
-          ? null
-          : Metadata.fromJson(json['metadata'] as Map<String, dynamic>),
-      productCollectionParentId:
-          json['product_collection_parent_id'] as String?,
+      name: json['name'] as String?,
+      type: json['type'] as String?,
+      metadata: json['metadata'],
     );
 
-Map<String, dynamic> _$$CollectionImplToJson(_$CollectionImpl instance) =>
+Map<String, dynamic> _$$ProfileImplToJson(_$ProfileImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'created_at': instance.createdAt?.toIso8601String(),
       'updated_at': instance.updatedAt?.toIso8601String(),
       'deleted_at': instance.deletedAt,
-      'title': instance.title,
-      'handle': instance.handle,
+      'name': instance.name,
+      'type': instance.type,
       'metadata': instance.metadata,
-      'product_collection_parent_id': instance.productCollectionParentId,
     };

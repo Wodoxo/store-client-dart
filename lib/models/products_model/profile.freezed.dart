@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'option.dart';
+part of 'profile.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-Option _$OptionFromJson(Map<String, dynamic> json) {
-  return _Option.fromJson(json);
+Profile _$ProfileFromJson(Map<String, dynamic> json) {
+  return _Profile.fromJson(json);
 }
 
 /// @nodoc
-mixin _$Option {
+mixin _$Profile {
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'created_at')
   DateTime? get createdAt => throw _privateConstructorUsedError;
@@ -27,37 +27,34 @@ mixin _$Option {
   DateTime? get updatedAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'deleted_at')
   dynamic get deletedAt => throw _privateConstructorUsedError;
-  String? get title => throw _privateConstructorUsedError;
-  @JsonKey(name: 'product_id')
-  String? get productId => throw _privateConstructorUsedError;
+  String? get name => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
   dynamic get metadata => throw _privateConstructorUsedError;
-  List<Value>? get values => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $OptionCopyWith<Option> get copyWith => throw _privateConstructorUsedError;
+  $ProfileCopyWith<Profile> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $OptionCopyWith<$Res> {
-  factory $OptionCopyWith(Option value, $Res Function(Option) then) =
-      _$OptionCopyWithImpl<$Res, Option>;
+abstract class $ProfileCopyWith<$Res> {
+  factory $ProfileCopyWith(Profile value, $Res Function(Profile) then) =
+      _$ProfileCopyWithImpl<$Res, Profile>;
   @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'updated_at') DateTime? updatedAt,
       @JsonKey(name: 'deleted_at') dynamic deletedAt,
-      String? title,
-      @JsonKey(name: 'product_id') String? productId,
-      dynamic metadata,
-      List<Value>? values});
+      String? name,
+      String? type,
+      dynamic metadata});
 }
 
 /// @nodoc
-class _$OptionCopyWithImpl<$Res, $Val extends Option>
-    implements $OptionCopyWith<$Res> {
-  _$OptionCopyWithImpl(this._value, this._then);
+class _$ProfileCopyWithImpl<$Res, $Val extends Profile>
+    implements $ProfileCopyWith<$Res> {
+  _$ProfileCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -71,10 +68,9 @@ class _$OptionCopyWithImpl<$Res, $Val extends Option>
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
     Object? deletedAt = freezed,
-    Object? title = freezed,
-    Object? productId = freezed,
+    Object? name = freezed,
+    Object? type = freezed,
     Object? metadata = freezed,
-    Object? values = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -93,31 +89,27 @@ class _$OptionCopyWithImpl<$Res, $Val extends Option>
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      productId: freezed == productId
-          ? _value.productId
-          : productId // ignore: cast_nullable_to_non_nullable
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
               as String?,
       metadata: freezed == metadata
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      values: freezed == values
-          ? _value.values
-          : values // ignore: cast_nullable_to_non_nullable
-              as List<Value>?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$OptionImplCopyWith<$Res> implements $OptionCopyWith<$Res> {
-  factory _$$OptionImplCopyWith(
-          _$OptionImpl value, $Res Function(_$OptionImpl) then) =
-      __$$OptionImplCopyWithImpl<$Res>;
+abstract class _$$ProfileImplCopyWith<$Res> implements $ProfileCopyWith<$Res> {
+  factory _$$ProfileImplCopyWith(
+          _$ProfileImpl value, $Res Function(_$ProfileImpl) then) =
+      __$$ProfileImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -125,18 +117,17 @@ abstract class _$$OptionImplCopyWith<$Res> implements $OptionCopyWith<$Res> {
       @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'updated_at') DateTime? updatedAt,
       @JsonKey(name: 'deleted_at') dynamic deletedAt,
-      String? title,
-      @JsonKey(name: 'product_id') String? productId,
-      dynamic metadata,
-      List<Value>? values});
+      String? name,
+      String? type,
+      dynamic metadata});
 }
 
 /// @nodoc
-class __$$OptionImplCopyWithImpl<$Res>
-    extends _$OptionCopyWithImpl<$Res, _$OptionImpl>
-    implements _$$OptionImplCopyWith<$Res> {
-  __$$OptionImplCopyWithImpl(
-      _$OptionImpl _value, $Res Function(_$OptionImpl) _then)
+class __$$ProfileImplCopyWithImpl<$Res>
+    extends _$ProfileCopyWithImpl<$Res, _$ProfileImpl>
+    implements _$$ProfileImplCopyWith<$Res> {
+  __$$ProfileImplCopyWithImpl(
+      _$ProfileImpl _value, $Res Function(_$ProfileImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -146,12 +137,11 @@ class __$$OptionImplCopyWithImpl<$Res>
     Object? createdAt = freezed,
     Object? updatedAt = freezed,
     Object? deletedAt = freezed,
-    Object? title = freezed,
-    Object? productId = freezed,
+    Object? name = freezed,
+    Object? type = freezed,
     Object? metadata = freezed,
-    Object? values = freezed,
   }) {
-    return _then(_$OptionImpl(
+    return _then(_$ProfileImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -168,42 +158,36 @@ class __$$OptionImplCopyWithImpl<$Res>
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      title: freezed == title
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
+      name: freezed == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
               as String?,
-      productId: freezed == productId
-          ? _value.productId
-          : productId // ignore: cast_nullable_to_non_nullable
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
               as String?,
       metadata: freezed == metadata
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      values: freezed == values
-          ? _value._values
-          : values // ignore: cast_nullable_to_non_nullable
-              as List<Value>?,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$OptionImpl implements _Option {
-  _$OptionImpl(
+class _$ProfileImpl implements _Profile {
+  _$ProfileImpl(
       {this.id,
       @JsonKey(name: 'created_at') this.createdAt,
       @JsonKey(name: 'updated_at') this.updatedAt,
       @JsonKey(name: 'deleted_at') this.deletedAt,
-      this.title,
-      @JsonKey(name: 'product_id') this.productId,
-      this.metadata,
-      final List<Value>? values})
-      : _values = values;
+      this.name,
+      this.type,
+      this.metadata});
 
-  factory _$OptionImpl.fromJson(Map<String, dynamic> json) =>
-      _$$OptionImplFromJson(json);
+  factory _$ProfileImpl.fromJson(Map<String, dynamic> json) =>
+      _$$ProfileImplFromJson(json);
 
   @override
   final String? id;
@@ -217,43 +201,31 @@ class _$OptionImpl implements _Option {
   @JsonKey(name: 'deleted_at')
   final dynamic deletedAt;
   @override
-  final String? title;
+  final String? name;
   @override
-  @JsonKey(name: 'product_id')
-  final String? productId;
+  final String? type;
   @override
   final dynamic metadata;
-  final List<Value>? _values;
-  @override
-  List<Value>? get values {
-    final value = _values;
-    if (value == null) return null;
-    if (_values is EqualUnmodifiableListView) return _values;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
 
   @override
   String toString() {
-    return 'Option(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt, title: $title, productId: $productId, metadata: $metadata, values: $values)';
+    return 'Profile(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt, name: $name, type: $type, metadata: $metadata)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$OptionImpl &&
+            other is _$ProfileImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             (identical(other.updatedAt, updatedAt) ||
                 other.updatedAt == updatedAt) &&
             const DeepCollectionEquality().equals(other.deletedAt, deletedAt) &&
-            (identical(other.title, title) || other.title == title) &&
-            (identical(other.productId, productId) ||
-                other.productId == productId) &&
-            const DeepCollectionEquality().equals(other.metadata, metadata) &&
-            const DeepCollectionEquality().equals(other._values, _values));
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.type, type) || other.type == type) &&
+            const DeepCollectionEquality().equals(other.metadata, metadata));
   }
 
   @JsonKey(ignore: true)
@@ -264,37 +236,35 @@ class _$OptionImpl implements _Option {
       createdAt,
       updatedAt,
       const DeepCollectionEquality().hash(deletedAt),
-      title,
-      productId,
-      const DeepCollectionEquality().hash(metadata),
-      const DeepCollectionEquality().hash(_values));
+      name,
+      type,
+      const DeepCollectionEquality().hash(metadata));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$OptionImplCopyWith<_$OptionImpl> get copyWith =>
-      __$$OptionImplCopyWithImpl<_$OptionImpl>(this, _$identity);
+  _$$ProfileImplCopyWith<_$ProfileImpl> get copyWith =>
+      __$$ProfileImplCopyWithImpl<_$ProfileImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$OptionImplToJson(
+    return _$$ProfileImplToJson(
       this,
     );
   }
 }
 
-abstract class _Option implements Option {
-  factory _Option(
+abstract class _Profile implements Profile {
+  factory _Profile(
       {final String? id,
       @JsonKey(name: 'created_at') final DateTime? createdAt,
       @JsonKey(name: 'updated_at') final DateTime? updatedAt,
       @JsonKey(name: 'deleted_at') final dynamic deletedAt,
-      final String? title,
-      @JsonKey(name: 'product_id') final String? productId,
-      final dynamic metadata,
-      final List<Value>? values}) = _$OptionImpl;
+      final String? name,
+      final String? type,
+      final dynamic metadata}) = _$ProfileImpl;
 
-  factory _Option.fromJson(Map<String, dynamic> json) = _$OptionImpl.fromJson;
+  factory _Profile.fromJson(Map<String, dynamic> json) = _$ProfileImpl.fromJson;
 
   @override
   String? get id;
@@ -308,16 +278,13 @@ abstract class _Option implements Option {
   @JsonKey(name: 'deleted_at')
   dynamic get deletedAt;
   @override
-  String? get title;
+  String? get name;
   @override
-  @JsonKey(name: 'product_id')
-  String? get productId;
+  String? get type;
   @override
   dynamic get metadata;
   @override
-  List<Value>? get values;
-  @override
   @JsonKey(ignore: true)
-  _$$OptionImplCopyWith<_$OptionImpl> get copyWith =>
+  _$$ProfileImplCopyWith<_$ProfileImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

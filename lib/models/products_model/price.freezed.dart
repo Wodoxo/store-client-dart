@@ -20,9 +20,28 @@ Price _$PriceFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$Price {
-  int? get amount => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey(name: 'created_at')
+  DateTime? get createdAt => throw _privateConstructorUsedError;
+  @JsonKey(name: 'updated_at')
+  DateTime? get updatedAt => throw _privateConstructorUsedError;
+  @JsonKey(name: 'deleted_at')
+  dynamic get deletedAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'currency_code')
   String? get currencyCode => throw _privateConstructorUsedError;
+  int? get amount => throw _privateConstructorUsedError;
+  @JsonKey(name: 'min_quantity')
+  dynamic get minQuantity => throw _privateConstructorUsedError;
+  @JsonKey(name: 'max_quantity')
+  dynamic get maxQuantity => throw _privateConstructorUsedError;
+  @JsonKey(name: 'price_list_id')
+  dynamic get priceListId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'region_id')
+  dynamic get regionId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'price_list')
+  dynamic get priceList => throw _privateConstructorUsedError;
+  @JsonKey(name: 'variant_id')
+  String? get variantId => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -35,7 +54,18 @@ abstract class $PriceCopyWith<$Res> {
       _$PriceCopyWithImpl<$Res, Price>;
   @useResult
   $Res call(
-      {int? amount, @JsonKey(name: 'currency_code') String? currencyCode});
+      {String? id,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
+      @JsonKey(name: 'updated_at') DateTime? updatedAt,
+      @JsonKey(name: 'deleted_at') dynamic deletedAt,
+      @JsonKey(name: 'currency_code') String? currencyCode,
+      int? amount,
+      @JsonKey(name: 'min_quantity') dynamic minQuantity,
+      @JsonKey(name: 'max_quantity') dynamic maxQuantity,
+      @JsonKey(name: 'price_list_id') dynamic priceListId,
+      @JsonKey(name: 'region_id') dynamic regionId,
+      @JsonKey(name: 'price_list') dynamic priceList,
+      @JsonKey(name: 'variant_id') String? variantId});
 }
 
 /// @nodoc
@@ -51,17 +81,67 @@ class _$PriceCopyWithImpl<$Res, $Val extends Price>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? amount = freezed,
+    Object? id = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
+    Object? deletedAt = freezed,
     Object? currencyCode = freezed,
+    Object? amount = freezed,
+    Object? minQuantity = freezed,
+    Object? maxQuantity = freezed,
+    Object? priceListId = freezed,
+    Object? regionId = freezed,
+    Object? priceList = freezed,
+    Object? variantId = freezed,
   }) {
     return _then(_value.copyWith(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      createdAt: freezed == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: freezed == updatedAt
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      deletedAt: freezed == deletedAt
+          ? _value.deletedAt
+          : deletedAt // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      currencyCode: freezed == currencyCode
+          ? _value.currencyCode
+          : currencyCode // ignore: cast_nullable_to_non_nullable
+              as String?,
       amount: freezed == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as int?,
-      currencyCode: freezed == currencyCode
-          ? _value.currencyCode
-          : currencyCode // ignore: cast_nullable_to_non_nullable
+      minQuantity: freezed == minQuantity
+          ? _value.minQuantity
+          : minQuantity // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      maxQuantity: freezed == maxQuantity
+          ? _value.maxQuantity
+          : maxQuantity // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      priceListId: freezed == priceListId
+          ? _value.priceListId
+          : priceListId // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      regionId: freezed == regionId
+          ? _value.regionId
+          : regionId // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      priceList: freezed == priceList
+          ? _value.priceList
+          : priceList // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      variantId: freezed == variantId
+          ? _value.variantId
+          : variantId // ignore: cast_nullable_to_non_nullable
               as String?,
     ) as $Val);
   }
@@ -75,7 +155,18 @@ abstract class _$$PriceImplCopyWith<$Res> implements $PriceCopyWith<$Res> {
   @override
   @useResult
   $Res call(
-      {int? amount, @JsonKey(name: 'currency_code') String? currencyCode});
+      {String? id,
+      @JsonKey(name: 'created_at') DateTime? createdAt,
+      @JsonKey(name: 'updated_at') DateTime? updatedAt,
+      @JsonKey(name: 'deleted_at') dynamic deletedAt,
+      @JsonKey(name: 'currency_code') String? currencyCode,
+      int? amount,
+      @JsonKey(name: 'min_quantity') dynamic minQuantity,
+      @JsonKey(name: 'max_quantity') dynamic maxQuantity,
+      @JsonKey(name: 'price_list_id') dynamic priceListId,
+      @JsonKey(name: 'region_id') dynamic regionId,
+      @JsonKey(name: 'price_list') dynamic priceList,
+      @JsonKey(name: 'variant_id') String? variantId});
 }
 
 /// @nodoc
@@ -89,17 +180,67 @@ class __$$PriceImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? amount = freezed,
+    Object? id = freezed,
+    Object? createdAt = freezed,
+    Object? updatedAt = freezed,
+    Object? deletedAt = freezed,
     Object? currencyCode = freezed,
+    Object? amount = freezed,
+    Object? minQuantity = freezed,
+    Object? maxQuantity = freezed,
+    Object? priceListId = freezed,
+    Object? regionId = freezed,
+    Object? priceList = freezed,
+    Object? variantId = freezed,
   }) {
     return _then(_$PriceImpl(
+      id: freezed == id
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      createdAt: freezed == createdAt
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      updatedAt: freezed == updatedAt
+          ? _value.updatedAt
+          : updatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      deletedAt: freezed == deletedAt
+          ? _value.deletedAt
+          : deletedAt // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      currencyCode: freezed == currencyCode
+          ? _value.currencyCode
+          : currencyCode // ignore: cast_nullable_to_non_nullable
+              as String?,
       amount: freezed == amount
           ? _value.amount
           : amount // ignore: cast_nullable_to_non_nullable
               as int?,
-      currencyCode: freezed == currencyCode
-          ? _value.currencyCode
-          : currencyCode // ignore: cast_nullable_to_non_nullable
+      minQuantity: freezed == minQuantity
+          ? _value.minQuantity
+          : minQuantity // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      maxQuantity: freezed == maxQuantity
+          ? _value.maxQuantity
+          : maxQuantity // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      priceListId: freezed == priceListId
+          ? _value.priceListId
+          : priceListId // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      regionId: freezed == regionId
+          ? _value.regionId
+          : regionId // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      priceList: freezed == priceList
+          ? _value.priceList
+          : priceList // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      variantId: freezed == variantId
+          ? _value.variantId
+          : variantId // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -108,20 +249,61 @@ class __$$PriceImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$PriceImpl implements _Price {
-  _$PriceImpl({this.amount, @JsonKey(name: 'currency_code') this.currencyCode});
+  _$PriceImpl(
+      {this.id,
+      @JsonKey(name: 'created_at') this.createdAt,
+      @JsonKey(name: 'updated_at') this.updatedAt,
+      @JsonKey(name: 'deleted_at') this.deletedAt,
+      @JsonKey(name: 'currency_code') this.currencyCode,
+      this.amount,
+      @JsonKey(name: 'min_quantity') this.minQuantity,
+      @JsonKey(name: 'max_quantity') this.maxQuantity,
+      @JsonKey(name: 'price_list_id') this.priceListId,
+      @JsonKey(name: 'region_id') this.regionId,
+      @JsonKey(name: 'price_list') this.priceList,
+      @JsonKey(name: 'variant_id') this.variantId});
 
   factory _$PriceImpl.fromJson(Map<String, dynamic> json) =>
       _$$PriceImplFromJson(json);
 
   @override
-  final int? amount;
+  final String? id;
+  @override
+  @JsonKey(name: 'created_at')
+  final DateTime? createdAt;
+  @override
+  @JsonKey(name: 'updated_at')
+  final DateTime? updatedAt;
+  @override
+  @JsonKey(name: 'deleted_at')
+  final dynamic deletedAt;
   @override
   @JsonKey(name: 'currency_code')
   final String? currencyCode;
+  @override
+  final int? amount;
+  @override
+  @JsonKey(name: 'min_quantity')
+  final dynamic minQuantity;
+  @override
+  @JsonKey(name: 'max_quantity')
+  final dynamic maxQuantity;
+  @override
+  @JsonKey(name: 'price_list_id')
+  final dynamic priceListId;
+  @override
+  @JsonKey(name: 'region_id')
+  final dynamic regionId;
+  @override
+  @JsonKey(name: 'price_list')
+  final dynamic priceList;
+  @override
+  @JsonKey(name: 'variant_id')
+  final String? variantId;
 
   @override
   String toString() {
-    return 'Price(amount: $amount, currencyCode: $currencyCode)';
+    return 'Price(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt, currencyCode: $currencyCode, amount: $amount, minQuantity: $minQuantity, maxQuantity: $maxQuantity, priceListId: $priceListId, regionId: $regionId, priceList: $priceList, variantId: $variantId)';
   }
 
   @override
@@ -129,14 +311,43 @@ class _$PriceImpl implements _Price {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$PriceImpl &&
-            (identical(other.amount, amount) || other.amount == amount) &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.createdAt, createdAt) ||
+                other.createdAt == createdAt) &&
+            (identical(other.updatedAt, updatedAt) ||
+                other.updatedAt == updatedAt) &&
+            const DeepCollectionEquality().equals(other.deletedAt, deletedAt) &&
             (identical(other.currencyCode, currencyCode) ||
-                other.currencyCode == currencyCode));
+                other.currencyCode == currencyCode) &&
+            (identical(other.amount, amount) || other.amount == amount) &&
+            const DeepCollectionEquality()
+                .equals(other.minQuantity, minQuantity) &&
+            const DeepCollectionEquality()
+                .equals(other.maxQuantity, maxQuantity) &&
+            const DeepCollectionEquality()
+                .equals(other.priceListId, priceListId) &&
+            const DeepCollectionEquality().equals(other.regionId, regionId) &&
+            const DeepCollectionEquality().equals(other.priceList, priceList) &&
+            (identical(other.variantId, variantId) ||
+                other.variantId == variantId));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, amount, currencyCode);
+  int get hashCode => Object.hash(
+      runtimeType,
+      id,
+      createdAt,
+      updatedAt,
+      const DeepCollectionEquality().hash(deletedAt),
+      currencyCode,
+      amount,
+      const DeepCollectionEquality().hash(minQuantity),
+      const DeepCollectionEquality().hash(maxQuantity),
+      const DeepCollectionEquality().hash(priceListId),
+      const DeepCollectionEquality().hash(regionId),
+      const DeepCollectionEquality().hash(priceList),
+      variantId);
 
   @JsonKey(ignore: true)
   @override
@@ -154,17 +365,55 @@ class _$PriceImpl implements _Price {
 
 abstract class _Price implements Price {
   factory _Price(
-          {final int? amount,
-          @JsonKey(name: 'currency_code') final String? currencyCode}) =
-      _$PriceImpl;
+      {final String? id,
+      @JsonKey(name: 'created_at') final DateTime? createdAt,
+      @JsonKey(name: 'updated_at') final DateTime? updatedAt,
+      @JsonKey(name: 'deleted_at') final dynamic deletedAt,
+      @JsonKey(name: 'currency_code') final String? currencyCode,
+      final int? amount,
+      @JsonKey(name: 'min_quantity') final dynamic minQuantity,
+      @JsonKey(name: 'max_quantity') final dynamic maxQuantity,
+      @JsonKey(name: 'price_list_id') final dynamic priceListId,
+      @JsonKey(name: 'region_id') final dynamic regionId,
+      @JsonKey(name: 'price_list') final dynamic priceList,
+      @JsonKey(name: 'variant_id') final String? variantId}) = _$PriceImpl;
 
   factory _Price.fromJson(Map<String, dynamic> json) = _$PriceImpl.fromJson;
 
   @override
-  int? get amount;
+  String? get id;
+  @override
+  @JsonKey(name: 'created_at')
+  DateTime? get createdAt;
+  @override
+  @JsonKey(name: 'updated_at')
+  DateTime? get updatedAt;
+  @override
+  @JsonKey(name: 'deleted_at')
+  dynamic get deletedAt;
   @override
   @JsonKey(name: 'currency_code')
   String? get currencyCode;
+  @override
+  int? get amount;
+  @override
+  @JsonKey(name: 'min_quantity')
+  dynamic get minQuantity;
+  @override
+  @JsonKey(name: 'max_quantity')
+  dynamic get maxQuantity;
+  @override
+  @JsonKey(name: 'price_list_id')
+  dynamic get priceListId;
+  @override
+  @JsonKey(name: 'region_id')
+  dynamic get regionId;
+  @override
+  @JsonKey(name: 'price_list')
+  dynamic get priceList;
+  @override
+  @JsonKey(name: 'variant_id')
+  String? get variantId;
   @override
   @JsonKey(ignore: true)
   _$$PriceImplCopyWith<_$PriceImpl> get copyWith =>

@@ -32,20 +32,18 @@ mixin _$Product {
   bool? get isGiftcard => throw _privateConstructorUsedError;
   bool? get discountable => throw _privateConstructorUsedError;
   String? get thumbnail => throw _privateConstructorUsedError;
-  @JsonKey(name: 'profile_id')
-  String? get profileId => throw _privateConstructorUsedError;
   @JsonKey(name: 'collection_id')
-  String? get collectionId => throw _privateConstructorUsedError;
+  dynamic get collectionId => throw _privateConstructorUsedError;
   @JsonKey(name: 'type_id')
   dynamic get typeId => throw _privateConstructorUsedError;
-  dynamic get weight => throw _privateConstructorUsedError;
-  dynamic get length => throw _privateConstructorUsedError;
-  dynamic get height => throw _privateConstructorUsedError;
-  dynamic get width => throw _privateConstructorUsedError;
+  int? get weight => throw _privateConstructorUsedError;
+  int? get length => throw _privateConstructorUsedError;
+  int? get height => throw _privateConstructorUsedError;
+  int? get width => throw _privateConstructorUsedError;
   @JsonKey(name: 'hs_code')
   dynamic get hsCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'origin_country')
-  dynamic get originCountry => throw _privateConstructorUsedError;
+  String? get originCountry => throw _privateConstructorUsedError;
   @JsonKey(name: 'mid_code')
   dynamic get midCode => throw _privateConstructorUsedError;
   dynamic get material => throw _privateConstructorUsedError;
@@ -56,28 +54,15 @@ mixin _$Product {
   @JsonKey(name: 'deleted_at')
   dynamic get deletedAt => throw _privateConstructorUsedError;
   Metadata? get metadata => throw _privateConstructorUsedError;
-  @JsonKey(name: 'days_to_prepare')
-  int? get daysToPrepare => throw _privateConstructorUsedError;
-  @JsonKey(name: 'reference_number')
-  int? get referenceNumber => throw _privateConstructorUsedError;
-  @JsonKey(name: 'order_quantity_min')
-  dynamic get orderQuantityMin => throw _privateConstructorUsedError;
-  @JsonKey(name: 'order_quantity_max')
-  int? get orderQuantityMax => throw _privateConstructorUsedError;
-  @JsonKey(name: 'local_pickup')
-  bool? get localPickup => throw _privateConstructorUsedError;
-  @JsonKey(name: 'fulfillment_provider_id')
-  String? get fulfillmentProviderId => throw _privateConstructorUsedError;
-  @JsonKey(name: 'average_review_rating')
-  dynamic get averageReviewRating => throw _privateConstructorUsedError;
-  @JsonKey(name: 'review_count')
-  dynamic get reviewCount => throw _privateConstructorUsedError;
-  List<Variant>? get variants => throw _privateConstructorUsedError;
-  List<Option>? get options => throw _privateConstructorUsedError;
+  @JsonKey(name: 'profile_id')
+  String? get profileId => throw _privateConstructorUsedError;
+  dynamic get collection => throw _privateConstructorUsedError;
   List<Image>? get images => throw _privateConstructorUsedError;
-  List<dynamic>? get tags => throw _privateConstructorUsedError;
-  Collection? get collection => throw _privateConstructorUsedError;
+  List<Option>? get options => throw _privateConstructorUsedError;
+  List<Profile>? get profiles => throw _privateConstructorUsedError;
+  List<Tag>? get tags => throw _privateConstructorUsedError;
   dynamic get type => throw _privateConstructorUsedError;
+  List<Variant>? get variants => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -100,38 +85,30 @@ abstract class $ProductCopyWith<$Res> {
       @JsonKey(name: 'is_giftcard') bool? isGiftcard,
       bool? discountable,
       String? thumbnail,
-      @JsonKey(name: 'profile_id') String? profileId,
-      @JsonKey(name: 'collection_id') String? collectionId,
+      @JsonKey(name: 'collection_id') dynamic collectionId,
       @JsonKey(name: 'type_id') dynamic typeId,
-      dynamic weight,
-      dynamic length,
-      dynamic height,
-      dynamic width,
+      int? weight,
+      int? length,
+      int? height,
+      int? width,
       @JsonKey(name: 'hs_code') dynamic hsCode,
-      @JsonKey(name: 'origin_country') dynamic originCountry,
+      @JsonKey(name: 'origin_country') String? originCountry,
       @JsonKey(name: 'mid_code') dynamic midCode,
       dynamic material,
       @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'updated_at') DateTime? updatedAt,
       @JsonKey(name: 'deleted_at') dynamic deletedAt,
       Metadata? metadata,
-      @JsonKey(name: 'days_to_prepare') int? daysToPrepare,
-      @JsonKey(name: 'reference_number') int? referenceNumber,
-      @JsonKey(name: 'order_quantity_min') dynamic orderQuantityMin,
-      @JsonKey(name: 'order_quantity_max') int? orderQuantityMax,
-      @JsonKey(name: 'local_pickup') bool? localPickup,
-      @JsonKey(name: 'fulfillment_provider_id') String? fulfillmentProviderId,
-      @JsonKey(name: 'average_review_rating') dynamic averageReviewRating,
-      @JsonKey(name: 'review_count') dynamic reviewCount,
-      List<Variant>? variants,
-      List<Option>? options,
+      @JsonKey(name: 'profile_id') String? profileId,
+      dynamic collection,
       List<Image>? images,
-      List<dynamic>? tags,
-      Collection? collection,
-      dynamic type});
+      List<Option>? options,
+      List<Profile>? profiles,
+      List<Tag>? tags,
+      dynamic type,
+      List<Variant>? variants});
 
   $MetadataCopyWith<$Res>? get metadata;
-  $CollectionCopyWith<$Res>? get collection;
 }
 
 /// @nodoc
@@ -157,7 +134,6 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
     Object? isGiftcard = freezed,
     Object? discountable = freezed,
     Object? thumbnail = freezed,
-    Object? profileId = freezed,
     Object? collectionId = freezed,
     Object? typeId = freezed,
     Object? weight = freezed,
@@ -172,20 +148,14 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
     Object? updatedAt = freezed,
     Object? deletedAt = freezed,
     Object? metadata = freezed,
-    Object? daysToPrepare = freezed,
-    Object? referenceNumber = freezed,
-    Object? orderQuantityMin = freezed,
-    Object? orderQuantityMax = freezed,
-    Object? localPickup = freezed,
-    Object? fulfillmentProviderId = freezed,
-    Object? averageReviewRating = freezed,
-    Object? reviewCount = freezed,
-    Object? variants = freezed,
-    Object? options = freezed,
-    Object? images = freezed,
-    Object? tags = freezed,
+    Object? profileId = freezed,
     Object? collection = freezed,
+    Object? images = freezed,
+    Object? options = freezed,
+    Object? profiles = freezed,
+    Object? tags = freezed,
     Object? type = freezed,
+    Object? variants = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -228,14 +198,10 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as String?,
-      profileId: freezed == profileId
-          ? _value.profileId
-          : profileId // ignore: cast_nullable_to_non_nullable
-              as String?,
       collectionId: freezed == collectionId
           ? _value.collectionId
           : collectionId // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as dynamic,
       typeId: freezed == typeId
           ? _value.typeId
           : typeId // ignore: cast_nullable_to_non_nullable
@@ -243,19 +209,19 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
       weight: freezed == weight
           ? _value.weight
           : weight // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       length: freezed == length
           ? _value.length
           : length // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       hsCode: freezed == hsCode
           ? _value.hsCode
           : hsCode // ignore: cast_nullable_to_non_nullable
@@ -263,7 +229,7 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
       originCountry: freezed == originCountry
           ? _value.originCountry
           : originCountry // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as String?,
       midCode: freezed == midCode
           ? _value.midCode
           : midCode // ignore: cast_nullable_to_non_nullable
@@ -288,62 +254,38 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
               as Metadata?,
-      daysToPrepare: freezed == daysToPrepare
-          ? _value.daysToPrepare
-          : daysToPrepare // ignore: cast_nullable_to_non_nullable
-              as int?,
-      referenceNumber: freezed == referenceNumber
-          ? _value.referenceNumber
-          : referenceNumber // ignore: cast_nullable_to_non_nullable
-              as int?,
-      orderQuantityMin: freezed == orderQuantityMin
-          ? _value.orderQuantityMin
-          : orderQuantityMin // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      orderQuantityMax: freezed == orderQuantityMax
-          ? _value.orderQuantityMax
-          : orderQuantityMax // ignore: cast_nullable_to_non_nullable
-              as int?,
-      localPickup: freezed == localPickup
-          ? _value.localPickup
-          : localPickup // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      fulfillmentProviderId: freezed == fulfillmentProviderId
-          ? _value.fulfillmentProviderId
-          : fulfillmentProviderId // ignore: cast_nullable_to_non_nullable
+      profileId: freezed == profileId
+          ? _value.profileId
+          : profileId // ignore: cast_nullable_to_non_nullable
               as String?,
-      averageReviewRating: freezed == averageReviewRating
-          ? _value.averageReviewRating
-          : averageReviewRating // ignore: cast_nullable_to_non_nullable
+      collection: freezed == collection
+          ? _value.collection
+          : collection // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      reviewCount: freezed == reviewCount
-          ? _value.reviewCount
-          : reviewCount // ignore: cast_nullable_to_non_nullable
+      images: freezed == images
+          ? _value.images
+          : images // ignore: cast_nullable_to_non_nullable
+              as List<Image>?,
+      options: freezed == options
+          ? _value.options
+          : options // ignore: cast_nullable_to_non_nullable
+              as List<Option>?,
+      profiles: freezed == profiles
+          ? _value.profiles
+          : profiles // ignore: cast_nullable_to_non_nullable
+              as List<Profile>?,
+      tags: freezed == tags
+          ? _value.tags
+          : tags // ignore: cast_nullable_to_non_nullable
+              as List<Tag>?,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
               as dynamic,
       variants: freezed == variants
           ? _value.variants
           : variants // ignore: cast_nullable_to_non_nullable
               as List<Variant>?,
-      options: freezed == options
-          ? _value.options
-          : options // ignore: cast_nullable_to_non_nullable
-              as List<Option>?,
-      images: freezed == images
-          ? _value.images
-          : images // ignore: cast_nullable_to_non_nullable
-              as List<Image>?,
-      tags: freezed == tags
-          ? _value.tags
-          : tags // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
-      collection: freezed == collection
-          ? _value.collection
-          : collection // ignore: cast_nullable_to_non_nullable
-              as Collection?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as dynamic,
     ) as $Val);
   }
 
@@ -356,18 +298,6 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
 
     return $MetadataCopyWith<$Res>(_value.metadata!, (value) {
       return _then(_value.copyWith(metadata: value) as $Val);
-    });
-  }
-
-  @override
-  @pragma('vm:prefer-inline')
-  $CollectionCopyWith<$Res>? get collection {
-    if (_value.collection == null) {
-      return null;
-    }
-
-    return $CollectionCopyWith<$Res>(_value.collection!, (value) {
-      return _then(_value.copyWith(collection: value) as $Val);
     });
   }
 }
@@ -390,40 +320,31 @@ abstract class _$$ProductImplCopyWith<$Res> implements $ProductCopyWith<$Res> {
       @JsonKey(name: 'is_giftcard') bool? isGiftcard,
       bool? discountable,
       String? thumbnail,
-      @JsonKey(name: 'profile_id') String? profileId,
-      @JsonKey(name: 'collection_id') String? collectionId,
+      @JsonKey(name: 'collection_id') dynamic collectionId,
       @JsonKey(name: 'type_id') dynamic typeId,
-      dynamic weight,
-      dynamic length,
-      dynamic height,
-      dynamic width,
+      int? weight,
+      int? length,
+      int? height,
+      int? width,
       @JsonKey(name: 'hs_code') dynamic hsCode,
-      @JsonKey(name: 'origin_country') dynamic originCountry,
+      @JsonKey(name: 'origin_country') String? originCountry,
       @JsonKey(name: 'mid_code') dynamic midCode,
       dynamic material,
       @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'updated_at') DateTime? updatedAt,
       @JsonKey(name: 'deleted_at') dynamic deletedAt,
       Metadata? metadata,
-      @JsonKey(name: 'days_to_prepare') int? daysToPrepare,
-      @JsonKey(name: 'reference_number') int? referenceNumber,
-      @JsonKey(name: 'order_quantity_min') dynamic orderQuantityMin,
-      @JsonKey(name: 'order_quantity_max') int? orderQuantityMax,
-      @JsonKey(name: 'local_pickup') bool? localPickup,
-      @JsonKey(name: 'fulfillment_provider_id') String? fulfillmentProviderId,
-      @JsonKey(name: 'average_review_rating') dynamic averageReviewRating,
-      @JsonKey(name: 'review_count') dynamic reviewCount,
-      List<Variant>? variants,
-      List<Option>? options,
+      @JsonKey(name: 'profile_id') String? profileId,
+      dynamic collection,
       List<Image>? images,
-      List<dynamic>? tags,
-      Collection? collection,
-      dynamic type});
+      List<Option>? options,
+      List<Profile>? profiles,
+      List<Tag>? tags,
+      dynamic type,
+      List<Variant>? variants});
 
   @override
   $MetadataCopyWith<$Res>? get metadata;
-  @override
-  $CollectionCopyWith<$Res>? get collection;
 }
 
 /// @nodoc
@@ -447,7 +368,6 @@ class __$$ProductImplCopyWithImpl<$Res>
     Object? isGiftcard = freezed,
     Object? discountable = freezed,
     Object? thumbnail = freezed,
-    Object? profileId = freezed,
     Object? collectionId = freezed,
     Object? typeId = freezed,
     Object? weight = freezed,
@@ -462,20 +382,14 @@ class __$$ProductImplCopyWithImpl<$Res>
     Object? updatedAt = freezed,
     Object? deletedAt = freezed,
     Object? metadata = freezed,
-    Object? daysToPrepare = freezed,
-    Object? referenceNumber = freezed,
-    Object? orderQuantityMin = freezed,
-    Object? orderQuantityMax = freezed,
-    Object? localPickup = freezed,
-    Object? fulfillmentProviderId = freezed,
-    Object? averageReviewRating = freezed,
-    Object? reviewCount = freezed,
-    Object? variants = freezed,
-    Object? options = freezed,
-    Object? images = freezed,
-    Object? tags = freezed,
+    Object? profileId = freezed,
     Object? collection = freezed,
+    Object? images = freezed,
+    Object? options = freezed,
+    Object? profiles = freezed,
+    Object? tags = freezed,
     Object? type = freezed,
+    Object? variants = freezed,
   }) {
     return _then(_$ProductImpl(
       id: freezed == id
@@ -518,14 +432,10 @@ class __$$ProductImplCopyWithImpl<$Res>
           ? _value.thumbnail
           : thumbnail // ignore: cast_nullable_to_non_nullable
               as String?,
-      profileId: freezed == profileId
-          ? _value.profileId
-          : profileId // ignore: cast_nullable_to_non_nullable
-              as String?,
       collectionId: freezed == collectionId
           ? _value.collectionId
           : collectionId // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as dynamic,
       typeId: freezed == typeId
           ? _value.typeId
           : typeId // ignore: cast_nullable_to_non_nullable
@@ -533,19 +443,19 @@ class __$$ProductImplCopyWithImpl<$Res>
       weight: freezed == weight
           ? _value.weight
           : weight // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       length: freezed == length
           ? _value.length
           : length // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       height: freezed == height
           ? _value.height
           : height // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       width: freezed == width
           ? _value.width
           : width // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int?,
       hsCode: freezed == hsCode
           ? _value.hsCode
           : hsCode // ignore: cast_nullable_to_non_nullable
@@ -553,7 +463,7 @@ class __$$ProductImplCopyWithImpl<$Res>
       originCountry: freezed == originCountry
           ? _value.originCountry
           : originCountry // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as String?,
       midCode: freezed == midCode
           ? _value.midCode
           : midCode // ignore: cast_nullable_to_non_nullable
@@ -578,62 +488,38 @@ class __$$ProductImplCopyWithImpl<$Res>
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
               as Metadata?,
-      daysToPrepare: freezed == daysToPrepare
-          ? _value.daysToPrepare
-          : daysToPrepare // ignore: cast_nullable_to_non_nullable
-              as int?,
-      referenceNumber: freezed == referenceNumber
-          ? _value.referenceNumber
-          : referenceNumber // ignore: cast_nullable_to_non_nullable
-              as int?,
-      orderQuantityMin: freezed == orderQuantityMin
-          ? _value.orderQuantityMin
-          : orderQuantityMin // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      orderQuantityMax: freezed == orderQuantityMax
-          ? _value.orderQuantityMax
-          : orderQuantityMax // ignore: cast_nullable_to_non_nullable
-              as int?,
-      localPickup: freezed == localPickup
-          ? _value.localPickup
-          : localPickup // ignore: cast_nullable_to_non_nullable
-              as bool?,
-      fulfillmentProviderId: freezed == fulfillmentProviderId
-          ? _value.fulfillmentProviderId
-          : fulfillmentProviderId // ignore: cast_nullable_to_non_nullable
+      profileId: freezed == profileId
+          ? _value.profileId
+          : profileId // ignore: cast_nullable_to_non_nullable
               as String?,
-      averageReviewRating: freezed == averageReviewRating
-          ? _value.averageReviewRating
-          : averageReviewRating // ignore: cast_nullable_to_non_nullable
+      collection: freezed == collection
+          ? _value.collection
+          : collection // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      reviewCount: freezed == reviewCount
-          ? _value.reviewCount
-          : reviewCount // ignore: cast_nullable_to_non_nullable
+      images: freezed == images
+          ? _value._images
+          : images // ignore: cast_nullable_to_non_nullable
+              as List<Image>?,
+      options: freezed == options
+          ? _value._options
+          : options // ignore: cast_nullable_to_non_nullable
+              as List<Option>?,
+      profiles: freezed == profiles
+          ? _value._profiles
+          : profiles // ignore: cast_nullable_to_non_nullable
+              as List<Profile>?,
+      tags: freezed == tags
+          ? _value._tags
+          : tags // ignore: cast_nullable_to_non_nullable
+              as List<Tag>?,
+      type: freezed == type
+          ? _value.type
+          : type // ignore: cast_nullable_to_non_nullable
               as dynamic,
       variants: freezed == variants
           ? _value._variants
           : variants // ignore: cast_nullable_to_non_nullable
               as List<Variant>?,
-      options: freezed == options
-          ? _value._options
-          : options // ignore: cast_nullable_to_non_nullable
-              as List<Option>?,
-      images: freezed == images
-          ? _value._images
-          : images // ignore: cast_nullable_to_non_nullable
-              as List<Image>?,
-      tags: freezed == tags
-          ? _value._tags
-          : tags // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
-      collection: freezed == collection
-          ? _value.collection
-          : collection // ignore: cast_nullable_to_non_nullable
-              as Collection?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as dynamic,
     ));
   }
 }
@@ -652,7 +538,6 @@ class _$ProductImpl implements _Product {
       @JsonKey(name: 'is_giftcard') this.isGiftcard,
       this.discountable,
       this.thumbnail,
-      @JsonKey(name: 'profile_id') this.profileId,
       @JsonKey(name: 'collection_id') this.collectionId,
       @JsonKey(name: 'type_id') this.typeId,
       this.weight,
@@ -667,24 +552,19 @@ class _$ProductImpl implements _Product {
       @JsonKey(name: 'updated_at') this.updatedAt,
       @JsonKey(name: 'deleted_at') this.deletedAt,
       this.metadata,
-      @JsonKey(name: 'days_to_prepare') this.daysToPrepare,
-      @JsonKey(name: 'reference_number') this.referenceNumber,
-      @JsonKey(name: 'order_quantity_min') this.orderQuantityMin,
-      @JsonKey(name: 'order_quantity_max') this.orderQuantityMax,
-      @JsonKey(name: 'local_pickup') this.localPickup,
-      @JsonKey(name: 'fulfillment_provider_id') this.fulfillmentProviderId,
-      @JsonKey(name: 'average_review_rating') this.averageReviewRating,
-      @JsonKey(name: 'review_count') this.reviewCount,
-      final List<Variant>? variants,
-      final List<Option>? options,
-      final List<Image>? images,
-      final List<dynamic>? tags,
+      @JsonKey(name: 'profile_id') this.profileId,
       this.collection,
-      this.type})
-      : _variants = variants,
+      final List<Image>? images,
+      final List<Option>? options,
+      final List<Profile>? profiles,
+      final List<Tag>? tags,
+      this.type,
+      final List<Variant>? variants})
+      : _images = images,
         _options = options,
-        _images = images,
-        _tags = tags;
+        _profiles = profiles,
+        _tags = tags,
+        _variants = variants;
 
   factory _$ProductImpl.fromJson(Map<String, dynamic> json) =>
       _$$ProductImplFromJson(json);
@@ -712,28 +592,25 @@ class _$ProductImpl implements _Product {
   @override
   final String? thumbnail;
   @override
-  @JsonKey(name: 'profile_id')
-  final String? profileId;
-  @override
   @JsonKey(name: 'collection_id')
-  final String? collectionId;
+  final dynamic collectionId;
   @override
   @JsonKey(name: 'type_id')
   final dynamic typeId;
   @override
-  final dynamic weight;
+  final int? weight;
   @override
-  final dynamic length;
+  final int? length;
   @override
-  final dynamic height;
+  final int? height;
   @override
-  final dynamic width;
+  final int? width;
   @override
   @JsonKey(name: 'hs_code')
   final dynamic hsCode;
   @override
   @JsonKey(name: 'origin_country')
-  final dynamic originCountry;
+  final String? originCountry;
   @override
   @JsonKey(name: 'mid_code')
   final dynamic midCode;
@@ -751,35 +628,16 @@ class _$ProductImpl implements _Product {
   @override
   final Metadata? metadata;
   @override
-  @JsonKey(name: 'days_to_prepare')
-  final int? daysToPrepare;
+  @JsonKey(name: 'profile_id')
+  final String? profileId;
   @override
-  @JsonKey(name: 'reference_number')
-  final int? referenceNumber;
+  final dynamic collection;
+  final List<Image>? _images;
   @override
-  @JsonKey(name: 'order_quantity_min')
-  final dynamic orderQuantityMin;
-  @override
-  @JsonKey(name: 'order_quantity_max')
-  final int? orderQuantityMax;
-  @override
-  @JsonKey(name: 'local_pickup')
-  final bool? localPickup;
-  @override
-  @JsonKey(name: 'fulfillment_provider_id')
-  final String? fulfillmentProviderId;
-  @override
-  @JsonKey(name: 'average_review_rating')
-  final dynamic averageReviewRating;
-  @override
-  @JsonKey(name: 'review_count')
-  final dynamic reviewCount;
-  final List<Variant>? _variants;
-  @override
-  List<Variant>? get variants {
-    final value = _variants;
+  List<Image>? get images {
+    final value = _images;
     if (value == null) return null;
-    if (_variants is EqualUnmodifiableListView) return _variants;
+    if (_images is EqualUnmodifiableListView) return _images;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
@@ -794,19 +652,19 @@ class _$ProductImpl implements _Product {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<Image>? _images;
+  final List<Profile>? _profiles;
   @override
-  List<Image>? get images {
-    final value = _images;
+  List<Profile>? get profiles {
+    final value = _profiles;
     if (value == null) return null;
-    if (_images is EqualUnmodifiableListView) return _images;
+    if (_profiles is EqualUnmodifiableListView) return _profiles;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
   }
 
-  final List<dynamic>? _tags;
+  final List<Tag>? _tags;
   @override
-  List<dynamic>? get tags {
+  List<Tag>? get tags {
     final value = _tags;
     if (value == null) return null;
     if (_tags is EqualUnmodifiableListView) return _tags;
@@ -815,13 +673,20 @@ class _$ProductImpl implements _Product {
   }
 
   @override
-  final Collection? collection;
-  @override
   final dynamic type;
+  final List<Variant>? _variants;
+  @override
+  List<Variant>? get variants {
+    final value = _variants;
+    if (value == null) return null;
+    if (_variants is EqualUnmodifiableListView) return _variants;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
 
   @override
   String toString() {
-    return 'Product(id: $id, title: $title, subtitle: $subtitle, status: $status, externalId: $externalId, description: $description, handle: $handle, isGiftcard: $isGiftcard, discountable: $discountable, thumbnail: $thumbnail, profileId: $profileId, collectionId: $collectionId, typeId: $typeId, weight: $weight, length: $length, height: $height, width: $width, hsCode: $hsCode, originCountry: $originCountry, midCode: $midCode, material: $material, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt, metadata: $metadata, daysToPrepare: $daysToPrepare, referenceNumber: $referenceNumber, orderQuantityMin: $orderQuantityMin, orderQuantityMax: $orderQuantityMax, localPickup: $localPickup, fulfillmentProviderId: $fulfillmentProviderId, averageReviewRating: $averageReviewRating, reviewCount: $reviewCount, variants: $variants, options: $options, images: $images, tags: $tags, collection: $collection, type: $type)';
+    return 'Product(id: $id, title: $title, subtitle: $subtitle, status: $status, externalId: $externalId, description: $description, handle: $handle, isGiftcard: $isGiftcard, discountable: $discountable, thumbnail: $thumbnail, collectionId: $collectionId, typeId: $typeId, weight: $weight, length: $length, height: $height, width: $width, hsCode: $hsCode, originCountry: $originCountry, midCode: $midCode, material: $material, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt, metadata: $metadata, profileId: $profileId, collection: $collection, images: $images, options: $options, profiles: $profiles, tags: $tags, type: $type, variants: $variants)';
   }
 
   @override
@@ -844,18 +709,16 @@ class _$ProductImpl implements _Product {
                 other.discountable == discountable) &&
             (identical(other.thumbnail, thumbnail) ||
                 other.thumbnail == thumbnail) &&
-            (identical(other.profileId, profileId) ||
-                other.profileId == profileId) &&
-            (identical(other.collectionId, collectionId) ||
-                other.collectionId == collectionId) &&
-            const DeepCollectionEquality().equals(other.typeId, typeId) &&
-            const DeepCollectionEquality().equals(other.weight, weight) &&
-            const DeepCollectionEquality().equals(other.length, length) &&
-            const DeepCollectionEquality().equals(other.height, height) &&
-            const DeepCollectionEquality().equals(other.width, width) &&
-            const DeepCollectionEquality().equals(other.hsCode, hsCode) &&
             const DeepCollectionEquality()
-                .equals(other.originCountry, originCountry) &&
+                .equals(other.collectionId, collectionId) &&
+            const DeepCollectionEquality().equals(other.typeId, typeId) &&
+            (identical(other.weight, weight) || other.weight == weight) &&
+            (identical(other.length, length) || other.length == length) &&
+            (identical(other.height, height) || other.height == height) &&
+            (identical(other.width, width) || other.width == width) &&
+            const DeepCollectionEquality().equals(other.hsCode, hsCode) &&
+            (identical(other.originCountry, originCountry) ||
+                other.originCountry == originCountry) &&
             const DeepCollectionEquality().equals(other.midCode, midCode) &&
             const DeepCollectionEquality().equals(other.material, material) &&
             (identical(other.createdAt, createdAt) ||
@@ -865,29 +728,16 @@ class _$ProductImpl implements _Product {
             const DeepCollectionEquality().equals(other.deletedAt, deletedAt) &&
             (identical(other.metadata, metadata) ||
                 other.metadata == metadata) &&
-            (identical(other.daysToPrepare, daysToPrepare) ||
-                other.daysToPrepare == daysToPrepare) &&
-            (identical(other.referenceNumber, referenceNumber) ||
-                other.referenceNumber == referenceNumber) &&
+            (identical(other.profileId, profileId) ||
+                other.profileId == profileId) &&
             const DeepCollectionEquality()
-                .equals(other.orderQuantityMin, orderQuantityMin) &&
-            (identical(other.orderQuantityMax, orderQuantityMax) ||
-                other.orderQuantityMax == orderQuantityMax) &&
-            (identical(other.localPickup, localPickup) ||
-                other.localPickup == localPickup) &&
-            (identical(other.fulfillmentProviderId, fulfillmentProviderId) ||
-                other.fulfillmentProviderId == fulfillmentProviderId) &&
-            const DeepCollectionEquality()
-                .equals(other.averageReviewRating, averageReviewRating) &&
-            const DeepCollectionEquality()
-                .equals(other.reviewCount, reviewCount) &&
-            const DeepCollectionEquality().equals(other._variants, _variants) &&
-            const DeepCollectionEquality().equals(other._options, _options) &&
+                .equals(other.collection, collection) &&
             const DeepCollectionEquality().equals(other._images, _images) &&
+            const DeepCollectionEquality().equals(other._options, _options) &&
+            const DeepCollectionEquality().equals(other._profiles, _profiles) &&
             const DeepCollectionEquality().equals(other._tags, _tags) &&
-            (identical(other.collection, collection) ||
-                other.collection == collection) &&
-            const DeepCollectionEquality().equals(other.type, type));
+            const DeepCollectionEquality().equals(other.type, type) &&
+            const DeepCollectionEquality().equals(other._variants, _variants));
   }
 
   @JsonKey(ignore: true)
@@ -904,35 +754,28 @@ class _$ProductImpl implements _Product {
         isGiftcard,
         discountable,
         thumbnail,
-        profileId,
-        collectionId,
+        const DeepCollectionEquality().hash(collectionId),
         const DeepCollectionEquality().hash(typeId),
-        const DeepCollectionEquality().hash(weight),
-        const DeepCollectionEquality().hash(length),
-        const DeepCollectionEquality().hash(height),
-        const DeepCollectionEquality().hash(width),
+        weight,
+        length,
+        height,
+        width,
         const DeepCollectionEquality().hash(hsCode),
-        const DeepCollectionEquality().hash(originCountry),
+        originCountry,
         const DeepCollectionEquality().hash(midCode),
         const DeepCollectionEquality().hash(material),
         createdAt,
         updatedAt,
         const DeepCollectionEquality().hash(deletedAt),
         metadata,
-        daysToPrepare,
-        referenceNumber,
-        const DeepCollectionEquality().hash(orderQuantityMin),
-        orderQuantityMax,
-        localPickup,
-        fulfillmentProviderId,
-        const DeepCollectionEquality().hash(averageReviewRating),
-        const DeepCollectionEquality().hash(reviewCount),
-        const DeepCollectionEquality().hash(_variants),
-        const DeepCollectionEquality().hash(_options),
+        profileId,
+        const DeepCollectionEquality().hash(collection),
         const DeepCollectionEquality().hash(_images),
+        const DeepCollectionEquality().hash(_options),
+        const DeepCollectionEquality().hash(_profiles),
         const DeepCollectionEquality().hash(_tags),
-        collection,
-        const DeepCollectionEquality().hash(type)
+        const DeepCollectionEquality().hash(type),
+        const DeepCollectionEquality().hash(_variants)
       ]);
 
   @JsonKey(ignore: true)
@@ -961,36 +804,28 @@ abstract class _Product implements Product {
       @JsonKey(name: 'is_giftcard') final bool? isGiftcard,
       final bool? discountable,
       final String? thumbnail,
-      @JsonKey(name: 'profile_id') final String? profileId,
-      @JsonKey(name: 'collection_id') final String? collectionId,
+      @JsonKey(name: 'collection_id') final dynamic collectionId,
       @JsonKey(name: 'type_id') final dynamic typeId,
-      final dynamic weight,
-      final dynamic length,
-      final dynamic height,
-      final dynamic width,
+      final int? weight,
+      final int? length,
+      final int? height,
+      final int? width,
       @JsonKey(name: 'hs_code') final dynamic hsCode,
-      @JsonKey(name: 'origin_country') final dynamic originCountry,
+      @JsonKey(name: 'origin_country') final String? originCountry,
       @JsonKey(name: 'mid_code') final dynamic midCode,
       final dynamic material,
       @JsonKey(name: 'created_at') final DateTime? createdAt,
       @JsonKey(name: 'updated_at') final DateTime? updatedAt,
       @JsonKey(name: 'deleted_at') final dynamic deletedAt,
       final Metadata? metadata,
-      @JsonKey(name: 'days_to_prepare') final int? daysToPrepare,
-      @JsonKey(name: 'reference_number') final int? referenceNumber,
-      @JsonKey(name: 'order_quantity_min') final dynamic orderQuantityMin,
-      @JsonKey(name: 'order_quantity_max') final int? orderQuantityMax,
-      @JsonKey(name: 'local_pickup') final bool? localPickup,
-      @JsonKey(name: 'fulfillment_provider_id')
-      final String? fulfillmentProviderId,
-      @JsonKey(name: 'average_review_rating') final dynamic averageReviewRating,
-      @JsonKey(name: 'review_count') final dynamic reviewCount,
-      final List<Variant>? variants,
-      final List<Option>? options,
+      @JsonKey(name: 'profile_id') final String? profileId,
+      final dynamic collection,
       final List<Image>? images,
-      final List<dynamic>? tags,
-      final Collection? collection,
-      final dynamic type}) = _$ProductImpl;
+      final List<Option>? options,
+      final List<Profile>? profiles,
+      final List<Tag>? tags,
+      final dynamic type,
+      final List<Variant>? variants}) = _$ProductImpl;
 
   factory _Product.fromJson(Map<String, dynamic> json) = _$ProductImpl.fromJson;
 
@@ -1017,28 +852,25 @@ abstract class _Product implements Product {
   @override
   String? get thumbnail;
   @override
-  @JsonKey(name: 'profile_id')
-  String? get profileId;
-  @override
   @JsonKey(name: 'collection_id')
-  String? get collectionId;
+  dynamic get collectionId;
   @override
   @JsonKey(name: 'type_id')
   dynamic get typeId;
   @override
-  dynamic get weight;
+  int? get weight;
   @override
-  dynamic get length;
+  int? get length;
   @override
-  dynamic get height;
+  int? get height;
   @override
-  dynamic get width;
+  int? get width;
   @override
   @JsonKey(name: 'hs_code')
   dynamic get hsCode;
   @override
   @JsonKey(name: 'origin_country')
-  dynamic get originCountry;
+  String? get originCountry;
   @override
   @JsonKey(name: 'mid_code')
   dynamic get midCode;
@@ -1056,41 +888,22 @@ abstract class _Product implements Product {
   @override
   Metadata? get metadata;
   @override
-  @JsonKey(name: 'days_to_prepare')
-  int? get daysToPrepare;
+  @JsonKey(name: 'profile_id')
+  String? get profileId;
   @override
-  @JsonKey(name: 'reference_number')
-  int? get referenceNumber;
-  @override
-  @JsonKey(name: 'order_quantity_min')
-  dynamic get orderQuantityMin;
-  @override
-  @JsonKey(name: 'order_quantity_max')
-  int? get orderQuantityMax;
-  @override
-  @JsonKey(name: 'local_pickup')
-  bool? get localPickup;
-  @override
-  @JsonKey(name: 'fulfillment_provider_id')
-  String? get fulfillmentProviderId;
-  @override
-  @JsonKey(name: 'average_review_rating')
-  dynamic get averageReviewRating;
-  @override
-  @JsonKey(name: 'review_count')
-  dynamic get reviewCount;
-  @override
-  List<Variant>? get variants;
-  @override
-  List<Option>? get options;
+  dynamic get collection;
   @override
   List<Image>? get images;
   @override
-  List<dynamic>? get tags;
+  List<Option>? get options;
   @override
-  Collection? get collection;
+  List<Profile>? get profiles;
+  @override
+  List<Tag>? get tags;
   @override
   dynamic get type;
+  @override
+  List<Variant>? get variants;
   @override
   @JsonKey(ignore: true)
   _$$ProductImplCopyWith<_$ProductImpl> get copyWith =>

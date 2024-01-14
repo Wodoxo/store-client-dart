@@ -1,23 +1,19 @@
 import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'value.dart';
-
-part 'option.freezed.dart';
-part 'option.g.dart';
+part 'tag.freezed.dart';
+part 'tag.g.dart';
 
 @freezed
-class Option with _$Option {
-	factory Option({
+class Tag with _$Tag {
+	factory Tag({
 		String? id,
 		@JsonKey(name: 'created_at') DateTime? createdAt,
 		@JsonKey(name: 'updated_at') DateTime? updatedAt,
 		@JsonKey(name: 'deleted_at') dynamic deletedAt,
-		String? title,
-		@JsonKey(name: 'product_id') String? productId,
+		String? value,
 		dynamic metadata,
-		List<Value>? values,
-	}) = _Option;
+	}) = _Tag;
 
-	factory Option.fromJson(Map<String, dynamic> json) => _$OptionFromJson(json);
+	factory Tag.fromJson(Map<String, dynamic> json) => _$TagFromJson(json);
 }

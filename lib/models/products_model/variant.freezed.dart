@@ -34,6 +34,8 @@ mixin _$Variant {
   dynamic get barcode => throw _privateConstructorUsedError;
   dynamic get ean => throw _privateConstructorUsedError;
   dynamic get upc => throw _privateConstructorUsedError;
+  @JsonKey(name: 'variant_rank')
+  int? get variantRank => throw _privateConstructorUsedError;
   @JsonKey(name: 'inventory_quantity')
   int? get inventoryQuantity => throw _privateConstructorUsedError;
   @JsonKey(name: 'allow_backorder')
@@ -52,12 +54,17 @@ mixin _$Variant {
   dynamic get height => throw _privateConstructorUsedError;
   dynamic get width => throw _privateConstructorUsedError;
   dynamic get metadata => throw _privateConstructorUsedError;
-  List<Price>? get prices => throw _privateConstructorUsedError;
   List<Option>? get options => throw _privateConstructorUsedError;
+  List<Price>? get prices => throw _privateConstructorUsedError;
+  bool? get purchasable => throw _privateConstructorUsedError;
   @JsonKey(name: 'original_price')
   dynamic get originalPrice => throw _privateConstructorUsedError;
   @JsonKey(name: 'calculated_price')
   dynamic get calculatedPrice => throw _privateConstructorUsedError;
+  @JsonKey(name: 'original_price_includes_tax')
+  dynamic get originalPriceIncludesTax => throw _privateConstructorUsedError;
+  @JsonKey(name: 'calculated_price_includes_tax')
+  dynamic get calculatedPriceIncludesTax => throw _privateConstructorUsedError;
   @JsonKey(name: 'original_price_incl_tax')
   dynamic get originalPriceInclTax => throw _privateConstructorUsedError;
   @JsonKey(name: 'calculated_price_incl_tax')
@@ -90,6 +97,7 @@ abstract class $VariantCopyWith<$Res> {
       dynamic barcode,
       dynamic ean,
       dynamic upc,
+      @JsonKey(name: 'variant_rank') int? variantRank,
       @JsonKey(name: 'inventory_quantity') int? inventoryQuantity,
       @JsonKey(name: 'allow_backorder') bool? allowBackorder,
       @JsonKey(name: 'manage_inventory') bool? manageInventory,
@@ -102,10 +110,15 @@ abstract class $VariantCopyWith<$Res> {
       dynamic height,
       dynamic width,
       dynamic metadata,
-      List<Price>? prices,
       List<Option>? options,
+      List<Price>? prices,
+      bool? purchasable,
       @JsonKey(name: 'original_price') dynamic originalPrice,
       @JsonKey(name: 'calculated_price') dynamic calculatedPrice,
+      @JsonKey(name: 'original_price_includes_tax')
+      dynamic originalPriceIncludesTax,
+      @JsonKey(name: 'calculated_price_includes_tax')
+      dynamic calculatedPriceIncludesTax,
       @JsonKey(name: 'original_price_incl_tax') dynamic originalPriceInclTax,
       @JsonKey(name: 'calculated_price_incl_tax')
       dynamic calculatedPriceInclTax,
@@ -137,6 +150,7 @@ class _$VariantCopyWithImpl<$Res, $Val extends Variant>
     Object? barcode = freezed,
     Object? ean = freezed,
     Object? upc = freezed,
+    Object? variantRank = freezed,
     Object? inventoryQuantity = freezed,
     Object? allowBackorder = freezed,
     Object? manageInventory = freezed,
@@ -149,10 +163,13 @@ class _$VariantCopyWithImpl<$Res, $Val extends Variant>
     Object? height = freezed,
     Object? width = freezed,
     Object? metadata = freezed,
-    Object? prices = freezed,
     Object? options = freezed,
+    Object? prices = freezed,
+    Object? purchasable = freezed,
     Object? originalPrice = freezed,
     Object? calculatedPrice = freezed,
+    Object? originalPriceIncludesTax = freezed,
+    Object? calculatedPriceIncludesTax = freezed,
     Object? originalPriceInclTax = freezed,
     Object? calculatedPriceInclTax = freezed,
     Object? originalTax = freezed,
@@ -200,6 +217,10 @@ class _$VariantCopyWithImpl<$Res, $Val extends Variant>
           ? _value.upc
           : upc // ignore: cast_nullable_to_non_nullable
               as dynamic,
+      variantRank: freezed == variantRank
+          ? _value.variantRank
+          : variantRank // ignore: cast_nullable_to_non_nullable
+              as int?,
       inventoryQuantity: freezed == inventoryQuantity
           ? _value.inventoryQuantity
           : inventoryQuantity // ignore: cast_nullable_to_non_nullable
@@ -248,14 +269,18 @@ class _$VariantCopyWithImpl<$Res, $Val extends Variant>
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      prices: freezed == prices
-          ? _value.prices
-          : prices // ignore: cast_nullable_to_non_nullable
-              as List<Price>?,
       options: freezed == options
           ? _value.options
           : options // ignore: cast_nullable_to_non_nullable
               as List<Option>?,
+      prices: freezed == prices
+          ? _value.prices
+          : prices // ignore: cast_nullable_to_non_nullable
+              as List<Price>?,
+      purchasable: freezed == purchasable
+          ? _value.purchasable
+          : purchasable // ignore: cast_nullable_to_non_nullable
+              as bool?,
       originalPrice: freezed == originalPrice
           ? _value.originalPrice
           : originalPrice // ignore: cast_nullable_to_non_nullable
@@ -263,6 +288,14 @@ class _$VariantCopyWithImpl<$Res, $Val extends Variant>
       calculatedPrice: freezed == calculatedPrice
           ? _value.calculatedPrice
           : calculatedPrice // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      originalPriceIncludesTax: freezed == originalPriceIncludesTax
+          ? _value.originalPriceIncludesTax
+          : originalPriceIncludesTax // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      calculatedPriceIncludesTax: freezed == calculatedPriceIncludesTax
+          ? _value.calculatedPriceIncludesTax
+          : calculatedPriceIncludesTax // ignore: cast_nullable_to_non_nullable
               as dynamic,
       originalPriceInclTax: freezed == originalPriceInclTax
           ? _value.originalPriceInclTax
@@ -306,6 +339,7 @@ abstract class _$$VariantImplCopyWith<$Res> implements $VariantCopyWith<$Res> {
       dynamic barcode,
       dynamic ean,
       dynamic upc,
+      @JsonKey(name: 'variant_rank') int? variantRank,
       @JsonKey(name: 'inventory_quantity') int? inventoryQuantity,
       @JsonKey(name: 'allow_backorder') bool? allowBackorder,
       @JsonKey(name: 'manage_inventory') bool? manageInventory,
@@ -318,10 +352,15 @@ abstract class _$$VariantImplCopyWith<$Res> implements $VariantCopyWith<$Res> {
       dynamic height,
       dynamic width,
       dynamic metadata,
-      List<Price>? prices,
       List<Option>? options,
+      List<Price>? prices,
+      bool? purchasable,
       @JsonKey(name: 'original_price') dynamic originalPrice,
       @JsonKey(name: 'calculated_price') dynamic calculatedPrice,
+      @JsonKey(name: 'original_price_includes_tax')
+      dynamic originalPriceIncludesTax,
+      @JsonKey(name: 'calculated_price_includes_tax')
+      dynamic calculatedPriceIncludesTax,
       @JsonKey(name: 'original_price_incl_tax') dynamic originalPriceInclTax,
       @JsonKey(name: 'calculated_price_incl_tax')
       dynamic calculatedPriceInclTax,
@@ -351,6 +390,7 @@ class __$$VariantImplCopyWithImpl<$Res>
     Object? barcode = freezed,
     Object? ean = freezed,
     Object? upc = freezed,
+    Object? variantRank = freezed,
     Object? inventoryQuantity = freezed,
     Object? allowBackorder = freezed,
     Object? manageInventory = freezed,
@@ -363,10 +403,13 @@ class __$$VariantImplCopyWithImpl<$Res>
     Object? height = freezed,
     Object? width = freezed,
     Object? metadata = freezed,
-    Object? prices = freezed,
     Object? options = freezed,
+    Object? prices = freezed,
+    Object? purchasable = freezed,
     Object? originalPrice = freezed,
     Object? calculatedPrice = freezed,
+    Object? originalPriceIncludesTax = freezed,
+    Object? calculatedPriceIncludesTax = freezed,
     Object? originalPriceInclTax = freezed,
     Object? calculatedPriceInclTax = freezed,
     Object? originalTax = freezed,
@@ -414,6 +457,10 @@ class __$$VariantImplCopyWithImpl<$Res>
           ? _value.upc
           : upc // ignore: cast_nullable_to_non_nullable
               as dynamic,
+      variantRank: freezed == variantRank
+          ? _value.variantRank
+          : variantRank // ignore: cast_nullable_to_non_nullable
+              as int?,
       inventoryQuantity: freezed == inventoryQuantity
           ? _value.inventoryQuantity
           : inventoryQuantity // ignore: cast_nullable_to_non_nullable
@@ -462,14 +509,18 @@ class __$$VariantImplCopyWithImpl<$Res>
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      prices: freezed == prices
-          ? _value._prices
-          : prices // ignore: cast_nullable_to_non_nullable
-              as List<Price>?,
       options: freezed == options
           ? _value._options
           : options // ignore: cast_nullable_to_non_nullable
               as List<Option>?,
+      prices: freezed == prices
+          ? _value._prices
+          : prices // ignore: cast_nullable_to_non_nullable
+              as List<Price>?,
+      purchasable: freezed == purchasable
+          ? _value.purchasable
+          : purchasable // ignore: cast_nullable_to_non_nullable
+              as bool?,
       originalPrice: freezed == originalPrice
           ? _value.originalPrice
           : originalPrice // ignore: cast_nullable_to_non_nullable
@@ -477,6 +528,14 @@ class __$$VariantImplCopyWithImpl<$Res>
       calculatedPrice: freezed == calculatedPrice
           ? _value.calculatedPrice
           : calculatedPrice // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      originalPriceIncludesTax: freezed == originalPriceIncludesTax
+          ? _value.originalPriceIncludesTax
+          : originalPriceIncludesTax // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      calculatedPriceIncludesTax: freezed == calculatedPriceIncludesTax
+          ? _value.calculatedPriceIncludesTax
+          : calculatedPriceIncludesTax // ignore: cast_nullable_to_non_nullable
               as dynamic,
       originalPriceInclTax: freezed == originalPriceInclTax
           ? _value.originalPriceInclTax
@@ -516,6 +575,7 @@ class _$VariantImpl implements _Variant {
       this.barcode,
       this.ean,
       this.upc,
+      @JsonKey(name: 'variant_rank') this.variantRank,
       @JsonKey(name: 'inventory_quantity') this.inventoryQuantity,
       @JsonKey(name: 'allow_backorder') this.allowBackorder,
       @JsonKey(name: 'manage_inventory') this.manageInventory,
@@ -528,17 +588,22 @@ class _$VariantImpl implements _Variant {
       this.height,
       this.width,
       this.metadata,
-      final List<Price>? prices,
       final List<Option>? options,
+      final List<Price>? prices,
+      this.purchasable,
       @JsonKey(name: 'original_price') this.originalPrice,
       @JsonKey(name: 'calculated_price') this.calculatedPrice,
+      @JsonKey(name: 'original_price_includes_tax')
+      this.originalPriceIncludesTax,
+      @JsonKey(name: 'calculated_price_includes_tax')
+      this.calculatedPriceIncludesTax,
       @JsonKey(name: 'original_price_incl_tax') this.originalPriceInclTax,
       @JsonKey(name: 'calculated_price_incl_tax') this.calculatedPriceInclTax,
       @JsonKey(name: 'original_tax') this.originalTax,
       @JsonKey(name: 'calculated_tax') this.calculatedTax,
       @JsonKey(name: 'tax_rates') this.taxRates})
-      : _prices = prices,
-        _options = options;
+      : _options = options,
+        _prices = prices;
 
   factory _$VariantImpl.fromJson(Map<String, dynamic> json) =>
       _$$VariantImplFromJson(json);
@@ -567,6 +632,9 @@ class _$VariantImpl implements _Variant {
   final dynamic ean;
   @override
   final dynamic upc;
+  @override
+  @JsonKey(name: 'variant_rank')
+  final int? variantRank;
   @override
   @JsonKey(name: 'inventory_quantity')
   final int? inventoryQuantity;
@@ -597,16 +665,6 @@ class _$VariantImpl implements _Variant {
   final dynamic width;
   @override
   final dynamic metadata;
-  final List<Price>? _prices;
-  @override
-  List<Price>? get prices {
-    final value = _prices;
-    if (value == null) return null;
-    if (_prices is EqualUnmodifiableListView) return _prices;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
   final List<Option>? _options;
   @override
   List<Option>? get options {
@@ -617,12 +675,30 @@ class _$VariantImpl implements _Variant {
     return EqualUnmodifiableListView(value);
   }
 
+  final List<Price>? _prices;
+  @override
+  List<Price>? get prices {
+    final value = _prices;
+    if (value == null) return null;
+    if (_prices is EqualUnmodifiableListView) return _prices;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  final bool? purchasable;
   @override
   @JsonKey(name: 'original_price')
   final dynamic originalPrice;
   @override
   @JsonKey(name: 'calculated_price')
   final dynamic calculatedPrice;
+  @override
+  @JsonKey(name: 'original_price_includes_tax')
+  final dynamic originalPriceIncludesTax;
+  @override
+  @JsonKey(name: 'calculated_price_includes_tax')
+  final dynamic calculatedPriceIncludesTax;
   @override
   @JsonKey(name: 'original_price_incl_tax')
   final dynamic originalPriceInclTax;
@@ -641,7 +717,7 @@ class _$VariantImpl implements _Variant {
 
   @override
   String toString() {
-    return 'Variant(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt, title: $title, productId: $productId, sku: $sku, barcode: $barcode, ean: $ean, upc: $upc, inventoryQuantity: $inventoryQuantity, allowBackorder: $allowBackorder, manageInventory: $manageInventory, hsCode: $hsCode, originCountry: $originCountry, midCode: $midCode, material: $material, weight: $weight, length: $length, height: $height, width: $width, metadata: $metadata, prices: $prices, options: $options, originalPrice: $originalPrice, calculatedPrice: $calculatedPrice, originalPriceInclTax: $originalPriceInclTax, calculatedPriceInclTax: $calculatedPriceInclTax, originalTax: $originalTax, calculatedTax: $calculatedTax, taxRates: $taxRates)';
+    return 'Variant(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt, title: $title, productId: $productId, sku: $sku, barcode: $barcode, ean: $ean, upc: $upc, variantRank: $variantRank, inventoryQuantity: $inventoryQuantity, allowBackorder: $allowBackorder, manageInventory: $manageInventory, hsCode: $hsCode, originCountry: $originCountry, midCode: $midCode, material: $material, weight: $weight, length: $length, height: $height, width: $width, metadata: $metadata, options: $options, prices: $prices, purchasable: $purchasable, originalPrice: $originalPrice, calculatedPrice: $calculatedPrice, originalPriceIncludesTax: $originalPriceIncludesTax, calculatedPriceIncludesTax: $calculatedPriceIncludesTax, originalPriceInclTax: $originalPriceInclTax, calculatedPriceInclTax: $calculatedPriceInclTax, originalTax: $originalTax, calculatedTax: $calculatedTax, taxRates: $taxRates)';
   }
 
   @override
@@ -662,6 +738,8 @@ class _$VariantImpl implements _Variant {
             const DeepCollectionEquality().equals(other.barcode, barcode) &&
             const DeepCollectionEquality().equals(other.ean, ean) &&
             const DeepCollectionEquality().equals(other.upc, upc) &&
+            (identical(other.variantRank, variantRank) ||
+                other.variantRank == variantRank) &&
             (identical(other.inventoryQuantity, inventoryQuantity) ||
                 other.inventoryQuantity == inventoryQuantity) &&
             (identical(other.allowBackorder, allowBackorder) ||
@@ -678,12 +756,18 @@ class _$VariantImpl implements _Variant {
             const DeepCollectionEquality().equals(other.height, height) &&
             const DeepCollectionEquality().equals(other.width, width) &&
             const DeepCollectionEquality().equals(other.metadata, metadata) &&
-            const DeepCollectionEquality().equals(other._prices, _prices) &&
             const DeepCollectionEquality().equals(other._options, _options) &&
+            const DeepCollectionEquality().equals(other._prices, _prices) &&
+            (identical(other.purchasable, purchasable) ||
+                other.purchasable == purchasable) &&
             const DeepCollectionEquality()
                 .equals(other.originalPrice, originalPrice) &&
             const DeepCollectionEquality()
                 .equals(other.calculatedPrice, calculatedPrice) &&
+            const DeepCollectionEquality().equals(
+                other.originalPriceIncludesTax, originalPriceIncludesTax) &&
+            const DeepCollectionEquality().equals(
+                other.calculatedPriceIncludesTax, calculatedPriceIncludesTax) &&
             const DeepCollectionEquality()
                 .equals(other.originalPriceInclTax, originalPriceInclTax) &&
             const DeepCollectionEquality()
@@ -709,6 +793,7 @@ class _$VariantImpl implements _Variant {
         const DeepCollectionEquality().hash(barcode),
         const DeepCollectionEquality().hash(ean),
         const DeepCollectionEquality().hash(upc),
+        variantRank,
         inventoryQuantity,
         allowBackorder,
         manageInventory,
@@ -721,10 +806,13 @@ class _$VariantImpl implements _Variant {
         const DeepCollectionEquality().hash(height),
         const DeepCollectionEquality().hash(width),
         const DeepCollectionEquality().hash(metadata),
-        const DeepCollectionEquality().hash(_prices),
         const DeepCollectionEquality().hash(_options),
+        const DeepCollectionEquality().hash(_prices),
+        purchasable,
         const DeepCollectionEquality().hash(originalPrice),
         const DeepCollectionEquality().hash(calculatedPrice),
+        const DeepCollectionEquality().hash(originalPriceIncludesTax),
+        const DeepCollectionEquality().hash(calculatedPriceIncludesTax),
         const DeepCollectionEquality().hash(originalPriceInclTax),
         const DeepCollectionEquality().hash(calculatedPriceInclTax),
         const DeepCollectionEquality().hash(originalTax),
@@ -758,6 +846,7 @@ abstract class _Variant implements Variant {
       final dynamic barcode,
       final dynamic ean,
       final dynamic upc,
+      @JsonKey(name: 'variant_rank') final int? variantRank,
       @JsonKey(name: 'inventory_quantity') final int? inventoryQuantity,
       @JsonKey(name: 'allow_backorder') final bool? allowBackorder,
       @JsonKey(name: 'manage_inventory') final bool? manageInventory,
@@ -770,10 +859,15 @@ abstract class _Variant implements Variant {
       final dynamic height,
       final dynamic width,
       final dynamic metadata,
-      final List<Price>? prices,
       final List<Option>? options,
+      final List<Price>? prices,
+      final bool? purchasable,
       @JsonKey(name: 'original_price') final dynamic originalPrice,
       @JsonKey(name: 'calculated_price') final dynamic calculatedPrice,
+      @JsonKey(name: 'original_price_includes_tax')
+      final dynamic originalPriceIncludesTax,
+      @JsonKey(name: 'calculated_price_includes_tax')
+      final dynamic calculatedPriceIncludesTax,
       @JsonKey(name: 'original_price_incl_tax')
       final dynamic originalPriceInclTax,
       @JsonKey(name: 'calculated_price_incl_tax')
@@ -809,6 +903,9 @@ abstract class _Variant implements Variant {
   @override
   dynamic get upc;
   @override
+  @JsonKey(name: 'variant_rank')
+  int? get variantRank;
+  @override
   @JsonKey(name: 'inventory_quantity')
   int? get inventoryQuantity;
   @override
@@ -839,15 +936,23 @@ abstract class _Variant implements Variant {
   @override
   dynamic get metadata;
   @override
+  List<Option>? get options;
+  @override
   List<Price>? get prices;
   @override
-  List<Option>? get options;
+  bool? get purchasable;
   @override
   @JsonKey(name: 'original_price')
   dynamic get originalPrice;
   @override
   @JsonKey(name: 'calculated_price')
   dynamic get calculatedPrice;
+  @override
+  @JsonKey(name: 'original_price_includes_tax')
+  dynamic get originalPriceIncludesTax;
+  @override
+  @JsonKey(name: 'calculated_price_includes_tax')
+  dynamic get calculatedPriceIncludesTax;
   @override
   @JsonKey(name: 'original_price_incl_tax')
   dynamic get originalPriceInclTax;
