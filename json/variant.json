@@ -108,7 +108,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 7
+                    "reviewCount": 7,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -254,7 +255,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 7
+                    "reviewCount": 7,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -390,7 +392,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -538,7 +541,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 7
+                    "reviewCount": 7,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -683,7 +687,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 9
+                    "reviewCount": 9,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -828,7 +833,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 9
+                    "reviewCount": 9,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -964,7 +970,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 6
+                    "reviewCount": 6,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -1100,7 +1107,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 6
+                    "reviewCount": 6,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -1244,7 +1252,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 6
+                    "reviewCount": 6,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -1380,7 +1389,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 6
+                    "reviewCount": 6,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -1528,7 +1538,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 6
+                    "reviewCount": 6,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -1664,7 +1675,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 6
+                    "reviewCount": 6,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -1811,7 +1823,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 6
+                    "reviewCount": 6,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -1955,7 +1968,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 6
+                    "reviewCount": 6,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -2099,7 +2113,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 6
+                    "reviewCount": 6,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -2244,7 +2259,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 9
+                    "reviewCount": 9,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -2380,7 +2396,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -2493,7 +2510,7 @@
                 "vendor": {
                     "id": "vendor_01H398MY2BFVBFQ02DH0MJ19CY",
                     "created_at": "2022-10-31T11:06:43.630Z",
-                    "updated_at": "2024-01-04T17:07:59.212Z",
+                    "updated_at": "2024-01-14T23:33:19.459Z",
                     "deleted_at": null,
                     "name": "Healthy Harvesters",
                     "description": "<p>We are a full service licensed plant nursery in California. We specialize in perennial permaculture plants that you can plant once and harvest for years.</p><p>Customer Satisfaction</p><p> We want you to be successful and satisfied. If you're unhappy for any reason, before leaving feedback, contact us. Although we make every effort, weather and the postal service do not always cooperate. We will work with you to your satisfaction.</p>",
@@ -2504,11 +2521,11 @@
                     "contactLastName": null,
                     "email": "warreninvestigations@yahoo.com",
                     "phone": "7144774984",
-                    "vacationEnabled": false,
+                    "vacationEnabled": true,
                     "vacationStartDate": null,
                     "vacationEndDate": null,
                     "vacationEnableSales": false,
-                    "vacationMessage": "",
+                    "vacationMessage": "Store closed ",
                     "storePolicy": null,
                     "shippingProfileId": "sp_01H398MY2CDT6YQ0RBCXTAX67J",
                     "shippoApiKey": null,
@@ -2516,7 +2533,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 4.109375,
-                    "reviewCount": 22
+                    "reviewCount": 22,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -2652,7 +2670,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 2
+                    "reviewCount": 2,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -2796,7 +2815,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -2932,7 +2952,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 2
+                    "reviewCount": 2,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -3068,7 +3089,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 2
+                    "reviewCount": 2,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -3204,7 +3226,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -3352,7 +3375,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 5
+                    "reviewCount": 5,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -3500,7 +3524,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 5
+                    "reviewCount": 5,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -3636,7 +3661,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 2
+                    "reviewCount": 2,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -3772,7 +3798,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 7
+                    "reviewCount": 7,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -3908,7 +3935,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 2
+                    "reviewCount": 2,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -4021,7 +4049,7 @@
                 "vendor": {
                     "id": "vendor_01H398MY2BFVBFQ02DH0MJ19CY",
                     "created_at": "2022-10-31T11:06:43.630Z",
-                    "updated_at": "2024-01-04T17:07:59.212Z",
+                    "updated_at": "2024-01-14T23:33:19.459Z",
                     "deleted_at": null,
                     "name": "Healthy Harvesters",
                     "description": "<p>We are a full service licensed plant nursery in California. We specialize in perennial permaculture plants that you can plant once and harvest for years.</p><p>Customer Satisfaction</p><p> We want you to be successful and satisfied. If you're unhappy for any reason, before leaving feedback, contact us. Although we make every effort, weather and the postal service do not always cooperate. We will work with you to your satisfaction.</p>",
@@ -4032,11 +4060,11 @@
                     "contactLastName": null,
                     "email": "warreninvestigations@yahoo.com",
                     "phone": "7144774984",
-                    "vacationEnabled": false,
+                    "vacationEnabled": true,
                     "vacationStartDate": null,
                     "vacationEndDate": null,
                     "vacationEnableSales": false,
-                    "vacationMessage": "",
+                    "vacationMessage": "Store closed ",
                     "storePolicy": null,
                     "shippingProfileId": "sp_01H398MY2CDT6YQ0RBCXTAX67J",
                     "shippoApiKey": null,
@@ -4044,7 +4072,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 4.109375,
-                    "reviewCount": 22
+                    "reviewCount": 22,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -4191,7 +4220,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 1
+                    "reviewCount": 1,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": [
                     {
@@ -4349,7 +4379,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -4462,7 +4493,7 @@
                 "vendor": {
                     "id": "vendor_01H398N0CGRM55ZGKM7KVT6P26",
                     "created_at": "2022-10-31T10:10:07.232Z",
-                    "updated_at": "2023-10-18T16:35:17.886Z",
+                    "updated_at": "2024-01-09T18:19:42.329Z",
                     "deleted_at": null,
                     "name": "Gourmet Forest LLC.",
                     "description": "At Gourmet Forest, we aim to assist you in your culinary and horticultural adventures. Whether it be mushrooms or planting stock, we offer only the best selections and varieties we're sure you'll love. Create unique delicacies, introduce gorgeous and reliable plants to your landscape, and transform your home into a space that confidently embodies your values.",
@@ -4485,7 +4516,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 1
+                    "reviewCount": 2,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -4659,7 +4691,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 1
+                    "reviewCount": 1,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -4795,7 +4828,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 1
+                    "reviewCount": 1,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -4931,7 +4965,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 1
+                    "reviewCount": 1,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -5067,7 +5102,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 1
+                    "reviewCount": 1,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -5203,7 +5239,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 1
+                    "reviewCount": 1,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -5339,7 +5376,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 1
+                    "reviewCount": 1,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -5475,7 +5513,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 1
+                    "reviewCount": 1,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -5620,7 +5659,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 8
+                    "reviewCount": 8,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -5733,7 +5773,7 @@
                 "vendor": {
                     "id": "vendor_01H398MV0881ZFP8ZHWFMGJSTA",
                     "created_at": "2022-10-31T14:46:43.996Z",
-                    "updated_at": "2023-12-29T14:43:10.077Z",
+                    "updated_at": "2024-01-10T17:41:16.133Z",
                     "deleted_at": null,
                     "name": "SC Specialties ",
                     "description": "<p>We acknowledge and respect that S.C Specialties is located on the indigenous land of the Lenape First Nation and recognize the peoples who have lived and continue to live on these lands. Our farm is where we aim to leave a forest in our footsteps. My name is Sergio and have been working in the restaurant kitchen world for over ten years, feel very passionate about what I grow and am very excited to showcase our high quality foods to arrive directly to your door. We are always exploring different ways to restore our forest ecosystem, build soil, and preserve water quality while producing food, medicine and materials. We help steward 40 acres of preserved land and are actively creating a forest nursery, operate multiple food production sites including our log cultivated mushroom yard and many sansai vegetables which we grow under the forest canopy. We are happy to answer any of your questions with full transparency about any of our sustainability farm practices for everything we grow and forage. If you are looking for something special that is not listed on our page please feel free to reach out. We would like to thank you for looking at our store and look forward to working with you.</p>",
@@ -5756,7 +5796,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 3.8611112,
-                    "reviewCount": 17
+                    "reviewCount": 17,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -5902,7 +5943,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 7
+                    "reviewCount": 7,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -6038,7 +6080,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -6151,7 +6194,7 @@
                 "vendor": {
                     "id": "vendor_01H398MY2BFVBFQ02DH0MJ19CY",
                     "created_at": "2022-10-31T11:06:43.630Z",
-                    "updated_at": "2024-01-04T17:07:59.212Z",
+                    "updated_at": "2024-01-14T23:33:19.459Z",
                     "deleted_at": null,
                     "name": "Healthy Harvesters",
                     "description": "<p>We are a full service licensed plant nursery in California. We specialize in perennial permaculture plants that you can plant once and harvest for years.</p><p>Customer Satisfaction</p><p> We want you to be successful and satisfied. If you're unhappy for any reason, before leaving feedback, contact us. Although we make every effort, weather and the postal service do not always cooperate. We will work with you to your satisfaction.</p>",
@@ -6162,11 +6205,11 @@
                     "contactLastName": null,
                     "email": "warreninvestigations@yahoo.com",
                     "phone": "7144774984",
-                    "vacationEnabled": false,
+                    "vacationEnabled": true,
                     "vacationStartDate": null,
                     "vacationEndDate": null,
                     "vacationEnableSales": false,
-                    "vacationMessage": "",
+                    "vacationMessage": "Store closed ",
                     "storePolicy": null,
                     "shippingProfileId": "sp_01H398MY2CDT6YQ0RBCXTAX67J",
                     "shippoApiKey": null,
@@ -6174,7 +6217,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 4.109375,
-                    "reviewCount": 22
+                    "reviewCount": 22,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -6287,7 +6331,7 @@
                 "vendor": {
                     "id": "vendor_01H398MY2BFVBFQ02DH0MJ19CY",
                     "created_at": "2022-10-31T11:06:43.630Z",
-                    "updated_at": "2024-01-04T17:07:59.212Z",
+                    "updated_at": "2024-01-14T23:33:19.459Z",
                     "deleted_at": null,
                     "name": "Healthy Harvesters",
                     "description": "<p>We are a full service licensed plant nursery in California. We specialize in perennial permaculture plants that you can plant once and harvest for years.</p><p>Customer Satisfaction</p><p> We want you to be successful and satisfied. If you're unhappy for any reason, before leaving feedback, contact us. Although we make every effort, weather and the postal service do not always cooperate. We will work with you to your satisfaction.</p>",
@@ -6298,11 +6342,11 @@
                     "contactLastName": null,
                     "email": "warreninvestigations@yahoo.com",
                     "phone": "7144774984",
-                    "vacationEnabled": false,
+                    "vacationEnabled": true,
                     "vacationStartDate": null,
                     "vacationEndDate": null,
                     "vacationEnableSales": false,
-                    "vacationMessage": "",
+                    "vacationMessage": "Store closed ",
                     "storePolicy": null,
                     "shippingProfileId": "sp_01H398MY2CDT6YQ0RBCXTAX67J",
                     "shippoApiKey": null,
@@ -6310,7 +6354,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 4.109375,
-                    "reviewCount": 22
+                    "reviewCount": 22,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -6446,7 +6491,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": "612-293-6486",
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -6582,7 +6628,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 6
+                    "reviewCount": 6,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -6726,7 +6773,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -6862,7 +6910,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 7
+                    "reviewCount": 7,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -7010,7 +7059,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 6
+                    "reviewCount": 6,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -7146,7 +7196,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 1
+                    "reviewCount": 1,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -7282,7 +7333,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 1
+                    "reviewCount": 1,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -7418,7 +7470,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -7580,7 +7633,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 1
+                    "reviewCount": 1,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -7716,7 +7770,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -7831,10 +7886,10 @@
                     "created_at": "2022-10-31T11:26:22.004Z",
                     "updated_at": "2023-10-12T13:57:04.969Z",
                     "deleted_at": null,
-                    "name": "Plains Foraging",
-                    "description": "<p>I am a certified forager in Tennessee who loves sharing the bounty of mother earth with others</p>",
-                    "logo": "https://cdn.foraged.com/entity-media/vendor/image/306ecb04-b749-4a59-b048-5c2b0c2ec4e1.jpg",
-                    "banner": "https://cdn.foraged.com/entity-media/vendor/image/b42533cf-ec5a-4ee7-a18f-9bd84275ff51.jpg",
+                    "name": "HarborLux",
+                    "description": "HarborLux provides the finest seafood in the world, straight to your door. Fresh off the docks of NC and imported from the most pristine fisheries around the world.",
+                    "logo": "https://foraged.nyc3.cdn.digitaloceanspaces.com/freemans fine meats-1705425721113.png",
+                    "banner": "https://foraged.nyc3.cdn.digitaloceanspaces.com/harbor lux banner-1705425957002.png",
                     "handle": "plains-foraging",
                     "contactFirstName": null,
                     "contactLastName": null,
@@ -7852,7 +7907,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -7988,7 +8044,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -8150,7 +8207,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 1
+                    "reviewCount": 1,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -8286,7 +8344,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -8460,7 +8519,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 16
+                    "reviewCount": 16,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -8622,7 +8682,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 16
+                    "reviewCount": 16,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -8796,7 +8857,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 16
+                    "reviewCount": 16,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -8958,7 +9020,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 16
+                    "reviewCount": 16,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -9120,7 +9183,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 16
+                    "reviewCount": 16,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -9282,7 +9346,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 16
+                    "reviewCount": 16,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -9418,7 +9483,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 1
+                    "reviewCount": 1,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -9563,7 +9629,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 7
+                    "reviewCount": 7,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -9676,7 +9743,7 @@
                 "vendor": {
                     "id": "vendor_01H398MV0881ZFP8ZHWFMGJSTA",
                     "created_at": "2022-10-31T14:46:43.996Z",
-                    "updated_at": "2023-12-29T14:43:10.077Z",
+                    "updated_at": "2024-01-10T17:41:16.133Z",
                     "deleted_at": null,
                     "name": "SC Specialties ",
                     "description": "<p>We acknowledge and respect that S.C Specialties is located on the indigenous land of the Lenape First Nation and recognize the peoples who have lived and continue to live on these lands. Our farm is where we aim to leave a forest in our footsteps. My name is Sergio and have been working in the restaurant kitchen world for over ten years, feel very passionate about what I grow and am very excited to showcase our high quality foods to arrive directly to your door. We are always exploring different ways to restore our forest ecosystem, build soil, and preserve water quality while producing food, medicine and materials. We help steward 40 acres of preserved land and are actively creating a forest nursery, operate multiple food production sites including our log cultivated mushroom yard and many sansai vegetables which we grow under the forest canopy. We are happy to answer any of your questions with full transparency about any of our sustainability farm practices for everything we grow and forage. If you are looking for something special that is not listed on our page please feel free to reach out. We would like to thank you for looking at our store and look forward to working with you.</p>",
@@ -9699,7 +9766,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 3.8611112,
-                    "reviewCount": 17
+                    "reviewCount": 17,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -9847,7 +9915,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 1
+                    "reviewCount": 1,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -9995,7 +10064,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -10131,7 +10201,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -10267,7 +10338,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -10380,7 +10452,7 @@
                 "vendor": {
                     "id": "vendor_01H398MY2BFVBFQ02DH0MJ19CY",
                     "created_at": "2022-10-31T11:06:43.630Z",
-                    "updated_at": "2024-01-04T17:07:59.212Z",
+                    "updated_at": "2024-01-14T23:33:19.459Z",
                     "deleted_at": null,
                     "name": "Healthy Harvesters",
                     "description": "<p>We are a full service licensed plant nursery in California. We specialize in perennial permaculture plants that you can plant once and harvest for years.</p><p>Customer Satisfaction</p><p> We want you to be successful and satisfied. If you're unhappy for any reason, before leaving feedback, contact us. Although we make every effort, weather and the postal service do not always cooperate. We will work with you to your satisfaction.</p>",
@@ -10391,11 +10463,11 @@
                     "contactLastName": null,
                     "email": "warreninvestigations@yahoo.com",
                     "phone": "7144774984",
-                    "vacationEnabled": false,
+                    "vacationEnabled": true,
                     "vacationStartDate": null,
                     "vacationEndDate": null,
                     "vacationEnableSales": false,
-                    "vacationMessage": "",
+                    "vacationMessage": "Store closed ",
                     "storePolicy": null,
                     "shippingProfileId": "sp_01H398MY2CDT6YQ0RBCXTAX67J",
                     "shippoApiKey": null,
@@ -10403,7 +10475,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 4.109375,
-                    "reviewCount": 22
+                    "reviewCount": 22,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -10539,7 +10612,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -10702,7 +10776,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 2
+                    "reviewCount": 2,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -10838,7 +10913,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -11000,7 +11076,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 7
+                    "reviewCount": 7,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -11136,7 +11213,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 2
+                    "reviewCount": 2,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -11298,7 +11376,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 2
+                    "reviewCount": 2,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -11460,7 +11539,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 2
+                    "reviewCount": 2,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -11622,7 +11702,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 2
+                    "reviewCount": 2,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -11784,7 +11865,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 2
+                    "reviewCount": 2,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -11955,7 +12037,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 6
+                    "reviewCount": 6,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -12094,7 +12177,7 @@
                 "vendor": {
                     "id": "vendor_01H398MY2BFVBFQ02DH0MJ19CY",
                     "created_at": "2022-10-31T11:06:43.630Z",
-                    "updated_at": "2024-01-04T17:07:59.212Z",
+                    "updated_at": "2024-01-14T23:33:19.459Z",
                     "deleted_at": null,
                     "name": "Healthy Harvesters",
                     "description": "<p>We are a full service licensed plant nursery in California. We specialize in perennial permaculture plants that you can plant once and harvest for years.</p><p>Customer Satisfaction</p><p> We want you to be successful and satisfied. If you're unhappy for any reason, before leaving feedback, contact us. Although we make every effort, weather and the postal service do not always cooperate. We will work with you to your satisfaction.</p>",
@@ -12105,11 +12188,11 @@
                     "contactLastName": null,
                     "email": "warreninvestigations@yahoo.com",
                     "phone": "7144774984",
-                    "vacationEnabled": false,
+                    "vacationEnabled": true,
                     "vacationStartDate": null,
                     "vacationEndDate": null,
                     "vacationEnableSales": false,
-                    "vacationMessage": "",
+                    "vacationMessage": "Store closed ",
                     "storePolicy": null,
                     "shippingProfileId": "sp_01H398MY2CDT6YQ0RBCXTAX67J",
                     "shippoApiKey": null,
@@ -12117,7 +12200,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 4.109375,
-                    "reviewCount": 22
+                    "reviewCount": 22,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -12253,7 +12337,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -12423,7 +12508,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -12559,7 +12645,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -12672,7 +12759,7 @@
                 "vendor": {
                     "id": "vendor_01H398N5208J8J2A2CBWT0BK3V",
                     "created_at": "2022-10-31T11:52:01.257Z",
-                    "updated_at": "2023-10-12T13:57:04.969Z",
+                    "updated_at": "2024-01-08T19:18:44.324Z",
                     "deleted_at": null,
                     "name": "MushLove Gourmets",
                     "description": "<p>Hello friends! </p><p>My family is in LOVE with foraging fresh choice mushrooms as well as plants and other edible/medicinal gifts from nature. My husband and I discovered mushroom hunting  years ago beginning with the elusive Morel... Since then, mushrooms have become a huge passion in our family. During the spring and summer months you can guarantee that one of us has scouted or foraged an area (or several) any day possible.</p><p>Most of our foraged mushrooms come from our family farm in the Fort Scott, KS area, where I have also just created a huge patch of inoculated logs. </p><p>YES, we have trees, hills and mushrooms in Kansas! You'd be surprised by the vast variety we have here in the central midwest.</p><p>Last year, we decided to begin our journey with cultivation in order to keep up with supply/demand and the fact that we cannot take our toddler to all of our spots. </p><p>We will be cycling several different species every few months, dependent on climate and what else is growing in the tent. Generally, we put our Oysters outside for the hot humid fresh air so they can thoroughly flourish and grow to their fullest potential. </p><p>My brother and I are planting truffle inoculated Nut Tree saplings this spring(2022), which should give us some yummy walnuts, pecans and truffles in 5-6 years if all goes well! We know the walnuts and pecans will produce because our land is already loaded with them, along with persimmons and paw paw. Fingers crossed for those truffles though-we can’t wait! </p><p>I, Bobby Jo, will be handling online orders and the majority of our little mushroom farm. SO, if you have any requests, questions, or concerns, please feel free to send a message and I'll get back to you ASAP.</p><p>Fresh and Frozen items will ship Monday-Thursday to avoid getting stuck at the post office on Sundays. </p><p>Thanks for checking us out on this amazing website run by the best crew in the world! </p><p>-Bobby Jo (and family)</p>",
@@ -12683,11 +12770,11 @@
                     "contactLastName": null,
                     "email": "Bblue872020@gmail.com",
                     "phone": "9133532389",
-                    "vacationEnabled": true,
+                    "vacationEnabled": false,
                     "vacationStartDate": null,
                     "vacationEndDate": null,
                     "vacationEnableSales": false,
-                    "vacationMessage": null,
+                    "vacationMessage": "",
                     "storePolicy": null,
                     "shippingProfileId": "sp_01H398N5218XXPKNRZDSP5KTA7",
                     "shippoApiKey": null,
@@ -12695,7 +12782,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 5
+                    "reviewCount": 5,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -12839,7 +12927,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 1
+                    "reviewCount": 1,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -12975,7 +13064,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 2
+                    "reviewCount": 2,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": [
                     {
@@ -13133,7 +13223,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 2
+                    "reviewCount": 2,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": [
                     {
@@ -13268,7 +13359,7 @@
                 "vendor": {
                     "id": "vendor_01H398N94PHPA5RPMK66ZZV130",
                     "created_at": "2022-10-31T10:41:15.820Z",
-                    "updated_at": "2023-12-29T14:43:10.077Z",
+                    "updated_at": "2024-01-16T17:23:37.566Z",
                     "deleted_at": null,
                     "name": "Wild Maine Mushrooms",
                     "description": "<p>Welcome to Wild Maine Mushrooms! We have been in business since 2020, bringing natural Maine treasures to your door. From Chaga to wild edible mushrooms to fiddleheads in the late spring, we do it all!</p><p>When you purchase from Wild Maine Mushrooms, you are supporting a small business and we can't thank you enough for that. If you need help with anything, please don't hesitate to reach out. Also, if you would like a few items that we offer, please send us a message and we will create a custom order for you to save you some money!</p><p>We focus on quality and selection - our reviews say it all!</p>",
@@ -13278,20 +13369,21 @@
                     "contactFirstName": null,
                     "contactLastName": null,
                     "email": "wildmaine207@yahoo.com",
-                    "phone": "2072498085",
-                    "vacationEnabled": true,
+                    "phone": "2077880064",
+                    "vacationEnabled": false,
                     "vacationStartDate": null,
                     "vacationEndDate": null,
                     "vacationEnableSales": false,
-                    "vacationMessage": "This vendor is away.",
+                    "vacationMessage": "",
                     "storePolicy": null,
                     "shippingProfileId": "sp_01H398N94QMTAZ6G470J9PNYWQ",
                     "shippoApiKey": null,
                     "googleMerchantAccountId": "5293553211",
-                    "googleMerchantPhoneVerified": null,
+                    "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 4.4814816,
-                    "reviewCount": 32
+                    "reviewCount": 32,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -13427,7 +13519,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 6
+                    "reviewCount": 6,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -13589,7 +13682,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": null,
-                    "reviewCount": null
+                    "reviewCount": null,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -13751,7 +13845,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 2
+                    "reviewCount": 2,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -13913,7 +14008,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 6
+                    "reviewCount": 6,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -14049,7 +14145,8 @@
                     "googleMerchantPhoneVerified": null,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 6
+                    "reviewCount": 6,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -14080,7 +14177,7 @@
         {
             "id": "variant_01H398P2S3DCF5TRHMMRWX40M3",
             "created_at": "2023-06-19T07:25:07.725Z",
-            "updated_at": "2023-12-19T20:40:03.606Z",
+            "updated_at": "2024-01-09T04:13:21.003Z",
             "deleted_at": null,
             "title": "1 oz.",
             "product_id": "prod_01H398P2QVGKV1EM7BVKX9T8E8",
@@ -14088,7 +14185,7 @@
             "barcode": null,
             "ean": null,
             "upc": null,
-            "inventory_quantity": 34,
+            "inventory_quantity": 32,
             "allow_backorder": false,
             "manage_inventory": true,
             "hs_code": null,
@@ -14193,7 +14290,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 1
+                    "reviewCount": 1,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -14337,7 +14435,8 @@
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
                     "averageReviewRating": 5,
-                    "reviewCount": 1
+                    "reviewCount": 1,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },
@@ -14462,7 +14561,7 @@
                 "vendor": {
                     "id": "vendor_01H398N64Y1ZYH7YNMPCQRPH9B",
                     "created_at": "2022-10-31T12:08:51.770Z",
-                    "updated_at": "2023-12-29T14:43:10.077Z",
+                    "updated_at": "2024-01-10T17:41:16.133Z",
                     "deleted_at": null,
                     "name": "Oregon Mushrooms",
                     "description": "<p>Oregon Mushrooms has been sharing our passion for mushrooms with others via the Internet since our first eBay sale back in 1999. We started out smaller with a focus on high quality dried morel mushrooms but soon customers began asking after the availability of other types of mushrooms. As a result of this kind of demand, we've since expanded our high-quality inventory to offer a variety of dried and fresh seasonal and cultivated mushrooms as well as unique mushroom-related specialty and gift items, such as black truffle oil and white truffle oil and truffle butter and truffle sea salt. All of our products are GMO Free! We do not believe in selling anything that is genetically modified. </p>",
@@ -14484,8 +14583,9 @@
                     "googleMerchantAccountId": "5293578409",
                     "googleMerchantPhoneVerified": true,
                     "googleMerchantAdsId": null,
-                    "averageReviewRating": 4.710129,
-                    "reviewCount": 237
+                    "averageReviewRating": 4.7118096,
+                    "reviewCount": 239,
+                    "stripeCustomerId": null
                 },
                 "shipping_options": []
             },

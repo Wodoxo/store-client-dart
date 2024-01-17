@@ -6,6 +6,8 @@ import 'package:wodoxo_api/resources/cart_resource.dart';
 import 'package:wodoxo_api/resources/product_category_resource.dart';
 import 'package:wodoxo_api/resources/product_resource.dart';
 import 'package:wodoxo_api/resources/region_resource.dart';
+import 'package:wodoxo_api/resources/shipping_resource.dart';
+import 'package:wodoxo_api/resources/variant_resource.dart';
 
 /// Client calls of the Open Food Facts API
 class WodoxoAPI {
@@ -18,13 +20,16 @@ class WodoxoAPI {
   late ProductCategoryResource _productCategories;
   late RegionResource _regions;
   late CartResource _carts;
-
+  late ShippingResource _shippingResource;
+  late VariantResource _variantResource;
 
   /// The section that brings together the requests that are related to coins
   ProductResource get products => _products;
   ProductCategoryResource get productCategories => _productCategories;
   RegionResource get regions => _regions;
   CartResource get carts => _carts;
+  ShippingResource get shippingResource => _shippingResource;
+  VariantResource get variantResource => _variantResource;
 
 
 
@@ -100,6 +105,8 @@ class WodoxoAPI {
    _productCategories = ProductCategoryResource(_dio);
    _regions = RegionResource(_dio);
    _carts = CartResource(_dio);
+   _shippingResource = ShippingResource(_dio);
+   _variantResource = VariantResource(_dio);
   }
  
 }
