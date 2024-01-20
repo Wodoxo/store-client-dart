@@ -1,6 +1,3 @@
-
-import 'dart:svg';
-
 import 'package:dio/dio.dart';
 import 'package:wodoxo_api/models/card_model/card_model.dart';
 import 'package:wodoxo_api/models/region_model/region_model.dart';
