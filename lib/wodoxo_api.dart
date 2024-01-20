@@ -2,7 +2,9 @@ library wodoxo_api;
 
 import 'package:dio/dio.dart';
 import 'package:wodoxo_api/helpers/wodoxo_rate_limit_exception.dart';
+import 'package:wodoxo_api/resources/auth_resource.dart';
 import 'package:wodoxo_api/resources/cart_resource.dart';
+import 'package:wodoxo_api/resources/customer_resource.dart';
 import 'package:wodoxo_api/resources/product_category_resource.dart';
 import 'package:wodoxo_api/resources/product_resource.dart';
 import 'package:wodoxo_api/resources/region_resource.dart';
@@ -22,6 +24,8 @@ class WodoxoAPI {
   late CartResource _carts;
   late ShippingResource _shippingResource;
   late VariantResource _variantResource;
+  late AuthResource _authResource;
+  late CustomerResource _customerResource;
 
   /// The section that brings together the requests that are related to coins
   ProductResource get products => _products;
@@ -30,6 +34,8 @@ class WodoxoAPI {
   CartResource get carts => _carts;
   ShippingResource get shippingResource => _shippingResource;
   VariantResource get variantResource => _variantResource;
+  AuthResource get authResource => _authResource;
+  CustomerResource get customerResource => _customerResource;
 
 
 
@@ -107,6 +113,9 @@ class WodoxoAPI {
    _carts = CartResource(_dio);
    _shippingResource = ShippingResource(_dio);
    _variantResource = VariantResource(_dio);
+   _authResource = AuthResource(_dio);
+   _customerResource = CustomerResource(_dio);
+   
   }
  
 }
