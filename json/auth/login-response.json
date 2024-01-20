@@ -1,0 +1,17 @@
+{
+    "customer": {
+        "id": "cus_01HMM7RGMD722B4EGYCJFKGPQW",
+        "created_at": "2024-01-20T20:07:28.643Z",
+        "updated_at": "2024-01-20T20:07:28.643Z",
+        "deleted_at": null,
+        "email": "atknatk@gmail.com",
+        "first_name": "Atakan",
+        "last_name": "Atik",
+        "billing_address_id": null,
+        "phone": "36599310004",
+        "has_account": true,
+        "metadata": null,
+        "orders": [],
+        "shipping_addresses": []
+    }
+}
