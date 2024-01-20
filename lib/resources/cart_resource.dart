@@ -68,7 +68,7 @@ class CartResource {
   }
 
 
-  Future<WodoxoResult<CardModel>> updateLineItem(String id, String lineItemId,  Number quantity , {  Map<String, dynamic>? queryParameters = null}) async {
+  Future<WodoxoResult<CardModel>> updateLineItem(String id, String lineItemId, int quantity , {  Map<String, dynamic>? queryParameters = null}) async {
     final response = await _dio.post(
       '$path/$id/line-items',
       data: {quantity},
