@@ -17,6 +17,8 @@ _$OptionImpl _$$OptionImplFromJson(Map<String, dynamic> json) => _$OptionImpl(
       deletedAt: json['deleted_at'],
       title: json['title'] as String?,
       productId: json['product_id'] as String?,
+      optionId: json['option_id'] as String?,
+      variantId: json['variant_id'] as String?,
       metadata: json['metadata'],
       values: (json['values'] as List<dynamic>?)
           ?.map((e) => Value.fromJson(e as Map<String, dynamic>))
@@ -31,6 +33,8 @@ Map<String, dynamic> _$$OptionImplToJson(_$OptionImpl instance) =>
       'deleted_at': instance.deletedAt,
       'title': instance.title,
       'product_id': instance.productId,
+      'option_id': instance.optionId,
+      'variant_id': instance.variantId,
       'metadata': instance.metadata,
       'values': instance.values,
     };

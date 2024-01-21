@@ -30,6 +30,10 @@ mixin _$Option {
   String? get title => throw _privateConstructorUsedError;
   @JsonKey(name: 'product_id')
   String? get productId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'option_id')
+  String? get optionId => throw _privateConstructorUsedError;
+  @JsonKey(name: 'variant_id')
+  String? get variantId => throw _privateConstructorUsedError;
   dynamic get metadata => throw _privateConstructorUsedError;
   List<Value>? get values => throw _privateConstructorUsedError;
 
@@ -50,6 +54,8 @@ abstract class $OptionCopyWith<$Res> {
       @JsonKey(name: 'deleted_at') dynamic deletedAt,
       String? title,
       @JsonKey(name: 'product_id') String? productId,
+      @JsonKey(name: 'option_id') String? optionId,
+      @JsonKey(name: 'variant_id') String? variantId,
       dynamic metadata,
       List<Value>? values});
 }
@@ -73,6 +79,8 @@ class _$OptionCopyWithImpl<$Res, $Val extends Option>
     Object? deletedAt = freezed,
     Object? title = freezed,
     Object? productId = freezed,
+    Object? optionId = freezed,
+    Object? variantId = freezed,
     Object? metadata = freezed,
     Object? values = freezed,
   }) {
@@ -101,6 +109,14 @@ class _$OptionCopyWithImpl<$Res, $Val extends Option>
           ? _value.productId
           : productId // ignore: cast_nullable_to_non_nullable
               as String?,
+      optionId: freezed == optionId
+          ? _value.optionId
+          : optionId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      variantId: freezed == variantId
+          ? _value.variantId
+          : variantId // ignore: cast_nullable_to_non_nullable
+              as String?,
       metadata: freezed == metadata
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
@@ -127,6 +143,8 @@ abstract class _$$OptionImplCopyWith<$Res> implements $OptionCopyWith<$Res> {
       @JsonKey(name: 'deleted_at') dynamic deletedAt,
       String? title,
       @JsonKey(name: 'product_id') String? productId,
+      @JsonKey(name: 'option_id') String? optionId,
+      @JsonKey(name: 'variant_id') String? variantId,
       dynamic metadata,
       List<Value>? values});
 }
@@ -148,6 +166,8 @@ class __$$OptionImplCopyWithImpl<$Res>
     Object? deletedAt = freezed,
     Object? title = freezed,
     Object? productId = freezed,
+    Object? optionId = freezed,
+    Object? variantId = freezed,
     Object? metadata = freezed,
     Object? values = freezed,
   }) {
@@ -176,6 +196,14 @@ class __$$OptionImplCopyWithImpl<$Res>
           ? _value.productId
           : productId // ignore: cast_nullable_to_non_nullable
               as String?,
+      optionId: freezed == optionId
+          ? _value.optionId
+          : optionId // ignore: cast_nullable_to_non_nullable
+              as String?,
+      variantId: freezed == variantId
+          ? _value.variantId
+          : variantId // ignore: cast_nullable_to_non_nullable
+              as String?,
       metadata: freezed == metadata
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
@@ -198,6 +226,8 @@ class _$OptionImpl implements _Option {
       @JsonKey(name: 'deleted_at') this.deletedAt,
       this.title,
       @JsonKey(name: 'product_id') this.productId,
+      @JsonKey(name: 'option_id') this.optionId,
+      @JsonKey(name: 'variant_id') this.variantId,
       this.metadata,
       final List<Value>? values})
       : _values = values;
@@ -222,6 +252,12 @@ class _$OptionImpl implements _Option {
   @JsonKey(name: 'product_id')
   final String? productId;
   @override
+  @JsonKey(name: 'option_id')
+  final String? optionId;
+  @override
+  @JsonKey(name: 'variant_id')
+  final String? variantId;
+  @override
   final dynamic metadata;
   final List<Value>? _values;
   @override
@@ -235,7 +271,7 @@ class _$OptionImpl implements _Option {
 
   @override
   String toString() {
-    return 'Option(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt, title: $title, productId: $productId, metadata: $metadata, values: $values)';
+    return 'Option(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt, title: $title, productId: $productId, optionId: $optionId, variantId: $variantId, metadata: $metadata, values: $values)';
   }
 
   @override
@@ -252,6 +288,10 @@ class _$OptionImpl implements _Option {
             (identical(other.title, title) || other.title == title) &&
             (identical(other.productId, productId) ||
                 other.productId == productId) &&
+            (identical(other.optionId, optionId) ||
+                other.optionId == optionId) &&
+            (identical(other.variantId, variantId) ||
+                other.variantId == variantId) &&
             const DeepCollectionEquality().equals(other.metadata, metadata) &&
             const DeepCollectionEquality().equals(other._values, _values));
   }
@@ -266,6 +306,8 @@ class _$OptionImpl implements _Option {
       const DeepCollectionEquality().hash(deletedAt),
       title,
       productId,
+      optionId,
+      variantId,
       const DeepCollectionEquality().hash(metadata),
       const DeepCollectionEquality().hash(_values));
 
@@ -291,6 +333,8 @@ abstract class _Option implements Option {
       @JsonKey(name: 'deleted_at') final dynamic deletedAt,
       final String? title,
       @JsonKey(name: 'product_id') final String? productId,
+      @JsonKey(name: 'option_id') final String? optionId,
+      @JsonKey(name: 'variant_id') final String? variantId,
       final dynamic metadata,
       final List<Value>? values}) = _$OptionImpl;
 
@@ -312,6 +356,12 @@ abstract class _Option implements Option {
   @override
   @JsonKey(name: 'product_id')
   String? get productId;
+  @override
+  @JsonKey(name: 'option_id')
+  String? get optionId;
+  @override
+  @JsonKey(name: 'variant_id')
+  String? get variantId;
   @override
   dynamic get metadata;
   @override

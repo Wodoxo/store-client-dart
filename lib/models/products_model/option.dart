@@ -1,4 +1,3 @@
-import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'value.dart';
@@ -15,6 +14,8 @@ class Option with _$Option {
 		@JsonKey(name: 'deleted_at') dynamic deletedAt,
 		String? title,
 		@JsonKey(name: 'product_id') String? productId,
+    @JsonKey(name: 'option_id') String? optionId,
+    @JsonKey(name: 'variant_id') String? variantId,
 		dynamic metadata,
 		List<Value>? values,
 	}) = _Option;

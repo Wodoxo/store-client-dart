@@ -1,0 +1,15 @@
+{
+    "address": {
+      "first_name": "Atakan Address",
+      "last_name": "Atik Address",
+      "address_1": "address_1",
+      "city": "city",
+      "country_code": "MT",
+      "postal_code": "SPB1234",
+      "phone": "35699310004",
+      "company": "Wodoxo",
+      "address_2": "address_2",
+      "province": "province",
+      "metadata": {}
+    }
+  }
