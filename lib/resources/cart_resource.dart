@@ -47,10 +47,13 @@ class CartResource {
     }
   }
 
-  Future<WodoxoResult<CardModel>> addLineItem(String id, AddLineItemRequestModel data , {  Map<String, dynamic>? queryParameters = null}) async {
+  Future<WodoxoResult<CardModel>> addLineItem(String id,  String variantId, int quantity , {  Map<String, dynamic>? queryParameters = null}) async {
     final response = await _dio.post(
       '$path/$id/line-items',
-      data: data,
+      data: {
+        variantId : variantId,
+        quantity: quantity
+      },
       queryParameters: queryParameters
     );
     if (response.statusCode == 200) {
@@ -69,7 +72,7 @@ class CartResource {
 
   Future<WodoxoResult<CardModel>> updateLineItem(String id, String lineItemId, int quantity , {  Map<String, dynamic>? queryParameters = null}) async {
     final response = await _dio.post(
-      '$path/$id/line-items',
+      '$path/$id/line-items/$lineItemId',
       data: {quantity},
       queryParameters: queryParameters
     );
