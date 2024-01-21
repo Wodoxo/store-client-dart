@@ -22,8 +22,9 @@ class ProductResource {
     } else {
       return WodoxoResult(
         new ProductsModel(),
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+         errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
         isError: true,
       );
     }
@@ -42,8 +43,9 @@ class ProductResource {
     } else {
       return WodoxoResult(
         new ProductModel(),
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
         isError: true,
       );
     }

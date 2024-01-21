@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
 import 'package:wodoxo_api/models/card_model/card_model.dart';
-import 'package:wodoxo_api/request_models/add_line_item_request_model/add_line_item_request_model.dart';
 import 'package:wodoxo_api/wodoxo_result.dart';
 
 class CartResource {
@@ -22,8 +21,9 @@ class CartResource {
     } else {
       return WodoxoResult(
         new CardModel(),
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
         isError: true,
       );
     }
@@ -40,8 +40,9 @@ class CartResource {
     } else {
       return WodoxoResult(
         new CardModel(),
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
         isError: true,
       );
     }
@@ -52,18 +53,18 @@ class CartResource {
       '$path/$id/line-items',
       data: {
         'variant_id' : variantId,
-         quantity: quantity
+         'quantity': quantity
       },
       queryParameters: queryParameters
     );
     if (response.statusCode == 200) {
       return WodoxoResult(CardModel.fromJson(response.data as Map<String,dynamic>));
-      
     } else {
       return WodoxoResult(
         new CardModel(),
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
         isError: true,
       );
     }
@@ -73,7 +74,9 @@ class CartResource {
   Future<WodoxoResult<CardModel>> updateLineItem(String id, String lineItemId, int quantity , {  Map<String, dynamic>? queryParameters = null}) async {
     final response = await _dio.post(
       '$path/$id/line-items/$lineItemId',
-      data: {quantity},
+        data: {
+         'quantity': quantity
+      },
       queryParameters: queryParameters
     );
     if (response.statusCode == 200) {
@@ -82,8 +85,9 @@ class CartResource {
     } else {
       return WodoxoResult(
         new CardModel(),
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
         isError: true,
       );
     }
@@ -100,8 +104,9 @@ class CartResource {
     } else {
       return WodoxoResult(
         new CardModel(),
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
         isError: true,
       );
     }
@@ -118,8 +123,9 @@ class CartResource {
     } else {
       return WodoxoResult(
         new CardModel(),
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
         isError: true,
       );
     }

@@ -7,8 +7,11 @@ class WodoxoResult<T> {
   final String? errorMessage;
 
   /// Error code
-  final int? errorCode;
+  final String? errorCode;
 
+  /// Error code
+  final String? errorType;
+  
   /// Result data
   final T data;
 
@@ -17,6 +20,7 @@ class WodoxoResult<T> {
     this.isError = false,
     this.errorMessage,
     this.errorCode,
+    this.errorType,
   });
 
   @override

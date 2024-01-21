@@ -16,7 +16,13 @@ class CustomerResource {
   Future<WodoxoResult<CreateCustomerModel>> create(CreateCustomerRequestModel data, {Map<String, dynamic>? queryParameters = null}) async {
     final response = await _dio.post(
       path,
-      data: data,
+      data: {
+        'email' : data.email,
+        'password' : data.password,
+        'first_name' : data.firstName,
+        'last_name' : data.lastName,
+        'phone' : data.phone
+      },
       queryParameters: queryParameters
     );
     if (response.statusCode == 200) {
@@ -25,8 +31,9 @@ class CustomerResource {
     } else {
       return WodoxoResult(
         new CreateCustomerModel(),
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
         isError: true,
       );
     }
@@ -38,7 +45,7 @@ class CustomerResource {
     final response = await _dio.post(
       '$path/password-token',
       data: {
-        email : email
+        'email' : email
       },
       queryParameters: queryParameters
     );
@@ -48,8 +55,9 @@ class CustomerResource {
     } else {
       return WodoxoResult(
         false,
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
         isError: true,
       );
     }
@@ -60,9 +68,9 @@ class CustomerResource {
     final response = await _dio.post(
       '$path/password-reset',
       data: {
-        email : email,
-        password : password,
-        token : token,
+        'email' : email,
+        'password' : password,
+        'token' : token,
       },
       queryParameters: queryParameters
     );
@@ -71,8 +79,9 @@ class CustomerResource {
     } else {
       return WodoxoResult(
         false,
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
         isError: true,
       );
     }
@@ -89,17 +98,17 @@ class CustomerResource {
     } else {
       return WodoxoResult(
         new CustomerModel(),
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+        errorMessage: response.data as String,
+        errorCode: '',
+        errorType: '',
         isError: true,
       );
     }
   }
 
-
-    Future<WodoxoResult<CustomerModel>> addShippingAddress(ShippingAddressRequestModel data,  {Map<String, dynamic>? queryParameters = null}) async {
+  Future<WodoxoResult<CustomerModel>> update(CreateCustomerRequestModel data, {Map<String, dynamic>? queryParameters = null}) async {
     final response = await _dio.post(
-      '$path/me/addresses',
+      '$path/me',
       data: data,
       queryParameters: queryParameters
     );
@@ -108,8 +117,30 @@ class CustomerResource {
     } else {
       return WodoxoResult(
         new CustomerModel(),
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
+        isError: true,
+      );
+    }
+  }
+
+
+
+    Future<WodoxoResult<CustomerModel>> addShippingAddress(ShippingAddressRequestModel data,  {Map<String, dynamic>? queryParameters = null}) async {
+    final response = await _dio.post(
+      '$path/me/addresses',
+      data: data.toJson(),
+      queryParameters: queryParameters
+    );
+    if (response.statusCode == 200) {
+      return WodoxoResult(CustomerModel.fromJson(response.data as Map<String,dynamic>));
+    } else {
+      return WodoxoResult(
+        new CustomerModel(),
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
         isError: true,
       );
     }
@@ -127,8 +158,9 @@ class CustomerResource {
     } else {
       return WodoxoResult(
         new CustomerModel(),
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
         isError: true,
       );
     }
@@ -144,8 +176,9 @@ class CustomerResource {
     } else {
       return WodoxoResult(
         new CustomerModel(),
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
         isError: true,
       );
     }

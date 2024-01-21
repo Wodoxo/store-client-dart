@@ -21,8 +21,9 @@ class VariantResource {
     } else {
       return WodoxoResult(
         new VariantsModel(),
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
         isError: true,
       );
     }
@@ -41,8 +42,9 @@ class VariantResource {
     } else {
       return WodoxoResult(
         new VariantsModel(),
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
         isError: true,
       );
     }

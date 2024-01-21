@@ -1,6 +1,11 @@
 library wodoxo_api;
 
+import 'dart:io';
+
+import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
+import 'package:dio_cookie_manager/dio_cookie_manager.dart';
+import 'package:path_provider/path_provider.dart';
 import 'package:wodoxo_api/helpers/wodoxo_rate_limit_exception.dart';
 import 'package:wodoxo_api/resources/auth_resource.dart';
 import 'package:wodoxo_api/resources/cart_resource.dart';
@@ -14,6 +19,7 @@ import 'package:wodoxo_api/resources/variant_resource.dart';
 /// Client calls of the Open Food Facts API
 class WodoxoAPI {
   late Dio _dio;
+  late PersistCookieJar _cookieJar;
   int _requestCount = 0;
   DateTime _firstRequest = DateTime.now();
 
@@ -67,6 +73,21 @@ class WodoxoAPI {
     bool? rateLimitManagement = false,
     this.enableLogging = true,
   }) {
+    _initialize(baseUrl, connectTimeout, receiveTimeout, rateLimitManagement,enableLogging);
+  }
+ 
+
+  Future<void> _initialize(String baseUrl,
+    Duration connectTimeout,
+    Duration receiveTimeout,
+    bool? rateLimitManagement,
+    bool enableLogging
+  ) async {
+     final Directory appDocDir = await getApplicationDocumentsDirectory();
+      final String appDocPath = appDocDir.path;
+    _cookieJar = PersistCookieJar(
+      storage: FileStorage(appDocPath + "/.cookies/"),
+    );
     _dio = Dio(
       BaseOptions(
         baseUrl : baseUrl,
@@ -75,6 +96,8 @@ class WodoxoAPI {
         validateStatus: (code) => true,
       ),
     );
+    _dio.interceptors.add(CookieManager(_cookieJar));
+
     if (rateLimitManagement != null) {
       _dio.interceptors.add(
         InterceptorsWrapper(
@@ -115,7 +138,7 @@ class WodoxoAPI {
    _variantResource = VariantResource(_dio);
    _authResource = AuthResource(_dio);
    _customerResource = CustomerResource(_dio);
-   
   }
- 
+
+
 }

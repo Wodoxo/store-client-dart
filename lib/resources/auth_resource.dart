@@ -1,32 +1,33 @@
 
 import 'package:dio/dio.dart';
-import 'package:wodoxo_api/models/login_model/login_model.dart';
+import 'package:wodoxo_api/models/customer_model/customer_model.dart';
 import 'package:wodoxo_api/wodoxo_result.dart';
 
 class AuthResource {
   
   final Dio _dio;
-  final path = '/customers';
+  final path = '/auth';
   const AuthResource(this._dio);
 
 
-  Future<WodoxoResult<LoginModel>> login(String email,String password, {Map<String, dynamic>? queryParameters = null}) async {
+  Future<WodoxoResult<CustomerModel>> login(String email,String password, {Map<String, dynamic>? queryParameters = null}) async {
     final response = await _dio.post(
       path,
       data: {
-        email : email,
-        password : password
+        'email' : email,
+        'password' : password
       },
       queryParameters: queryParameters
     );
     if (response.statusCode == 200) {
-      return WodoxoResult(LoginModel.fromJson(response.data as Map<String,dynamic>));
+      return WodoxoResult(CustomerModel.fromJson(response.data as Map<String,dynamic>));
       
     } else {
       return WodoxoResult(
-        new LoginModel(),
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+        new CustomerModel(),
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
         isError: true,
       );
     }
@@ -44,8 +45,9 @@ class AuthResource {
     } else {
       return WodoxoResult(
         false,
-        errorMessage: response.data.toString(),
-        errorCode: response.statusCode ?? 0,
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
         isError: true,
       );
     }
