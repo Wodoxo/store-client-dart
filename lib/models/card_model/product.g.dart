@@ -36,9 +36,7 @@ _$ProductImpl _$$ProductImplFromJson(Map<String, dynamic> json) =>
       typeId: json['type_id'] as String?,
       discountable: json['discountable'] as bool?,
       externalId: json['external_id'],
-      metadata: json['metadata'] == null
-          ? null
-          : Metadata.fromJson(json['metadata'] as Map<String, dynamic>),
+      metadata: json['metadata'],
       vendorId: json['vendor_id'] as String?,
       orderQuantityMin: json['order_quantity_min'],
       orderQuantityMax: json['order_quantity_max'],

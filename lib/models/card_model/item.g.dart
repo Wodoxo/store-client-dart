@@ -34,9 +34,7 @@ _$ItemImpl _$$ItemImplFromJson(Map<String, dynamic> json) => _$ItemImpl(
       fulfilledQuantity: json['fulfilled_quantity'],
       returnedQuantity: json['returned_quantity'],
       shippedQuantity: json['shipped_quantity'],
-      metadata: json['metadata'] == null
-          ? null
-          : Metadata.fromJson(json['metadata'] as Map<String, dynamic>),
+      metadata: json['metadata'],
       adjustments: json['adjustments'] as List<dynamic>?,
       taxLines: (json['tax_lines'] as List<dynamic>?)
           ?.map((e) => TaxLine.fromJson(e as Map<String, dynamic>))

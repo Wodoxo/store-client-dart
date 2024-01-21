@@ -61,7 +61,7 @@ mixin _$Item {
   dynamic get returnedQuantity => throw _privateConstructorUsedError;
   @JsonKey(name: 'shipped_quantity')
   dynamic get shippedQuantity => throw _privateConstructorUsedError;
-  Metadata? get metadata => throw _privateConstructorUsedError;
+  dynamic? get metadata => throw _privateConstructorUsedError;
   List<dynamic>? get adjustments => throw _privateConstructorUsedError;
   @JsonKey(name: 'tax_lines')
   List<TaxLine>? get taxLines => throw _privateConstructorUsedError;
@@ -111,7 +111,7 @@ abstract class $ItemCopyWith<$Res> {
       @JsonKey(name: 'fulfilled_quantity') dynamic fulfilledQuantity,
       @JsonKey(name: 'returned_quantity') dynamic returnedQuantity,
       @JsonKey(name: 'shipped_quantity') dynamic shippedQuantity,
-      Metadata? metadata,
+      dynamic? metadata,
       List<dynamic>? adjustments,
       @JsonKey(name: 'tax_lines') List<TaxLine>? taxLines,
       Variant? variant,
@@ -268,7 +268,7 @@ class _$ItemCopyWithImpl<$Res, $Val extends Item>
       metadata: freezed == metadata
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
-              as Metadata?,
+              as dynamic?,
       adjustments: freezed == adjustments
           ? _value.adjustments
           : adjustments // ignore: cast_nullable_to_non_nullable
@@ -352,7 +352,7 @@ abstract class _$$ItemImplCopyWith<$Res> implements $ItemCopyWith<$Res> {
       @JsonKey(name: 'fulfilled_quantity') dynamic fulfilledQuantity,
       @JsonKey(name: 'returned_quantity') dynamic returnedQuantity,
       @JsonKey(name: 'shipped_quantity') dynamic shippedQuantity,
-      Metadata? metadata,
+      dynamic? metadata,
       List<dynamic>? adjustments,
       @JsonKey(name: 'tax_lines') List<TaxLine>? taxLines,
       Variant? variant,
@@ -507,7 +507,7 @@ class __$$ItemImplCopyWithImpl<$Res>
       metadata: freezed == metadata
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
-              as Metadata?,
+              as dynamic?,
       adjustments: freezed == adjustments
           ? _value._adjustments
           : adjustments // ignore: cast_nullable_to_non_nullable
@@ -656,7 +656,7 @@ class _$ItemImpl implements _Item {
   @JsonKey(name: 'shipped_quantity')
   final dynamic shippedQuantity;
   @override
-  final Metadata? metadata;
+  final dynamic? metadata;
   final List<dynamic>? _adjustments;
   @override
   List<dynamic>? get adjustments {
@@ -748,8 +748,7 @@ class _$ItemImpl implements _Item {
                 .equals(other.returnedQuantity, returnedQuantity) &&
             const DeepCollectionEquality()
                 .equals(other.shippedQuantity, shippedQuantity) &&
-            (identical(other.metadata, metadata) ||
-                other.metadata == metadata) &&
+            const DeepCollectionEquality().equals(other.metadata, metadata) &&
             const DeepCollectionEquality()
                 .equals(other._adjustments, _adjustments) &&
             const DeepCollectionEquality().equals(other._taxLines, _taxLines) &&
@@ -794,7 +793,7 @@ class _$ItemImpl implements _Item {
         const DeepCollectionEquality().hash(fulfilledQuantity),
         const DeepCollectionEquality().hash(returnedQuantity),
         const DeepCollectionEquality().hash(shippedQuantity),
-        metadata,
+        const DeepCollectionEquality().hash(metadata),
         const DeepCollectionEquality().hash(_adjustments),
         const DeepCollectionEquality().hash(_taxLines),
         variant,
@@ -845,7 +844,7 @@ abstract class _Item implements Item {
       @JsonKey(name: 'fulfilled_quantity') final dynamic fulfilledQuantity,
       @JsonKey(name: 'returned_quantity') final dynamic returnedQuantity,
       @JsonKey(name: 'shipped_quantity') final dynamic shippedQuantity,
-      final Metadata? metadata,
+      final dynamic? metadata,
       final List<dynamic>? adjustments,
       @JsonKey(name: 'tax_lines') final List<TaxLine>? taxLines,
       final Variant? variant,
@@ -923,7 +922,7 @@ abstract class _Item implements Item {
   @JsonKey(name: 'shipped_quantity')
   dynamic get shippedQuantity;
   @override
-  Metadata? get metadata;
+  dynamic? get metadata;
   @override
   List<dynamic>? get adjustments;
   @override

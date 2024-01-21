@@ -34,7 +34,7 @@ class Item with _$Item {
 		@JsonKey(name: 'fulfilled_quantity') dynamic fulfilledQuantity,
 		@JsonKey(name: 'returned_quantity') dynamic returnedQuantity,
 		@JsonKey(name: 'shipped_quantity') dynamic shippedQuantity,
-		Metadata? metadata,
+		dynamic? metadata,
 		List<dynamic>? adjustments,
 		@JsonKey(name: 'tax_lines') List<TaxLine>? taxLines,
 		Variant? variant,

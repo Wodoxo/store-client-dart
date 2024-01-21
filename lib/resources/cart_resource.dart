@@ -1,6 +1,5 @@
 import 'package:dio/dio.dart';
 import 'package:wodoxo_api/models/card_model/card_model.dart';
-import 'package:wodoxo_api/models/region_model/region_model.dart';
 import 'package:wodoxo_api/request_models/add_line_item_request_model/add_line_item_request_model.dart';
 import 'package:wodoxo_api/wodoxo_result.dart';
 
@@ -30,17 +29,17 @@ class CartResource {
     }
   }
 
-  Future<WodoxoResult<RegionModel>> get(String id,  {Map<String, dynamic>? queryParameters = null}) async {
+  Future<WodoxoResult<CardModel>> get(String id,  {Map<String, dynamic>? queryParameters = null}) async {
     final response = await _dio.get(
       '$path/$id',
       queryParameters: queryParameters
     );
     if (response.statusCode == 200) {
-      return WodoxoResult(RegionModel.fromJson(response.data as Map<String,dynamic>));
+      return WodoxoResult(CardModel.fromJson(response.data as Map<String,dynamic>));
       
     } else {
       return WodoxoResult(
-        new RegionModel(),
+        new CardModel(),
         errorMessage: response.data.toString(),
         errorCode: response.statusCode ?? 0,
         isError: true,

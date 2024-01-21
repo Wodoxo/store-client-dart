@@ -34,7 +34,7 @@ class Product with _$Product {
 		@JsonKey(name: 'type_id') String? typeId,
 		bool? discountable,
 		@JsonKey(name: 'external_id') dynamic externalId,
-		Metadata? metadata,
+		dynamic? metadata,
 		@JsonKey(name: 'vendor_id') String? vendorId,
 		@JsonKey(name: 'order_quantity_min') dynamic orderQuantityMin,
 		@JsonKey(name: 'order_quantity_max') dynamic orderQuantityMax,
