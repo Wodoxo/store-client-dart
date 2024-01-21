@@ -51,8 +51,8 @@ class CartResource {
     final response = await _dio.post(
       '$path/$id/line-items',
       data: {
-        variantId : variantId,
-        quantity: quantity
+        'variant_id' : variantId,
+         quantity: quantity
       },
       queryParameters: queryParameters
     );
