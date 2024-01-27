@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:wodoxo_api/models/card_model/card_model.dart';
+import 'package:wodoxo_api/payload_models/cart_payload_model/cart_payload_model.dart';
 import 'package:wodoxo_api/wodoxo_result.dart';
 
 class CartResource {
@@ -13,6 +14,27 @@ class CartResource {
     final response = await _dio.post(
       path,
       data: data,
+      queryParameters: queryParameters
+    );
+    if (response.statusCode == 200) {
+      return WodoxoResult(CardModel.fromJson(response.data as Map<String,dynamic>));
+      
+    } else {
+      return WodoxoResult(
+        new CardModel(),
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
+        isError: true,
+      );
+    }
+  }
+
+
+    Future<WodoxoResult<CardModel>> update(String cartId , CartPayloadModel model,{ Map<String, dynamic>? queryParameters = null}) async {
+    final response = await _dio.post(
+      '$path/$cartId',
+      data: model,
       queryParameters: queryParameters
     );
     if (response.statusCode == 200) {

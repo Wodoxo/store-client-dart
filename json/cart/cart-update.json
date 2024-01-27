@@ -1,0 +1,38 @@
+{
+    "shipping_address": {
+        "first_name": "Atakan",
+        "last_name": "asdasd",
+        "address_1": "14532 Southwest 129th Street",
+        "address_2": "123",
+        "city": "Miami",
+        "country_code": "us",
+        "province": "FL",
+        "company": "",
+        "postal_code": "33186",
+        "phone": "+14234234234"
+    },
+    "email": "atknphone@gamil.com",
+    "context": {
+        "ip": "172.71.194.2",
+        "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "sms_notifications": false,
+        "subscribeToNewsletter": false
+    },
+    "billing_address": {
+        "first_name": "Atakan",
+        "last_name": "asdasd",
+        "address_1": "14532 Southwest 129th Street",
+        "address_2": "123",
+        "city": "Miami",
+        "country_code": "us",
+        "province": "FL",
+        "company": "",
+        "postal_code": "33186",
+        "phone": "+14234234234"
+    },
+    "region_id": "<string>",
+  "country_code": "<string>",
+  
+  "sales_channel_id": "<string>",
+  "customer_id": "<string>"
+}

@@ -2,7 +2,7 @@
 /// frequency allowed by the server
 class WodoxoRateLimitException implements Exception {
   /// Maximum allowed number of calls per minute
-  static const int requestPerMinute = 50;
+  static const int requestPerMinute = 120;
 
   /// Error message
   String errorMessage;

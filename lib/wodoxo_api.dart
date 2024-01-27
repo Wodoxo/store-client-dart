@@ -5,7 +5,6 @@ import 'dart:io';
 import 'package:cookie_jar/cookie_jar.dart';
 import 'package:dio/dio.dart';
 import 'package:dio_cookie_manager/dio_cookie_manager.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:wodoxo_api/helpers/wodoxo_rate_limit_exception.dart';
 import 'package:wodoxo_api/resources/auth_resource.dart';
 import 'package:wodoxo_api/resources/cart_resource.dart';
@@ -66,24 +65,13 @@ class WodoxoAPI {
   /// **[enableLogging]** sets whether logging should be enabled.
   /// Default is true.
   ///
-  WodoxoAPI({
+  WodoxoAPI(Directory appDocDir, {
     String baseUrl = 'http://31.220.86.10:9000/store',
     Duration connectTimeout = const Duration(seconds: 30),
     Duration receiveTimeout = const Duration(seconds: 10),
     bool? rateLimitManagement = false,
     this.enableLogging = true,
   }) {
-    _initialize(baseUrl, connectTimeout, receiveTimeout, rateLimitManagement,enableLogging);
-  }
- 
-
-  Future<void> _initialize(String baseUrl,
-    Duration connectTimeout,
-    Duration receiveTimeout,
-    bool? rateLimitManagement,
-    bool enableLogging
-  ) async {
-     final Directory appDocDir = await getApplicationDocumentsDirectory();
       final String appDocPath = appDocDir.path;
     _cookieJar = PersistCookieJar(
       storage: FileStorage(appDocPath + "/.cookies/"),
@@ -139,6 +127,6 @@ class WodoxoAPI {
    _authResource = AuthResource(_dio);
    _customerResource = CustomerResource(_dio);
   }
-
+ 
 
 }

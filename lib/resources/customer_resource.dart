@@ -2,8 +2,8 @@
 import 'package:dio/dio.dart';
 import 'package:wodoxo_api/models/create_customer_model/create_customer_model.dart';
 import 'package:wodoxo_api/models/customer_model/customer_model.dart';
-import 'package:wodoxo_api/request_models/create_customer_request_model/create_customer_request_model.dart';
-import 'package:wodoxo_api/request_models/shipping_address_request_model/shipping_address_request_model.dart';
+import 'package:wodoxo_api/payload_models/create_customer_request_model/create_customer_request_model.dart';
+import 'package:wodoxo_api/payload_models/shipping_address_request_model/shipping_address_request_model.dart';
 import 'package:wodoxo_api/wodoxo_result.dart';
 
 class CustomerResource {
