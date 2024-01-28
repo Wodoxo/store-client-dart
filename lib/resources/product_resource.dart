@@ -1,6 +1,7 @@
 
 import 'package:dio/dio.dart';
 import 'package:wodoxo_api/models/product_model/product_model.dart';
+import 'package:wodoxo_api/models/product_search_model/product_search_model.dart';
 import 'package:wodoxo_api/models/products_model/products_model.dart';
 import 'package:wodoxo_api/wodoxo_result.dart';
 
@@ -22,6 +23,30 @@ class ProductResource {
     } else {
       return WodoxoResult(
         new ProductsModel(),
+         errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
+        isError: true,
+      );
+    }
+  }
+
+
+
+  Future<WodoxoResult<ProductSearchModel>> search(String query , {Map<String, dynamic>? queryParameters = null}) async {
+    final response = await _dio.post(
+      '$path/search',
+      data : {
+        'q' : query
+      },
+      queryParameters: queryParameters
+    );
+    if (response.statusCode == 200) {
+      return WodoxoResult(ProductSearchModel.fromJson(response.data as Map<String,dynamic>));
+      
+    } else {
+      return WodoxoResult(
+        new ProductSearchModel(),
          errorMessage: response.data['message'] as String?,
         errorCode: response.data['code'] as String?,
         errorType: response.data['type'] as String?,

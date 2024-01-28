@@ -1,0 +1,41 @@
+{
+    "hits": [
+        {
+            "title": "Asus Tuf Gaming F17 17\" FHD 144HZ Core i5-11400H (11th Gen) 512GB SSD 8GB RAM RTX2050 Win11 Gaming Laptop",
+            "description": "SKU\tNBO-L131646\nManufacturer Code\tFX706HF-HX001W\nManufacturer\tASUS\nModel\tASUS TUF\nProcessor Type\tIntel Core i5-11400H 4C / 8T\nCPU Speed\t2.7 GHz (Turbo 4.5 GHz)\nMemory\t8 GB\nMemory Type\tDDR4 SO-DIMM\nMemory Speed\t3200MHz\nMemory Configuration\t1 x 8GB\nMemory Slots\t2\nMaximum Memory\t16 GB\nStorage Form Factor\tM.2 PCIe (NVMe)\nStorage\t512 GB\nScreen Size\t17.3\"\nMax Resolution\tFHD (1920x1080) 144Hz\nTouchscreen\tNo\nGraphics Chipset\tNVIDIA GeForce RTX 2050\nDedicated Graphics Memory\t4 GB\nCard Reader\tNo\nWebcam\tHD Webcam (720p)\nKeyboard Backlight\tYes (RGB)\nInputs / Outputs\t\n3x USB 3.2 Gen1 Type-A\n2x Thunderbolt 4\n1x HDMI 2.1\n1x Ethernet\n1x Audio Combo Jack\nOperating System\tWindows 11 Home\nColour\tBlack\nDimensions (W x H x D) / Weight\t399 x 23.3 ~ 24.8 x 269 mm / 2.6 kg\nManufacturer's Warranty\t2 Years - Terms & Conditions\n",
+            "thumbnail": "https://molto-bucket.s3.eu-central-1.amazonaws.com/gaming_1-1705781804594.jpeg",
+            "handle": "asus-tuf-gaming-f-17-17-fhd-144-hz-core-i-5-11400-h-11-th-gen-512-gb-ssd-8-gb-ram-rtx-2050-win-11-gaming-laptop",
+            "id": "prod_01HMM89FSC9H3ANJ0ZGDX4VBQ5",
+            "prices": {
+                "eur": 85900
+            },
+            "categories": [
+                {
+                    "id": "pcat_01HKK1RRQPWSQTEVQ58C451ZD5",
+                    "name": "\t\t\t\tGaming Laptops"
+                }
+            ]
+        },
+        {
+            "title": "ASUS Vivobook 15.6\" FHD Core i5-1235U (12th Gen) 512GB SSD 8GB RAM Win11",
+            "description": "SKU\tNBO-L142092\nManufacturer Code\tX1504ZA-NJ043W\nManufacturer\tASUS\nModel\tVivoBook\nProcessor Type\tIntel Core i5 1235U 10C/12T\nCPU Speed\t1.3 GHz (Turbo 4.4 GHz)\nMemory\t8 GB\nMemory Type\tDDR4 SO-DIMM\nMemory Speed\t3200 MHz\nMemory Configuration\t1 x 8GB\nMemory Slots\t1\nMaximum Memory\t16 GB\nStorage Form Factor\tM.2 PCIe (NVMe)\nStorage\t512 GB\nScreen Size\t15.6\"\nMax Resolution\tFHD (1920x1080)\nTouchscreen\tNo\nGraphics Chipset\tIntel Iris Xe Graphics\nCard Reader\tNo\nWebcam\tHD Webcam (720p)\nKeyboard Backlight\tNo\nInputs / Outputs\t\n1x USB 3.2 Gen 1 Type-C\n1x USB 2.0 Type-A\n2x USB 3.2 Gen 1 Type-A\n1x HDMI 1.4\n1x 3.5mm Combo Audio Jack\nOperating System\tWindows 11 Home\nColour\tSilver\nDimensions (W x H x D) / Weight\t359.7 x 232.5 x 17.9 mm / 1.70 kg\nManufacturer's Warranty\t2 Years - Terms & Conditions",
+            "thumbnail": "https://molto-bucket.s3.eu-central-1.amazonaws.com/x1504za-nj043w-2-1705790978969.jpg",
+            "handle": "asus-vivobook-15-6-fhd-core-i-5-1235-u-12-th-gen-512-gb-ssd-8-gb-ram-win-11",
+            "id": "prod_01HMMH1F3ARXF1EHPPWE7ENDW8",
+            "prices": {
+                "eur": 63900
+            },
+            "categories": [
+                {
+                    "id": "pcat_01HKK1RF8J8G8834R8RPTS4B27",
+                    "name": "Notebooks"
+                }
+            ]
+        }
+    ],
+    "query": "asus",
+    "processingTimeMs": 0,
+    "limit": 20,
+    "offset": 0,
+    "estimatedTotalHits": 2
+}
