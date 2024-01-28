@@ -159,6 +159,45 @@ class CartResource {
     }
   }
 
+     Future<WodoxoResult<CardModel>> createPaymentSession(String cartId, {  Map<String, dynamic>? queryParameters = null}) async {
+    final response = await _dio.post(
+      '$path/$cartId/payment-sessions',
+      queryParameters: queryParameters
+    );
+    if (response.statusCode == 200) {
+      return WodoxoResult(CardModel.fromJson(response.data as Map<String,dynamic>));
+      
+    } else {
+      return WodoxoResult(
+        new CardModel(),
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
+        isError: true,
+      );
+    }
+  }
+
+
+     Future<WodoxoResult<CardModel>> updatePaymentSession(String cartId,String providerId, {  Map<String, dynamic>? queryParameters = null}) async {
+    final response = await _dio.post(
+      '$path/$cartId/payment-sessions/$providerId',
+      queryParameters: queryParameters
+    );
+    if (response.statusCode == 200) {
+      return WodoxoResult(CardModel.fromJson(response.data as Map<String,dynamic>));
+      
+    } else {
+      return WodoxoResult(
+        new CardModel(),
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
+        isError: true,
+      );
+    }
+  }
+
    Future<WodoxoResult<CardModel>> complete(String id, {  Map<String, dynamic>? queryParameters = null}) async {
     final response = await _dio.post(
       '$path/$id/complete',

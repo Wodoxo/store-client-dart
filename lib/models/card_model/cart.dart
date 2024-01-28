@@ -2,11 +2,13 @@ import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:wodoxo_api/models/address_model/address_model.dart';
 
+
 import 'context.dart';
 import 'item.dart';
+import 'payment_session.dart';
 import 'region.dart';
 import 'sales_channel.dart';
-
+import 'shipping_method.dart';
 
 part 'cart.freezed.dart';
 part 'cart.g.dart';
@@ -22,8 +24,9 @@ class Cart with _$Cart {
 		dynamic payment,
 		@JsonKey(name: 'shipping_address') AddressModel? shippingAddress,
 		@JsonKey(name: 'billing_address') AddressModel? billingAddress,
-		@JsonKey(name: 'shipping_methods') List<dynamic>? shippingMethods,
-		@JsonKey(name: 'payment_sessions') List<dynamic>? paymentSessions,
+		@JsonKey(name: 'shipping_methods') List<ShippingMethod>? shippingMethods,
+		@JsonKey(name: 'payment_sessions') List<PaymentSession>? paymentSessions,
+		@JsonKey(name: 'payment_session') PaymentSession? paymentSession,
 		List<dynamic>? discounts,
 		@JsonKey(name: 'sales_channel') SalesChannel? salesChannel,
 		dynamic customer,

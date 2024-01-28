@@ -238,8 +238,84 @@
             "phone": "99310004",
             "metadata": null
         },
-        "shipping_methods": [],
-        "payment_sessions": [],
+        "shipping_methods": [
+            {
+                "id": "sm_01HN918W7QYZ8024H8MJA1S55E",
+                "shipping_option_id": "so_01HGRY6W9PTBFQGXPEWHSTVFM5",
+                "order_id": null,
+                "claim_order_id": null,
+                "cart_id": "cart_01HN8B73P122NP2Q5B7W5BFGJH",
+                "swap_id": null,
+                "return_id": null,
+                "price": 1500,
+                "data": {},
+                "includes_tax": false,
+                "shipping_option": {
+                    "id": "so_01HGRY6W9PTBFQGXPEWHSTVFM5",
+                    "created_at": "2023-12-03T22:53:58.331Z",
+                    "updated_at": "2023-12-03T22:53:58.331Z",
+                    "deleted_at": null,
+                    "name": "PostFake Express",
+                    "region_id": "reg_01HGRY6W84AEWR1YDQDM053ZG6",
+                    "profile_id": "sp_01HGRNQG51BQPJN87Y7Y0EJJC8",
+                    "provider_id": "manual",
+                    "price_type": "flat_rate",
+                    "amount": 1500,
+                    "is_return": false,
+                    "admin_only": false,
+                    "data": {
+                        "id": "manual-fulfillment"
+                    },
+                    "metadata": null,
+                    "includes_tax": false
+                },
+                "tax_lines": [
+                    {
+                        "rate": 0,
+                        "name": "default",
+                        "code": "default",
+                        "shipping_method_id": "sm_01HN918W7QYZ8024H8MJA1S55E"
+                    }
+                ],
+                "original_total": 1500,
+                "total": 1500,
+                "subtotal": 1500,
+                "original_tax_total": 0,
+                "tax_total": 0
+            }
+        ],
+        "payment_sessions": [ {
+            "id": "ps_01HN91F3P7N4C3AH03G0MT4K5P",
+            "created_at": "2024-01-28T22:01:32.099Z",
+            "updated_at": "2024-01-28T22:01:32.099Z",
+            "cart_id": "cart_01HN8B73P122NP2Q5B7W5BFGJH",
+            "provider_id": "manual",
+            "is_selected": true,
+            "is_initiated": true,
+            "status": "pending",
+            "data": {
+                "status": "pending"
+            },
+            "idempotency_key": null,
+            "amount": 9400,
+            "payment_authorized_at": null
+        }],
+        "payment_session": {
+            "id": "ps_01HN91F3P7N4C3AH03G0MT4K5P",
+            "created_at": "2024-01-28T22:01:32.099Z",
+            "updated_at": "2024-01-28T22:01:32.099Z",
+            "cart_id": "cart_01HN8B73P122NP2Q5B7W5BFGJH",
+            "provider_id": "manual",
+            "is_selected": true,
+            "is_initiated": true,
+            "status": "pending",
+            "data": {
+                "status": "pending"
+            },
+            "idempotency_key": null,
+            "amount": 9400,
+            "payment_authorized_at": null
+        },
         "discounts": [],
         "sales_channel": {
             "id": "sc_01H398E38G3D2MQ868SKMVRR7W",

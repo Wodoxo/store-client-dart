@@ -32,9 +32,13 @@ mixin _$Cart {
   @JsonKey(name: 'billing_address')
   AddressModel? get billingAddress => throw _privateConstructorUsedError;
   @JsonKey(name: 'shipping_methods')
-  List<dynamic>? get shippingMethods => throw _privateConstructorUsedError;
+  List<ShippingMethod>? get shippingMethods =>
+      throw _privateConstructorUsedError;
   @JsonKey(name: 'payment_sessions')
-  List<dynamic>? get paymentSessions => throw _privateConstructorUsedError;
+  List<PaymentSession>? get paymentSessions =>
+      throw _privateConstructorUsedError;
+  @JsonKey(name: 'payment_session')
+  PaymentSession? get paymentSession => throw _privateConstructorUsedError;
   List<dynamic>? get discounts => throw _privateConstructorUsedError;
   @JsonKey(name: 'sales_channel')
   SalesChannel? get salesChannel => throw _privateConstructorUsedError;
@@ -103,8 +107,9 @@ abstract class $CartCopyWith<$Res> {
       dynamic payment,
       @JsonKey(name: 'shipping_address') AddressModel? shippingAddress,
       @JsonKey(name: 'billing_address') AddressModel? billingAddress,
-      @JsonKey(name: 'shipping_methods') List<dynamic>? shippingMethods,
-      @JsonKey(name: 'payment_sessions') List<dynamic>? paymentSessions,
+      @JsonKey(name: 'shipping_methods') List<ShippingMethod>? shippingMethods,
+      @JsonKey(name: 'payment_sessions') List<PaymentSession>? paymentSessions,
+      @JsonKey(name: 'payment_session') PaymentSession? paymentSession,
       List<dynamic>? discounts,
       @JsonKey(name: 'sales_channel') SalesChannel? salesChannel,
       dynamic customer,
@@ -137,6 +142,7 @@ abstract class $CartCopyWith<$Res> {
   $RegionCopyWith<$Res>? get region;
   $AddressModelCopyWith<$Res>? get shippingAddress;
   $AddressModelCopyWith<$Res>? get billingAddress;
+  $PaymentSessionCopyWith<$Res>? get paymentSession;
   $SalesChannelCopyWith<$Res>? get salesChannel;
   $ContextCopyWith<$Res>? get context;
 }
@@ -164,6 +170,7 @@ class _$CartCopyWithImpl<$Res, $Val extends Cart>
     Object? billingAddress = freezed,
     Object? shippingMethods = freezed,
     Object? paymentSessions = freezed,
+    Object? paymentSession = freezed,
     Object? discounts = freezed,
     Object? salesChannel = freezed,
     Object? customer = freezed,
@@ -229,11 +236,15 @@ class _$CartCopyWithImpl<$Res, $Val extends Cart>
       shippingMethods: freezed == shippingMethods
           ? _value.shippingMethods
           : shippingMethods // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
+              as List<ShippingMethod>?,
       paymentSessions: freezed == paymentSessions
           ? _value.paymentSessions
           : paymentSessions // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
+              as List<PaymentSession>?,
+      paymentSession: freezed == paymentSession
+          ? _value.paymentSession
+          : paymentSession // ignore: cast_nullable_to_non_nullable
+              as PaymentSession?,
       discounts: freezed == discounts
           ? _value.discounts
           : discounts // ignore: cast_nullable_to_non_nullable
@@ -387,6 +398,18 @@ class _$CartCopyWithImpl<$Res, $Val extends Cart>
 
   @override
   @pragma('vm:prefer-inline')
+  $PaymentSessionCopyWith<$Res>? get paymentSession {
+    if (_value.paymentSession == null) {
+      return null;
+    }
+
+    return $PaymentSessionCopyWith<$Res>(_value.paymentSession!, (value) {
+      return _then(_value.copyWith(paymentSession: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $SalesChannelCopyWith<$Res>? get salesChannel {
     if (_value.salesChannel == null) {
       return null;
@@ -426,8 +449,9 @@ abstract class _$$CartImplCopyWith<$Res> implements $CartCopyWith<$Res> {
       dynamic payment,
       @JsonKey(name: 'shipping_address') AddressModel? shippingAddress,
       @JsonKey(name: 'billing_address') AddressModel? billingAddress,
-      @JsonKey(name: 'shipping_methods') List<dynamic>? shippingMethods,
-      @JsonKey(name: 'payment_sessions') List<dynamic>? paymentSessions,
+      @JsonKey(name: 'shipping_methods') List<ShippingMethod>? shippingMethods,
+      @JsonKey(name: 'payment_sessions') List<PaymentSession>? paymentSessions,
+      @JsonKey(name: 'payment_session') PaymentSession? paymentSession,
       List<dynamic>? discounts,
       @JsonKey(name: 'sales_channel') SalesChannel? salesChannel,
       dynamic customer,
@@ -464,6 +488,8 @@ abstract class _$$CartImplCopyWith<$Res> implements $CartCopyWith<$Res> {
   @override
   $AddressModelCopyWith<$Res>? get billingAddress;
   @override
+  $PaymentSessionCopyWith<$Res>? get paymentSession;
+  @override
   $SalesChannelCopyWith<$Res>? get salesChannel;
   @override
   $ContextCopyWith<$Res>? get context;
@@ -489,6 +515,7 @@ class __$$CartImplCopyWithImpl<$Res>
     Object? billingAddress = freezed,
     Object? shippingMethods = freezed,
     Object? paymentSessions = freezed,
+    Object? paymentSession = freezed,
     Object? discounts = freezed,
     Object? salesChannel = freezed,
     Object? customer = freezed,
@@ -554,11 +581,15 @@ class __$$CartImplCopyWithImpl<$Res>
       shippingMethods: freezed == shippingMethods
           ? _value._shippingMethods
           : shippingMethods // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
+              as List<ShippingMethod>?,
       paymentSessions: freezed == paymentSessions
           ? _value._paymentSessions
           : paymentSessions // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
+              as List<PaymentSession>?,
+      paymentSession: freezed == paymentSession
+          ? _value.paymentSession
+          : paymentSession // ignore: cast_nullable_to_non_nullable
+              as PaymentSession?,
       discounts: freezed == discounts
           ? _value._discounts
           : discounts // ignore: cast_nullable_to_non_nullable
@@ -687,8 +718,11 @@ class _$CartImpl implements _Cart {
       this.payment,
       @JsonKey(name: 'shipping_address') this.shippingAddress,
       @JsonKey(name: 'billing_address') this.billingAddress,
-      @JsonKey(name: 'shipping_methods') final List<dynamic>? shippingMethods,
-      @JsonKey(name: 'payment_sessions') final List<dynamic>? paymentSessions,
+      @JsonKey(name: 'shipping_methods')
+      final List<ShippingMethod>? shippingMethods,
+      @JsonKey(name: 'payment_sessions')
+      final List<PaymentSession>? paymentSessions,
+      @JsonKey(name: 'payment_session') this.paymentSession,
       final List<dynamic>? discounts,
       @JsonKey(name: 'sales_channel') this.salesChannel,
       this.customer,
@@ -761,10 +795,10 @@ class _$CartImpl implements _Cart {
   @override
   @JsonKey(name: 'billing_address')
   final AddressModel? billingAddress;
-  final List<dynamic>? _shippingMethods;
+  final List<ShippingMethod>? _shippingMethods;
   @override
   @JsonKey(name: 'shipping_methods')
-  List<dynamic>? get shippingMethods {
+  List<ShippingMethod>? get shippingMethods {
     final value = _shippingMethods;
     if (value == null) return null;
     if (_shippingMethods is EqualUnmodifiableListView) return _shippingMethods;
@@ -772,10 +806,10 @@ class _$CartImpl implements _Cart {
     return EqualUnmodifiableListView(value);
   }
 
-  final List<dynamic>? _paymentSessions;
+  final List<PaymentSession>? _paymentSessions;
   @override
   @JsonKey(name: 'payment_sessions')
-  List<dynamic>? get paymentSessions {
+  List<PaymentSession>? get paymentSessions {
     final value = _paymentSessions;
     if (value == null) return null;
     if (_paymentSessions is EqualUnmodifiableListView) return _paymentSessions;
@@ -783,6 +817,9 @@ class _$CartImpl implements _Cart {
     return EqualUnmodifiableListView(value);
   }
 
+  @override
+  @JsonKey(name: 'payment_session')
+  final PaymentSession? paymentSession;
   final List<dynamic>? _discounts;
   @override
   List<dynamic>? get discounts {
@@ -870,7 +907,7 @@ class _$CartImpl implements _Cart {
 
   @override
   String toString() {
-    return 'Cart(object: $object, id: $id, giftCards: $giftCards, region: $region, items: $items, payment: $payment, shippingAddress: $shippingAddress, billingAddress: $billingAddress, shippingMethods: $shippingMethods, paymentSessions: $paymentSessions, discounts: $discounts, salesChannel: $salesChannel, customer: $customer, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt, email: $email, billingAddressId: $billingAddressId, shippingAddressId: $shippingAddressId, regionId: $regionId, customerId: $customerId, paymentId: $paymentId, type: $type, completedAt: $completedAt, paymentAuthorizedAt: $paymentAuthorizedAt, idempotencyKey: $idempotencyKey, context: $context, metadata: $metadata, salesChannelId: $salesChannelId, subtotal: $subtotal, discountTotal: $discountTotal, itemTaxTotal: $itemTaxTotal, shippingTotal: $shippingTotal, shippingTaxTotal: $shippingTaxTotal, giftCardTotal: $giftCardTotal, giftCardTaxTotal: $giftCardTaxTotal, taxTotal: $taxTotal, total: $total)';
+    return 'Cart(object: $object, id: $id, giftCards: $giftCards, region: $region, items: $items, payment: $payment, shippingAddress: $shippingAddress, billingAddress: $billingAddress, shippingMethods: $shippingMethods, paymentSessions: $paymentSessions, paymentSession: $paymentSession, discounts: $discounts, salesChannel: $salesChannel, customer: $customer, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt, email: $email, billingAddressId: $billingAddressId, shippingAddressId: $shippingAddressId, regionId: $regionId, customerId: $customerId, paymentId: $paymentId, type: $type, completedAt: $completedAt, paymentAuthorizedAt: $paymentAuthorizedAt, idempotencyKey: $idempotencyKey, context: $context, metadata: $metadata, salesChannelId: $salesChannelId, subtotal: $subtotal, discountTotal: $discountTotal, itemTaxTotal: $itemTaxTotal, shippingTotal: $shippingTotal, shippingTaxTotal: $shippingTaxTotal, giftCardTotal: $giftCardTotal, giftCardTaxTotal: $giftCardTaxTotal, taxTotal: $taxTotal, total: $total)';
   }
 
   @override
@@ -893,6 +930,8 @@ class _$CartImpl implements _Cart {
                 .equals(other._shippingMethods, _shippingMethods) &&
             const DeepCollectionEquality()
                 .equals(other._paymentSessions, _paymentSessions) &&
+            (identical(other.paymentSession, paymentSession) ||
+                other.paymentSession == paymentSession) &&
             const DeepCollectionEquality()
                 .equals(other._discounts, _discounts) &&
             (identical(other.salesChannel, salesChannel) ||
@@ -957,6 +996,7 @@ class _$CartImpl implements _Cart {
         billingAddress,
         const DeepCollectionEquality().hash(_shippingMethods),
         const DeepCollectionEquality().hash(_paymentSessions),
+        paymentSession,
         const DeepCollectionEquality().hash(_discounts),
         salesChannel,
         const DeepCollectionEquality().hash(customer),
@@ -1011,8 +1051,11 @@ abstract class _Cart implements Cart {
       final dynamic payment,
       @JsonKey(name: 'shipping_address') final AddressModel? shippingAddress,
       @JsonKey(name: 'billing_address') final AddressModel? billingAddress,
-      @JsonKey(name: 'shipping_methods') final List<dynamic>? shippingMethods,
-      @JsonKey(name: 'payment_sessions') final List<dynamic>? paymentSessions,
+      @JsonKey(name: 'shipping_methods')
+      final List<ShippingMethod>? shippingMethods,
+      @JsonKey(name: 'payment_sessions')
+      final List<PaymentSession>? paymentSessions,
+      @JsonKey(name: 'payment_session') final PaymentSession? paymentSession,
       final List<dynamic>? discounts,
       @JsonKey(name: 'sales_channel') final SalesChannel? salesChannel,
       final dynamic customer,
@@ -1065,10 +1108,13 @@ abstract class _Cart implements Cart {
   AddressModel? get billingAddress;
   @override
   @JsonKey(name: 'shipping_methods')
-  List<dynamic>? get shippingMethods;
+  List<ShippingMethod>? get shippingMethods;
   @override
   @JsonKey(name: 'payment_sessions')
-  List<dynamic>? get paymentSessions;
+  List<PaymentSession>? get paymentSessions;
+  @override
+  @JsonKey(name: 'payment_session')
+  PaymentSession? get paymentSession;
   @override
   List<dynamic>? get discounts;
   @override

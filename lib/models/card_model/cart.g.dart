@@ -25,8 +25,16 @@ _$CartImpl _$$CartImplFromJson(Map<String, dynamic> json) => _$CartImpl(
           ? null
           : AddressModel.fromJson(
               json['billing_address'] as Map<String, dynamic>),
-      shippingMethods: json['shipping_methods'] as List<dynamic>?,
-      paymentSessions: json['payment_sessions'] as List<dynamic>?,
+      shippingMethods: (json['shipping_methods'] as List<dynamic>?)
+          ?.map((e) => ShippingMethod.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      paymentSessions: (json['payment_sessions'] as List<dynamic>?)
+          ?.map((e) => PaymentSession.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      paymentSession: json['payment_session'] == null
+          ? null
+          : PaymentSession.fromJson(
+              json['payment_session'] as Map<String, dynamic>),
       discounts: json['discounts'] as List<dynamic>?,
       salesChannel: json['sales_channel'] == null
           ? null
@@ -78,6 +86,7 @@ Map<String, dynamic> _$$CartImplToJson(_$CartImpl instance) =>
       'billing_address': instance.billingAddress,
       'shipping_methods': instance.shippingMethods,
       'payment_sessions': instance.paymentSessions,
+      'payment_session': instance.paymentSession,
       'discounts': instance.discounts,
       'sales_channel': instance.salesChannel,
       'customer': instance.customer,
