@@ -20,32 +20,25 @@ AddressModel _$AddressModelFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$AddressModel {
+  @JsonKey(includeIfNull: false)
   String? get id => throw _privateConstructorUsedError;
-  @JsonKey(name: 'created_at')
-  DateTime? get createdAt => throw _privateConstructorUsedError;
-  @JsonKey(name: 'updated_at')
-  DateTime? get updatedAt => throw _privateConstructorUsedError;
-  @JsonKey(name: 'deleted_at')
-  dynamic get deletedAt => throw _privateConstructorUsedError;
-  @JsonKey(name: 'customer_id')
-  dynamic get customerId => throw _privateConstructorUsedError;
-  String? get company => throw _privateConstructorUsedError;
   @JsonKey(name: 'first_name')
   String? get firstName => throw _privateConstructorUsedError;
   @JsonKey(name: 'last_name')
   String? get lastName => throw _privateConstructorUsedError;
   @JsonKey(name: 'address_1')
   String? get address1 => throw _privateConstructorUsedError;
-  @JsonKey(name: 'address_2')
-  String? get address2 => throw _privateConstructorUsedError;
   String? get city => throw _privateConstructorUsedError;
   @JsonKey(name: 'country_code')
-  dynamic get countryCode => throw _privateConstructorUsedError;
-  String? get province => throw _privateConstructorUsedError;
+  String? get countryCode => throw _privateConstructorUsedError;
   @JsonKey(name: 'postal_code')
   String? get postalCode => throw _privateConstructorUsedError;
   String? get phone => throw _privateConstructorUsedError;
-  dynamic get metadata => throw _privateConstructorUsedError;
+  String? get company => throw _privateConstructorUsedError;
+  @JsonKey(name: 'address_2')
+  String? get address2 => throw _privateConstructorUsedError;
+  String? get province => throw _privateConstructorUsedError;
+  Metadata? get metadata => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -60,22 +53,20 @@ abstract class $AddressModelCopyWith<$Res> {
       _$AddressModelCopyWithImpl<$Res, AddressModel>;
   @useResult
   $Res call(
-      {String? id,
-      @JsonKey(name: 'created_at') DateTime? createdAt,
-      @JsonKey(name: 'updated_at') DateTime? updatedAt,
-      @JsonKey(name: 'deleted_at') dynamic deletedAt,
-      @JsonKey(name: 'customer_id') dynamic customerId,
-      String? company,
+      {@JsonKey(includeIfNull: false) String? id,
       @JsonKey(name: 'first_name') String? firstName,
       @JsonKey(name: 'last_name') String? lastName,
       @JsonKey(name: 'address_1') String? address1,
-      @JsonKey(name: 'address_2') String? address2,
       String? city,
-      @JsonKey(name: 'country_code') dynamic countryCode,
-      String? province,
+      @JsonKey(name: 'country_code') String? countryCode,
       @JsonKey(name: 'postal_code') String? postalCode,
       String? phone,
-      dynamic metadata});
+      String? company,
+      @JsonKey(name: 'address_2') String? address2,
+      String? province,
+      Metadata? metadata});
+
+  $MetadataCopyWith<$Res>? get metadata;
 }
 
 /// @nodoc
@@ -92,46 +83,22 @@ class _$AddressModelCopyWithImpl<$Res, $Val extends AddressModel>
   @override
   $Res call({
     Object? id = freezed,
-    Object? createdAt = freezed,
-    Object? updatedAt = freezed,
-    Object? deletedAt = freezed,
-    Object? customerId = freezed,
-    Object? company = freezed,
     Object? firstName = freezed,
     Object? lastName = freezed,
     Object? address1 = freezed,
-    Object? address2 = freezed,
     Object? city = freezed,
     Object? countryCode = freezed,
-    Object? province = freezed,
     Object? postalCode = freezed,
     Object? phone = freezed,
+    Object? company = freezed,
+    Object? address2 = freezed,
+    Object? province = freezed,
     Object? metadata = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      createdAt: freezed == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      deletedAt: freezed == deletedAt
-          ? _value.deletedAt
-          : deletedAt // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      customerId: freezed == customerId
-          ? _value.customerId
-          : customerId // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      company: freezed == company
-          ? _value.company
-          : company // ignore: cast_nullable_to_non_nullable
               as String?,
       firstName: freezed == firstName
           ? _value.firstName
@@ -145,10 +112,6 @@ class _$AddressModelCopyWithImpl<$Res, $Val extends AddressModel>
           ? _value.address1
           : address1 // ignore: cast_nullable_to_non_nullable
               as String?,
-      address2: freezed == address2
-          ? _value.address2
-          : address2 // ignore: cast_nullable_to_non_nullable
-              as String?,
       city: freezed == city
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
@@ -156,10 +119,6 @@ class _$AddressModelCopyWithImpl<$Res, $Val extends AddressModel>
       countryCode: freezed == countryCode
           ? _value.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      province: freezed == province
-          ? _value.province
-          : province // ignore: cast_nullable_to_non_nullable
               as String?,
       postalCode: freezed == postalCode
           ? _value.postalCode
@@ -169,11 +128,35 @@ class _$AddressModelCopyWithImpl<$Res, $Val extends AddressModel>
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
               as String?,
+      company: freezed == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as String?,
+      address2: freezed == address2
+          ? _value.address2
+          : address2 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      province: freezed == province
+          ? _value.province
+          : province // ignore: cast_nullable_to_non_nullable
+              as String?,
       metadata: freezed == metadata
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as Metadata?,
     ) as $Val);
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $MetadataCopyWith<$Res>? get metadata {
+    if (_value.metadata == null) {
+      return null;
+    }
+
+    return $MetadataCopyWith<$Res>(_value.metadata!, (value) {
+      return _then(_value.copyWith(metadata: value) as $Val);
+    });
   }
 }
 
@@ -186,22 +169,21 @@ abstract class _$$AddressModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String? id,
-      @JsonKey(name: 'created_at') DateTime? createdAt,
-      @JsonKey(name: 'updated_at') DateTime? updatedAt,
-      @JsonKey(name: 'deleted_at') dynamic deletedAt,
-      @JsonKey(name: 'customer_id') dynamic customerId,
-      String? company,
+      {@JsonKey(includeIfNull: false) String? id,
       @JsonKey(name: 'first_name') String? firstName,
       @JsonKey(name: 'last_name') String? lastName,
       @JsonKey(name: 'address_1') String? address1,
-      @JsonKey(name: 'address_2') String? address2,
       String? city,
-      @JsonKey(name: 'country_code') dynamic countryCode,
-      String? province,
+      @JsonKey(name: 'country_code') String? countryCode,
       @JsonKey(name: 'postal_code') String? postalCode,
       String? phone,
-      dynamic metadata});
+      String? company,
+      @JsonKey(name: 'address_2') String? address2,
+      String? province,
+      Metadata? metadata});
+
+  @override
+  $MetadataCopyWith<$Res>? get metadata;
 }
 
 /// @nodoc
@@ -216,46 +198,22 @@ class __$$AddressModelImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = freezed,
-    Object? createdAt = freezed,
-    Object? updatedAt = freezed,
-    Object? deletedAt = freezed,
-    Object? customerId = freezed,
-    Object? company = freezed,
     Object? firstName = freezed,
     Object? lastName = freezed,
     Object? address1 = freezed,
-    Object? address2 = freezed,
     Object? city = freezed,
     Object? countryCode = freezed,
-    Object? province = freezed,
     Object? postalCode = freezed,
     Object? phone = freezed,
+    Object? company = freezed,
+    Object? address2 = freezed,
+    Object? province = freezed,
     Object? metadata = freezed,
   }) {
     return _then(_$AddressModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String?,
-      createdAt: freezed == createdAt
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      updatedAt: freezed == updatedAt
-          ? _value.updatedAt
-          : updatedAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      deletedAt: freezed == deletedAt
-          ? _value.deletedAt
-          : deletedAt // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      customerId: freezed == customerId
-          ? _value.customerId
-          : customerId // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      company: freezed == company
-          ? _value.company
-          : company // ignore: cast_nullable_to_non_nullable
               as String?,
       firstName: freezed == firstName
           ? _value.firstName
@@ -269,10 +227,6 @@ class __$$AddressModelImplCopyWithImpl<$Res>
           ? _value.address1
           : address1 // ignore: cast_nullable_to_non_nullable
               as String?,
-      address2: freezed == address2
-          ? _value.address2
-          : address2 // ignore: cast_nullable_to_non_nullable
-              as String?,
       city: freezed == city
           ? _value.city
           : city // ignore: cast_nullable_to_non_nullable
@@ -280,10 +234,6 @@ class __$$AddressModelImplCopyWithImpl<$Res>
       countryCode: freezed == countryCode
           ? _value.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-      province: freezed == province
-          ? _value.province
-          : province // ignore: cast_nullable_to_non_nullable
               as String?,
       postalCode: freezed == postalCode
           ? _value.postalCode
@@ -293,10 +243,22 @@ class __$$AddressModelImplCopyWithImpl<$Res>
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
               as String?,
+      company: freezed == company
+          ? _value.company
+          : company // ignore: cast_nullable_to_non_nullable
+              as String?,
+      address2: freezed == address2
+          ? _value.address2
+          : address2 // ignore: cast_nullable_to_non_nullable
+              as String?,
+      province: freezed == province
+          ? _value.province
+          : province // ignore: cast_nullable_to_non_nullable
+              as String?,
       metadata: freezed == metadata
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as Metadata?,
     ));
   }
 }
@@ -305,42 +267,25 @@ class __$$AddressModelImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$AddressModelImpl implements _AddressModel {
   _$AddressModelImpl(
-      {this.id,
-      @JsonKey(name: 'created_at') this.createdAt,
-      @JsonKey(name: 'updated_at') this.updatedAt,
-      @JsonKey(name: 'deleted_at') this.deletedAt,
-      @JsonKey(name: 'customer_id') this.customerId,
-      this.company,
+      {@JsonKey(includeIfNull: false) this.id,
       @JsonKey(name: 'first_name') this.firstName,
       @JsonKey(name: 'last_name') this.lastName,
       @JsonKey(name: 'address_1') this.address1,
-      @JsonKey(name: 'address_2') this.address2,
       this.city,
       @JsonKey(name: 'country_code') this.countryCode,
-      this.province,
       @JsonKey(name: 'postal_code') this.postalCode,
       this.phone,
+      this.company,
+      @JsonKey(name: 'address_2') this.address2,
+      this.province,
       this.metadata});
 
   factory _$AddressModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$AddressModelImplFromJson(json);
 
   @override
+  @JsonKey(includeIfNull: false)
   final String? id;
-  @override
-  @JsonKey(name: 'created_at')
-  final DateTime? createdAt;
-  @override
-  @JsonKey(name: 'updated_at')
-  final DateTime? updatedAt;
-  @override
-  @JsonKey(name: 'deleted_at')
-  final dynamic deletedAt;
-  @override
-  @JsonKey(name: 'customer_id')
-  final dynamic customerId;
-  @override
-  final String? company;
   @override
   @JsonKey(name: 'first_name')
   final String? firstName;
@@ -351,26 +296,28 @@ class _$AddressModelImpl implements _AddressModel {
   @JsonKey(name: 'address_1')
   final String? address1;
   @override
-  @JsonKey(name: 'address_2')
-  final String? address2;
-  @override
   final String? city;
   @override
   @JsonKey(name: 'country_code')
-  final dynamic countryCode;
-  @override
-  final String? province;
+  final String? countryCode;
   @override
   @JsonKey(name: 'postal_code')
   final String? postalCode;
   @override
   final String? phone;
   @override
-  final dynamic metadata;
+  final String? company;
+  @override
+  @JsonKey(name: 'address_2')
+  final String? address2;
+  @override
+  final String? province;
+  @override
+  final Metadata? metadata;
 
   @override
   String toString() {
-    return 'AddressModel(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt, customerId: $customerId, company: $company, firstName: $firstName, lastName: $lastName, address1: $address1, address2: $address2, city: $city, countryCode: $countryCode, province: $province, postalCode: $postalCode, phone: $phone, metadata: $metadata)';
+    return 'AddressModel(id: $id, firstName: $firstName, lastName: $lastName, address1: $address1, city: $city, countryCode: $countryCode, postalCode: $postalCode, phone: $phone, company: $company, address2: $address2, province: $province, metadata: $metadata)';
   }
 
   @override
@@ -379,31 +326,25 @@ class _$AddressModelImpl implements _AddressModel {
         (other.runtimeType == runtimeType &&
             other is _$AddressModelImpl &&
             (identical(other.id, id) || other.id == id) &&
-            (identical(other.createdAt, createdAt) ||
-                other.createdAt == createdAt) &&
-            (identical(other.updatedAt, updatedAt) ||
-                other.updatedAt == updatedAt) &&
-            const DeepCollectionEquality().equals(other.deletedAt, deletedAt) &&
-            const DeepCollectionEquality()
-                .equals(other.customerId, customerId) &&
-            (identical(other.company, company) || other.company == company) &&
             (identical(other.firstName, firstName) ||
                 other.firstName == firstName) &&
             (identical(other.lastName, lastName) ||
                 other.lastName == lastName) &&
             (identical(other.address1, address1) ||
                 other.address1 == address1) &&
-            (identical(other.address2, address2) ||
-                other.address2 == address2) &&
             (identical(other.city, city) || other.city == city) &&
-            const DeepCollectionEquality()
-                .equals(other.countryCode, countryCode) &&
-            (identical(other.province, province) ||
-                other.province == province) &&
+            (identical(other.countryCode, countryCode) ||
+                other.countryCode == countryCode) &&
             (identical(other.postalCode, postalCode) ||
                 other.postalCode == postalCode) &&
             (identical(other.phone, phone) || other.phone == phone) &&
-            const DeepCollectionEquality().equals(other.metadata, metadata));
+            (identical(other.company, company) || other.company == company) &&
+            (identical(other.address2, address2) ||
+                other.address2 == address2) &&
+            (identical(other.province, province) ||
+                other.province == province) &&
+            (identical(other.metadata, metadata) ||
+                other.metadata == metadata));
   }
 
   @JsonKey(ignore: true)
@@ -411,21 +352,17 @@ class _$AddressModelImpl implements _AddressModel {
   int get hashCode => Object.hash(
       runtimeType,
       id,
-      createdAt,
-      updatedAt,
-      const DeepCollectionEquality().hash(deletedAt),
-      const DeepCollectionEquality().hash(customerId),
-      company,
       firstName,
       lastName,
       address1,
-      address2,
       city,
-      const DeepCollectionEquality().hash(countryCode),
-      province,
+      countryCode,
       postalCode,
       phone,
-      const DeepCollectionEquality().hash(metadata));
+      company,
+      address2,
+      province,
+      metadata);
 
   @JsonKey(ignore: true)
   @override
@@ -443,42 +380,25 @@ class _$AddressModelImpl implements _AddressModel {
 
 abstract class _AddressModel implements AddressModel {
   factory _AddressModel(
-      {final String? id,
-      @JsonKey(name: 'created_at') final DateTime? createdAt,
-      @JsonKey(name: 'updated_at') final DateTime? updatedAt,
-      @JsonKey(name: 'deleted_at') final dynamic deletedAt,
-      @JsonKey(name: 'customer_id') final dynamic customerId,
-      final String? company,
+      {@JsonKey(includeIfNull: false) final String? id,
       @JsonKey(name: 'first_name') final String? firstName,
       @JsonKey(name: 'last_name') final String? lastName,
       @JsonKey(name: 'address_1') final String? address1,
-      @JsonKey(name: 'address_2') final String? address2,
       final String? city,
-      @JsonKey(name: 'country_code') final dynamic countryCode,
-      final String? province,
+      @JsonKey(name: 'country_code') final String? countryCode,
       @JsonKey(name: 'postal_code') final String? postalCode,
       final String? phone,
-      final dynamic metadata}) = _$AddressModelImpl;
+      final String? company,
+      @JsonKey(name: 'address_2') final String? address2,
+      final String? province,
+      final Metadata? metadata}) = _$AddressModelImpl;
 
   factory _AddressModel.fromJson(Map<String, dynamic> json) =
       _$AddressModelImpl.fromJson;
 
   @override
+  @JsonKey(includeIfNull: false)
   String? get id;
-  @override
-  @JsonKey(name: 'created_at')
-  DateTime? get createdAt;
-  @override
-  @JsonKey(name: 'updated_at')
-  DateTime? get updatedAt;
-  @override
-  @JsonKey(name: 'deleted_at')
-  dynamic get deletedAt;
-  @override
-  @JsonKey(name: 'customer_id')
-  dynamic get customerId;
-  @override
-  String? get company;
   @override
   @JsonKey(name: 'first_name')
   String? get firstName;
@@ -489,22 +409,24 @@ abstract class _AddressModel implements AddressModel {
   @JsonKey(name: 'address_1')
   String? get address1;
   @override
-  @JsonKey(name: 'address_2')
-  String? get address2;
-  @override
   String? get city;
   @override
   @JsonKey(name: 'country_code')
-  dynamic get countryCode;
-  @override
-  String? get province;
+  String? get countryCode;
   @override
   @JsonKey(name: 'postal_code')
   String? get postalCode;
   @override
   String? get phone;
   @override
-  dynamic get metadata;
+  String? get company;
+  @override
+  @JsonKey(name: 'address_2')
+  String? get address2;
+  @override
+  String? get province;
+  @override
+  Metadata? get metadata;
   @override
   @JsonKey(ignore: true)
   _$$AddressModelImplCopyWith<_$AddressModelImpl> get copyWith =>

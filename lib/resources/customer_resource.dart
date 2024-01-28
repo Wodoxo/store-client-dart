@@ -1,9 +1,11 @@
 
+import 'dart:convert';
+
 import 'package:dio/dio.dart';
+import 'package:wodoxo_api/models/address_model/address_model.dart';
 import 'package:wodoxo_api/models/create_customer_model/create_customer_model.dart';
 import 'package:wodoxo_api/models/customer_model/customer_model.dart';
 import 'package:wodoxo_api/payload_models/create_customer_request_model/create_customer_request_model.dart';
-import 'package:wodoxo_api/payload_models/shipping_address_request_model/shipping_address_request_model.dart';
 import 'package:wodoxo_api/wodoxo_result.dart';
 
 class CustomerResource {
@@ -127,10 +129,12 @@ class CustomerResource {
 
 
 
-    Future<WodoxoResult<CustomerModel>> addShippingAddress(ShippingAddressRequestModel data,  {Map<String, dynamic>? queryParameters = null}) async {
+    Future<WodoxoResult<CustomerModel>> addShippingAddress(AddressModel data,  {Map<String, dynamic>? queryParameters = null}) async {
     final response = await _dio.post(
       '$path/me/addresses',
-      data: data.toJson(),
+      data: {
+        'address' : data
+      },
       queryParameters: queryParameters
     );
     if (response.statusCode == 200) {
@@ -147,7 +151,7 @@ class CustomerResource {
   }
 
 
-    Future<WodoxoResult<CustomerModel>> updateShippingAddress(String addressId , ShippingAddressRequestModel data,  {Map<String, dynamic>? queryParameters = null}) async {
+    Future<WodoxoResult<CustomerModel>> updateShippingAddress(String addressId , AddressModel data,  {Map<String, dynamic>? queryParameters = null}) async {
     final response = await _dio.post(
       '$path/me/addresses/$addressId',
       data: data,

@@ -11,7 +11,7 @@ _$CartPayloadModelImpl _$$CartPayloadModelImplFromJson(
     _$CartPayloadModelImpl(
       shippingAddress: json['shipping_address'] == null
           ? null
-          : ShippingAddress.fromJson(
+          : AddressModel.fromJson(
               json['shipping_address'] as Map<String, dynamic>),
       email: json['email'] as String?,
       context: json['context'] == null
@@ -19,7 +19,7 @@ _$CartPayloadModelImpl _$$CartPayloadModelImplFromJson(
           : Context.fromJson(json['context'] as Map<String, dynamic>),
       billingAddress: json['billing_address'] == null
           ? null
-          : BillingAddress.fromJson(
+          : AddressModel.fromJson(
               json['billing_address'] as Map<String, dynamic>),
       regionId: json['region_id'] as String?,
       countryCode: json['country_code'] as String?,

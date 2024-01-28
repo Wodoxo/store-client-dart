@@ -21,11 +21,11 @@ CartPayloadModel _$CartPayloadModelFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$CartPayloadModel {
   @JsonKey(name: 'shipping_address')
-  ShippingAddress? get shippingAddress => throw _privateConstructorUsedError;
+  AddressModel? get shippingAddress => throw _privateConstructorUsedError;
   String? get email => throw _privateConstructorUsedError;
   Context? get context => throw _privateConstructorUsedError;
   @JsonKey(name: 'billing_address')
-  BillingAddress? get billingAddress => throw _privateConstructorUsedError;
+  AddressModel? get billingAddress => throw _privateConstructorUsedError;
   @JsonKey(name: 'region_id')
   String? get regionId => throw _privateConstructorUsedError;
   @JsonKey(name: 'country_code')
@@ -48,18 +48,18 @@ abstract class $CartPayloadModelCopyWith<$Res> {
       _$CartPayloadModelCopyWithImpl<$Res, CartPayloadModel>;
   @useResult
   $Res call(
-      {@JsonKey(name: 'shipping_address') ShippingAddress? shippingAddress,
+      {@JsonKey(name: 'shipping_address') AddressModel? shippingAddress,
       String? email,
       Context? context,
-      @JsonKey(name: 'billing_address') BillingAddress? billingAddress,
+      @JsonKey(name: 'billing_address') AddressModel? billingAddress,
       @JsonKey(name: 'region_id') String? regionId,
       @JsonKey(name: 'country_code') String? countryCode,
       @JsonKey(name: 'sales_channel_id') String? salesChannelId,
       @JsonKey(name: 'customer_id') String? customerId});
 
-  $ShippingAddressCopyWith<$Res>? get shippingAddress;
+  $AddressModelCopyWith<$Res>? get shippingAddress;
   $ContextCopyWith<$Res>? get context;
-  $BillingAddressCopyWith<$Res>? get billingAddress;
+  $AddressModelCopyWith<$Res>? get billingAddress;
 }
 
 /// @nodoc
@@ -88,7 +88,7 @@ class _$CartPayloadModelCopyWithImpl<$Res, $Val extends CartPayloadModel>
       shippingAddress: freezed == shippingAddress
           ? _value.shippingAddress
           : shippingAddress // ignore: cast_nullable_to_non_nullable
-              as ShippingAddress?,
+              as AddressModel?,
       email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -100,7 +100,7 @@ class _$CartPayloadModelCopyWithImpl<$Res, $Val extends CartPayloadModel>
       billingAddress: freezed == billingAddress
           ? _value.billingAddress
           : billingAddress // ignore: cast_nullable_to_non_nullable
-              as BillingAddress?,
+              as AddressModel?,
       regionId: freezed == regionId
           ? _value.regionId
           : regionId // ignore: cast_nullable_to_non_nullable
@@ -122,12 +122,12 @@ class _$CartPayloadModelCopyWithImpl<$Res, $Val extends CartPayloadModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $ShippingAddressCopyWith<$Res>? get shippingAddress {
+  $AddressModelCopyWith<$Res>? get shippingAddress {
     if (_value.shippingAddress == null) {
       return null;
     }
 
-    return $ShippingAddressCopyWith<$Res>(_value.shippingAddress!, (value) {
+    return $AddressModelCopyWith<$Res>(_value.shippingAddress!, (value) {
       return _then(_value.copyWith(shippingAddress: value) as $Val);
     });
   }
@@ -146,12 +146,12 @@ class _$CartPayloadModelCopyWithImpl<$Res, $Val extends CartPayloadModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $BillingAddressCopyWith<$Res>? get billingAddress {
+  $AddressModelCopyWith<$Res>? get billingAddress {
     if (_value.billingAddress == null) {
       return null;
     }
 
-    return $BillingAddressCopyWith<$Res>(_value.billingAddress!, (value) {
+    return $AddressModelCopyWith<$Res>(_value.billingAddress!, (value) {
       return _then(_value.copyWith(billingAddress: value) as $Val);
     });
   }
@@ -166,21 +166,21 @@ abstract class _$$CartPayloadModelImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {@JsonKey(name: 'shipping_address') ShippingAddress? shippingAddress,
+      {@JsonKey(name: 'shipping_address') AddressModel? shippingAddress,
       String? email,
       Context? context,
-      @JsonKey(name: 'billing_address') BillingAddress? billingAddress,
+      @JsonKey(name: 'billing_address') AddressModel? billingAddress,
       @JsonKey(name: 'region_id') String? regionId,
       @JsonKey(name: 'country_code') String? countryCode,
       @JsonKey(name: 'sales_channel_id') String? salesChannelId,
       @JsonKey(name: 'customer_id') String? customerId});
 
   @override
-  $ShippingAddressCopyWith<$Res>? get shippingAddress;
+  $AddressModelCopyWith<$Res>? get shippingAddress;
   @override
   $ContextCopyWith<$Res>? get context;
   @override
-  $BillingAddressCopyWith<$Res>? get billingAddress;
+  $AddressModelCopyWith<$Res>? get billingAddress;
 }
 
 /// @nodoc
@@ -207,7 +207,7 @@ class __$$CartPayloadModelImplCopyWithImpl<$Res>
       shippingAddress: freezed == shippingAddress
           ? _value.shippingAddress
           : shippingAddress // ignore: cast_nullable_to_non_nullable
-              as ShippingAddress?,
+              as AddressModel?,
       email: freezed == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
@@ -219,7 +219,7 @@ class __$$CartPayloadModelImplCopyWithImpl<$Res>
       billingAddress: freezed == billingAddress
           ? _value.billingAddress
           : billingAddress // ignore: cast_nullable_to_non_nullable
-              as BillingAddress?,
+              as AddressModel?,
       regionId: freezed == regionId
           ? _value.regionId
           : regionId // ignore: cast_nullable_to_non_nullable
@@ -258,14 +258,14 @@ class _$CartPayloadModelImpl implements _CartPayloadModel {
 
   @override
   @JsonKey(name: 'shipping_address')
-  final ShippingAddress? shippingAddress;
+  final AddressModel? shippingAddress;
   @override
   final String? email;
   @override
   final Context? context;
   @override
   @JsonKey(name: 'billing_address')
-  final BillingAddress? billingAddress;
+  final AddressModel? billingAddress;
   @override
   @JsonKey(name: 'region_id')
   final String? regionId;
@@ -327,11 +327,10 @@ class _$CartPayloadModelImpl implements _CartPayloadModel {
 
 abstract class _CartPayloadModel implements CartPayloadModel {
   factory _CartPayloadModel(
-      {@JsonKey(name: 'shipping_address')
-      final ShippingAddress? shippingAddress,
+      {@JsonKey(name: 'shipping_address') final AddressModel? shippingAddress,
       final String? email,
       final Context? context,
-      @JsonKey(name: 'billing_address') final BillingAddress? billingAddress,
+      @JsonKey(name: 'billing_address') final AddressModel? billingAddress,
       @JsonKey(name: 'region_id') final String? regionId,
       @JsonKey(name: 'country_code') final String? countryCode,
       @JsonKey(name: 'sales_channel_id') final String? salesChannelId,
@@ -343,14 +342,14 @@ abstract class _CartPayloadModel implements CartPayloadModel {
 
   @override
   @JsonKey(name: 'shipping_address')
-  ShippingAddress? get shippingAddress;
+  AddressModel? get shippingAddress;
   @override
   String? get email;
   @override
   Context? get context;
   @override
   @JsonKey(name: 'billing_address')
-  BillingAddress? get billingAddress;
+  AddressModel? get billingAddress;
   @override
   @JsonKey(name: 'region_id')
   String? get regionId;

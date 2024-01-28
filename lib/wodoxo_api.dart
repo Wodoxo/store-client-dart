@@ -3,6 +3,7 @@ library wodoxo_api;
 import 'dart:io';
 
 import 'package:cookie_jar/cookie_jar.dart';
+import 'package:curl_logger_dio_interceptor/curl_logger_dio_interceptor.dart';
 import 'package:dio/dio.dart';
 import 'package:dio_cookie_manager/dio_cookie_manager.dart';
 import 'package:wodoxo_api/helpers/wodoxo_rate_limit_exception.dart';
@@ -85,6 +86,36 @@ class WodoxoAPI {
       ),
     );
     _dio.interceptors.add(CookieManager(_cookieJar));
+    if(enableLogging){
+      _dio.interceptors.add(CurlLoggerDioInterceptor(printOnSuccess: true));
+    }
+
+    _dio.interceptors.add(InterceptorsWrapper(
+  onRequest: (
+    RequestOptions options,
+    RequestInterceptorHandler handler,
+  ) {
+    if (options.contentType == null) {
+      final dynamic data = options.data;
+      final String? contentType;
+      if (data is FormData) {
+        contentType = Headers.multipartFormDataContentType;
+      } else if (data is Map) {
+        contentType = Headers.formUrlEncodedContentType;
+      } else if (data is String) {
+        contentType = Headers.jsonContentType;
+      } else if (data != null) {
+        contentType = Headers.jsonContentType; 
+      } else {
+        contentType = null;
+      }
+      options.headers.remove('content-length');
+      options.contentType = contentType;
+      
+    }
+    handler.next(options);
+  },
+));
 
     if (rateLimitManagement != null) {
       _dio.interceptors.add(
