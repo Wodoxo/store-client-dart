@@ -28,9 +28,9 @@ mixin _$Cart {
   List<Item>? get items => throw _privateConstructorUsedError;
   dynamic get payment => throw _privateConstructorUsedError;
   @JsonKey(name: 'shipping_address')
-  dynamic get shippingAddress => throw _privateConstructorUsedError;
+  AddressModel? get shippingAddress => throw _privateConstructorUsedError;
   @JsonKey(name: 'billing_address')
-  dynamic get billingAddress => throw _privateConstructorUsedError;
+  AddressModel? get billingAddress => throw _privateConstructorUsedError;
   @JsonKey(name: 'shipping_methods')
   List<dynamic>? get shippingMethods => throw _privateConstructorUsedError;
   @JsonKey(name: 'payment_sessions')
@@ -101,8 +101,8 @@ abstract class $CartCopyWith<$Res> {
       Region? region,
       List<Item>? items,
       dynamic payment,
-      @JsonKey(name: 'shipping_address') dynamic shippingAddress,
-      @JsonKey(name: 'billing_address') dynamic billingAddress,
+      @JsonKey(name: 'shipping_address') AddressModel? shippingAddress,
+      @JsonKey(name: 'billing_address') AddressModel? billingAddress,
       @JsonKey(name: 'shipping_methods') List<dynamic>? shippingMethods,
       @JsonKey(name: 'payment_sessions') List<dynamic>? paymentSessions,
       List<dynamic>? discounts,
@@ -135,6 +135,8 @@ abstract class $CartCopyWith<$Res> {
       int? total});
 
   $RegionCopyWith<$Res>? get region;
+  $AddressModelCopyWith<$Res>? get shippingAddress;
+  $AddressModelCopyWith<$Res>? get billingAddress;
   $SalesChannelCopyWith<$Res>? get salesChannel;
   $ContextCopyWith<$Res>? get context;
 }
@@ -219,11 +221,11 @@ class _$CartCopyWithImpl<$Res, $Val extends Cart>
       shippingAddress: freezed == shippingAddress
           ? _value.shippingAddress
           : shippingAddress // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as AddressModel?,
       billingAddress: freezed == billingAddress
           ? _value.billingAddress
           : billingAddress // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as AddressModel?,
       shippingMethods: freezed == shippingMethods
           ? _value.shippingMethods
           : shippingMethods // ignore: cast_nullable_to_non_nullable
@@ -361,6 +363,30 @@ class _$CartCopyWithImpl<$Res, $Val extends Cart>
 
   @override
   @pragma('vm:prefer-inline')
+  $AddressModelCopyWith<$Res>? get shippingAddress {
+    if (_value.shippingAddress == null) {
+      return null;
+    }
+
+    return $AddressModelCopyWith<$Res>(_value.shippingAddress!, (value) {
+      return _then(_value.copyWith(shippingAddress: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $AddressModelCopyWith<$Res>? get billingAddress {
+    if (_value.billingAddress == null) {
+      return null;
+    }
+
+    return $AddressModelCopyWith<$Res>(_value.billingAddress!, (value) {
+      return _then(_value.copyWith(billingAddress: value) as $Val);
+    });
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
   $SalesChannelCopyWith<$Res>? get salesChannel {
     if (_value.salesChannel == null) {
       return null;
@@ -398,8 +424,8 @@ abstract class _$$CartImplCopyWith<$Res> implements $CartCopyWith<$Res> {
       Region? region,
       List<Item>? items,
       dynamic payment,
-      @JsonKey(name: 'shipping_address') dynamic shippingAddress,
-      @JsonKey(name: 'billing_address') dynamic billingAddress,
+      @JsonKey(name: 'shipping_address') AddressModel? shippingAddress,
+      @JsonKey(name: 'billing_address') AddressModel? billingAddress,
       @JsonKey(name: 'shipping_methods') List<dynamic>? shippingMethods,
       @JsonKey(name: 'payment_sessions') List<dynamic>? paymentSessions,
       List<dynamic>? discounts,
@@ -433,6 +459,10 @@ abstract class _$$CartImplCopyWith<$Res> implements $CartCopyWith<$Res> {
 
   @override
   $RegionCopyWith<$Res>? get region;
+  @override
+  $AddressModelCopyWith<$Res>? get shippingAddress;
+  @override
+  $AddressModelCopyWith<$Res>? get billingAddress;
   @override
   $SalesChannelCopyWith<$Res>? get salesChannel;
   @override
@@ -516,11 +546,11 @@ class __$$CartImplCopyWithImpl<$Res>
       shippingAddress: freezed == shippingAddress
           ? _value.shippingAddress
           : shippingAddress // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as AddressModel?,
       billingAddress: freezed == billingAddress
           ? _value.billingAddress
           : billingAddress // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as AddressModel?,
       shippingMethods: freezed == shippingMethods
           ? _value._shippingMethods
           : shippingMethods // ignore: cast_nullable_to_non_nullable
@@ -727,10 +757,10 @@ class _$CartImpl implements _Cart {
   final dynamic payment;
   @override
   @JsonKey(name: 'shipping_address')
-  final dynamic shippingAddress;
+  final AddressModel? shippingAddress;
   @override
   @JsonKey(name: 'billing_address')
-  final dynamic billingAddress;
+  final AddressModel? billingAddress;
   final List<dynamic>? _shippingMethods;
   @override
   @JsonKey(name: 'shipping_methods')
@@ -855,10 +885,10 @@ class _$CartImpl implements _Cart {
             (identical(other.region, region) || other.region == region) &&
             const DeepCollectionEquality().equals(other._items, _items) &&
             const DeepCollectionEquality().equals(other.payment, payment) &&
-            const DeepCollectionEquality()
-                .equals(other.shippingAddress, shippingAddress) &&
-            const DeepCollectionEquality()
-                .equals(other.billingAddress, billingAddress) &&
+            (identical(other.shippingAddress, shippingAddress) ||
+                other.shippingAddress == shippingAddress) &&
+            (identical(other.billingAddress, billingAddress) ||
+                other.billingAddress == billingAddress) &&
             const DeepCollectionEquality()
                 .equals(other._shippingMethods, _shippingMethods) &&
             const DeepCollectionEquality()
@@ -923,8 +953,8 @@ class _$CartImpl implements _Cart {
         region,
         const DeepCollectionEquality().hash(_items),
         const DeepCollectionEquality().hash(payment),
-        const DeepCollectionEquality().hash(shippingAddress),
-        const DeepCollectionEquality().hash(billingAddress),
+        shippingAddress,
+        billingAddress,
         const DeepCollectionEquality().hash(_shippingMethods),
         const DeepCollectionEquality().hash(_paymentSessions),
         const DeepCollectionEquality().hash(_discounts),
@@ -979,8 +1009,8 @@ abstract class _Cart implements Cart {
       final Region? region,
       final List<Item>? items,
       final dynamic payment,
-      @JsonKey(name: 'shipping_address') final dynamic shippingAddress,
-      @JsonKey(name: 'billing_address') final dynamic billingAddress,
+      @JsonKey(name: 'shipping_address') final AddressModel? shippingAddress,
+      @JsonKey(name: 'billing_address') final AddressModel? billingAddress,
       @JsonKey(name: 'shipping_methods') final List<dynamic>? shippingMethods,
       @JsonKey(name: 'payment_sessions') final List<dynamic>? paymentSessions,
       final List<dynamic>? discounts,
@@ -1029,10 +1059,10 @@ abstract class _Cart implements Cart {
   dynamic get payment;
   @override
   @JsonKey(name: 'shipping_address')
-  dynamic get shippingAddress;
+  AddressModel? get shippingAddress;
   @override
   @JsonKey(name: 'billing_address')
-  dynamic get billingAddress;
+  AddressModel? get billingAddress;
   @override
   @JsonKey(name: 'shipping_methods')
   List<dynamic>? get shippingMethods;

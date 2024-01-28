@@ -1,9 +1,12 @@
+import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:wodoxo_api/models/address_model/address_model.dart';
 
 import 'context.dart';
 import 'item.dart';
 import 'region.dart';
 import 'sales_channel.dart';
+
 
 part 'cart.freezed.dart';
 part 'cart.g.dart';
@@ -17,8 +20,8 @@ class Cart with _$Cart {
 		Region? region,
 		List<Item>? items,
 		dynamic payment,
-		@JsonKey(name: 'shipping_address') dynamic shippingAddress,
-		@JsonKey(name: 'billing_address') dynamic billingAddress,
+		@JsonKey(name: 'shipping_address') AddressModel? shippingAddress,
+		@JsonKey(name: 'billing_address') AddressModel? billingAddress,
 		@JsonKey(name: 'shipping_methods') List<dynamic>? shippingMethods,
 		@JsonKey(name: 'payment_sessions') List<dynamic>? paymentSessions,
 		List<dynamic>? discounts,

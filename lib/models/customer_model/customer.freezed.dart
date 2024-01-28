@@ -38,10 +38,9 @@ mixin _$Customer {
   @JsonKey(name: 'has_account')
   bool? get hasAccount => throw _privateConstructorUsedError;
   dynamic get metadata => throw _privateConstructorUsedError;
-  @JsonKey(name: 'billing_address')
-  dynamic get billingAddress => throw _privateConstructorUsedError;
+  List<Order>? get orders => throw _privateConstructorUsedError;
   @JsonKey(name: 'shipping_addresses')
-  List<ShippingAddress>? get shippingAddresses =>
+  List<AddressModel>? get shippingAddresses =>
       throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -67,9 +66,9 @@ abstract class $CustomerCopyWith<$Res> {
       String? phone,
       @JsonKey(name: 'has_account') bool? hasAccount,
       dynamic metadata,
-      @JsonKey(name: 'billing_address') dynamic billingAddress,
+      List<Order>? orders,
       @JsonKey(name: 'shipping_addresses')
-      List<ShippingAddress>? shippingAddresses});
+      List<AddressModel>? shippingAddresses});
 }
 
 /// @nodoc
@@ -96,7 +95,7 @@ class _$CustomerCopyWithImpl<$Res, $Val extends Customer>
     Object? phone = freezed,
     Object? hasAccount = freezed,
     Object? metadata = freezed,
-    Object? billingAddress = freezed,
+    Object? orders = freezed,
     Object? shippingAddresses = freezed,
   }) {
     return _then(_value.copyWith(
@@ -144,14 +143,14 @@ class _$CustomerCopyWithImpl<$Res, $Val extends Customer>
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      billingAddress: freezed == billingAddress
-          ? _value.billingAddress
-          : billingAddress // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+      orders: freezed == orders
+          ? _value.orders
+          : orders // ignore: cast_nullable_to_non_nullable
+              as List<Order>?,
       shippingAddresses: freezed == shippingAddresses
           ? _value.shippingAddresses
           : shippingAddresses // ignore: cast_nullable_to_non_nullable
-              as List<ShippingAddress>?,
+              as List<AddressModel>?,
     ) as $Val);
   }
 }
@@ -176,9 +175,9 @@ abstract class _$$CustomerImplCopyWith<$Res>
       String? phone,
       @JsonKey(name: 'has_account') bool? hasAccount,
       dynamic metadata,
-      @JsonKey(name: 'billing_address') dynamic billingAddress,
+      List<Order>? orders,
       @JsonKey(name: 'shipping_addresses')
-      List<ShippingAddress>? shippingAddresses});
+      List<AddressModel>? shippingAddresses});
 }
 
 /// @nodoc
@@ -203,7 +202,7 @@ class __$$CustomerImplCopyWithImpl<$Res>
     Object? phone = freezed,
     Object? hasAccount = freezed,
     Object? metadata = freezed,
-    Object? billingAddress = freezed,
+    Object? orders = freezed,
     Object? shippingAddresses = freezed,
   }) {
     return _then(_$CustomerImpl(
@@ -251,14 +250,14 @@ class __$$CustomerImplCopyWithImpl<$Res>
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
               as dynamic,
-      billingAddress: freezed == billingAddress
-          ? _value.billingAddress
-          : billingAddress // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+      orders: freezed == orders
+          ? _value._orders
+          : orders // ignore: cast_nullable_to_non_nullable
+              as List<Order>?,
       shippingAddresses: freezed == shippingAddresses
           ? _value._shippingAddresses
           : shippingAddresses // ignore: cast_nullable_to_non_nullable
-              as List<ShippingAddress>?,
+              as List<AddressModel>?,
     ));
   }
 }
@@ -278,10 +277,11 @@ class _$CustomerImpl implements _Customer {
       this.phone,
       @JsonKey(name: 'has_account') this.hasAccount,
       this.metadata,
-      @JsonKey(name: 'billing_address') this.billingAddress,
+      final List<Order>? orders,
       @JsonKey(name: 'shipping_addresses')
-      final List<ShippingAddress>? shippingAddresses})
-      : _shippingAddresses = shippingAddresses;
+      final List<AddressModel>? shippingAddresses})
+      : _orders = orders,
+        _shippingAddresses = shippingAddresses;
 
   factory _$CustomerImpl.fromJson(Map<String, dynamic> json) =>
       _$$CustomerImplFromJson(json);
@@ -315,13 +315,20 @@ class _$CustomerImpl implements _Customer {
   final bool? hasAccount;
   @override
   final dynamic metadata;
+  final List<Order>? _orders;
   @override
-  @JsonKey(name: 'billing_address')
-  final dynamic billingAddress;
-  final List<ShippingAddress>? _shippingAddresses;
+  List<Order>? get orders {
+    final value = _orders;
+    if (value == null) return null;
+    if (_orders is EqualUnmodifiableListView) return _orders;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<AddressModel>? _shippingAddresses;
   @override
   @JsonKey(name: 'shipping_addresses')
-  List<ShippingAddress>? get shippingAddresses {
+  List<AddressModel>? get shippingAddresses {
     final value = _shippingAddresses;
     if (value == null) return null;
     if (_shippingAddresses is EqualUnmodifiableListView)
@@ -332,7 +339,7 @@ class _$CustomerImpl implements _Customer {
 
   @override
   String toString() {
-    return 'Customer(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt, email: $email, firstName: $firstName, lastName: $lastName, billingAddressId: $billingAddressId, phone: $phone, hasAccount: $hasAccount, metadata: $metadata, billingAddress: $billingAddress, shippingAddresses: $shippingAddresses)';
+    return 'Customer(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt, email: $email, firstName: $firstName, lastName: $lastName, billingAddressId: $billingAddressId, phone: $phone, hasAccount: $hasAccount, metadata: $metadata, orders: $orders, shippingAddresses: $shippingAddresses)';
   }
 
   @override
@@ -357,8 +364,7 @@ class _$CustomerImpl implements _Customer {
             (identical(other.hasAccount, hasAccount) ||
                 other.hasAccount == hasAccount) &&
             const DeepCollectionEquality().equals(other.metadata, metadata) &&
-            const DeepCollectionEquality()
-                .equals(other.billingAddress, billingAddress) &&
+            const DeepCollectionEquality().equals(other._orders, _orders) &&
             const DeepCollectionEquality()
                 .equals(other._shippingAddresses, _shippingAddresses));
   }
@@ -378,7 +384,7 @@ class _$CustomerImpl implements _Customer {
       phone,
       hasAccount,
       const DeepCollectionEquality().hash(metadata),
-      const DeepCollectionEquality().hash(billingAddress),
+      const DeepCollectionEquality().hash(_orders),
       const DeepCollectionEquality().hash(_shippingAddresses));
 
   @JsonKey(ignore: true)
@@ -408,9 +414,9 @@ abstract class _Customer implements Customer {
       final String? phone,
       @JsonKey(name: 'has_account') final bool? hasAccount,
       final dynamic metadata,
-      @JsonKey(name: 'billing_address') final dynamic billingAddress,
+      final List<Order>? orders,
       @JsonKey(name: 'shipping_addresses')
-      final List<ShippingAddress>? shippingAddresses}) = _$CustomerImpl;
+      final List<AddressModel>? shippingAddresses}) = _$CustomerImpl;
 
   factory _Customer.fromJson(Map<String, dynamic> json) =
       _$CustomerImpl.fromJson;
@@ -445,11 +451,10 @@ abstract class _Customer implements Customer {
   @override
   dynamic get metadata;
   @override
-  @JsonKey(name: 'billing_address')
-  dynamic get billingAddress;
+  List<Order>? get orders;
   @override
   @JsonKey(name: 'shipping_addresses')
-  List<ShippingAddress>? get shippingAddresses;
+  List<AddressModel>? get shippingAddresses;
   @override
   @JsonKey(ignore: true)
   _$$CustomerImplCopyWith<_$CustomerImpl> get copyWith =>

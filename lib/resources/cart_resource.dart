@@ -34,7 +34,10 @@ class CartResource {
     Future<WodoxoResult<CardModel>> update(String cartId , CartPayloadModel model,{ Map<String, dynamic>? queryParameters = null}) async {
     final response = await _dio.post(
       '$path/$cartId',
-      data: model,
+      data: {
+        'shipping_address' : model.shippingAddress,
+        'billing_address' : model.billingAddress,
+      },
       queryParameters: queryParameters
     );
     if (response.statusCode == 200) {
@@ -118,6 +121,28 @@ class CartResource {
     Future<WodoxoResult<CardModel>> deleteLineItem(String id, String lineItemId, {  Map<String, dynamic>? queryParameters = null}) async {
     final response = await _dio.delete(
       '$path/$id/line-items/$lineItemId',
+      queryParameters: queryParameters
+    );
+    if (response.statusCode == 200) {
+      return WodoxoResult(CardModel.fromJson(response.data as Map<String,dynamic>));
+      
+    } else {
+      return WodoxoResult(
+        new CardModel(),
+        errorMessage: response.data['message'] as String?,
+        errorCode: response.data['code'] as String?,
+        errorType: response.data['type'] as String?,
+        isError: true,
+      );
+    }
+  }
+
+     Future<WodoxoResult<CardModel>> addShippingMethod(String cartId,String shippingId, {  Map<String, dynamic>? queryParameters = null}) async {
+    final response = await _dio.post(
+      '$path/$cartId/shipping-methods',
+      data: {
+        'option_id' : shippingId
+      },
       queryParameters: queryParameters
     );
     if (response.statusCode == 200) {

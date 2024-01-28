@@ -1,14 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'shipping_address.dart';
+part of 'address_model.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$ShippingAddressImpl _$$ShippingAddressImplFromJson(
-        Map<String, dynamic> json) =>
-    _$ShippingAddressImpl(
+_$AddressModelImpl _$$AddressModelImplFromJson(Map<String, dynamic> json) =>
+    _$AddressModelImpl(
       id: json['id'] as String?,
       createdAt: json['created_at'] == null
           ? null
@@ -17,24 +16,21 @@ _$ShippingAddressImpl _$$ShippingAddressImplFromJson(
           ? null
           : DateTime.parse(json['updated_at'] as String),
       deletedAt: json['deleted_at'],
-      customerId: json['customer_id'] as String?,
+      customerId: json['customer_id'],
       company: json['company'] as String?,
       firstName: json['first_name'] as String?,
       lastName: json['last_name'] as String?,
       address1: json['address_1'] as String?,
       address2: json['address_2'] as String?,
       city: json['city'] as String?,
-      countryCode: json['country_code'] as String?,
+      countryCode: json['country_code'],
       province: json['province'] as String?,
       postalCode: json['postal_code'] as String?,
       phone: json['phone'] as String?,
-      metadata: json['metadata'] == null
-          ? null
-          : Metadata.fromJson(json['metadata'] as Map<String, dynamic>),
+      metadata: json['metadata'],
     );
 
-Map<String, dynamic> _$$ShippingAddressImplToJson(
-        _$ShippingAddressImpl instance) =>
+Map<String, dynamic> _$$AddressModelImplToJson(_$AddressModelImpl instance) =>
     <String, dynamic>{
       'id': instance.id,
       'created_at': instance.createdAt?.toIso8601String(),

@@ -1,7 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'metadata.dart';
 import 'vendor.dart';
 
 part 'product.freezed.dart';
@@ -34,7 +33,7 @@ class Product with _$Product {
 		@JsonKey(name: 'type_id') String? typeId,
 		bool? discountable,
 		@JsonKey(name: 'external_id') dynamic externalId,
-		dynamic? metadata,
+		dynamic metadata,
 		@JsonKey(name: 'vendor_id') String? vendorId,
 		@JsonKey(name: 'order_quantity_min') dynamic orderQuantityMin,
 		@JsonKey(name: 'order_quantity_max') dynamic orderQuantityMax,

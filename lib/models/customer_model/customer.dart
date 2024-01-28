@@ -1,7 +1,8 @@
 import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:wodoxo_api/models/address_model/address_model.dart';
 
-import 'shipping_address.dart';
+import 'order.dart';
 
 part 'customer.freezed.dart';
 part 'customer.g.dart';
@@ -20,8 +21,8 @@ class Customer with _$Customer {
 		String? phone,
 		@JsonKey(name: 'has_account') bool? hasAccount,
 		dynamic metadata,
-		@JsonKey(name: 'billing_address') dynamic billingAddress,
-		@JsonKey(name: 'shipping_addresses') List<ShippingAddress>? shippingAddresses,
+		List<Order>? orders,
+		@JsonKey(name: 'shipping_addresses') List<AddressModel>? shippingAddresses,
 	}) = _Customer;
 
 	factory Customer.fromJson(Map<String, dynamic> json) => _$CustomerFromJson(json);

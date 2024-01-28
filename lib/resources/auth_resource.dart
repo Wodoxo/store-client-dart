@@ -54,5 +54,24 @@ class AuthResource {
   }
 
 
+  Future<WodoxoResult<CustomerModel>> me( {Map<String, dynamic>? queryParameters = null}) async {
+    final response = await _dio.get(
+      '$path',
+      queryParameters: queryParameters
+    );
+    if (response.statusCode == 200) {
+      return WodoxoResult(CustomerModel.fromJson(response.data as Map<String,dynamic>));
+    } else {
+      return WodoxoResult(
+        new CustomerModel(),
+        errorMessage: response.data as String,
+        errorCode: '',
+        errorType: '',
+        isError: true,
+      );
+    }
+  }
+
+
 
 }

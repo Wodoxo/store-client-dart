@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'shipping_address.dart';
+part of 'address_model.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,12 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-ShippingAddress _$ShippingAddressFromJson(Map<String, dynamic> json) {
-  return _ShippingAddress.fromJson(json);
+AddressModel _$AddressModelFromJson(Map<String, dynamic> json) {
+  return _AddressModel.fromJson(json);
 }
 
 /// @nodoc
-mixin _$ShippingAddress {
+mixin _$AddressModel {
   String? get id => throw _privateConstructorUsedError;
   @JsonKey(name: 'created_at')
   DateTime? get createdAt => throw _privateConstructorUsedError;
@@ -28,7 +28,7 @@ mixin _$ShippingAddress {
   @JsonKey(name: 'deleted_at')
   dynamic get deletedAt => throw _privateConstructorUsedError;
   @JsonKey(name: 'customer_id')
-  String? get customerId => throw _privateConstructorUsedError;
+  dynamic get customerId => throw _privateConstructorUsedError;
   String? get company => throw _privateConstructorUsedError;
   @JsonKey(name: 'first_name')
   String? get firstName => throw _privateConstructorUsedError;
@@ -40,48 +40,48 @@ mixin _$ShippingAddress {
   String? get address2 => throw _privateConstructorUsedError;
   String? get city => throw _privateConstructorUsedError;
   @JsonKey(name: 'country_code')
-  String? get countryCode => throw _privateConstructorUsedError;
+  dynamic get countryCode => throw _privateConstructorUsedError;
   String? get province => throw _privateConstructorUsedError;
   @JsonKey(name: 'postal_code')
   String? get postalCode => throw _privateConstructorUsedError;
   String? get phone => throw _privateConstructorUsedError;
-  Metadata? get metadata => throw _privateConstructorUsedError;
+  dynamic get metadata => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $ShippingAddressCopyWith<ShippingAddress> get copyWith =>
+  $AddressModelCopyWith<AddressModel> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $ShippingAddressCopyWith<$Res> {
-  factory $ShippingAddressCopyWith(
-          ShippingAddress value, $Res Function(ShippingAddress) then) =
-      _$ShippingAddressCopyWithImpl<$Res, ShippingAddress>;
+abstract class $AddressModelCopyWith<$Res> {
+  factory $AddressModelCopyWith(
+          AddressModel value, $Res Function(AddressModel) then) =
+      _$AddressModelCopyWithImpl<$Res, AddressModel>;
   @useResult
   $Res call(
       {String? id,
       @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'updated_at') DateTime? updatedAt,
       @JsonKey(name: 'deleted_at') dynamic deletedAt,
-      @JsonKey(name: 'customer_id') String? customerId,
+      @JsonKey(name: 'customer_id') dynamic customerId,
       String? company,
       @JsonKey(name: 'first_name') String? firstName,
       @JsonKey(name: 'last_name') String? lastName,
       @JsonKey(name: 'address_1') String? address1,
       @JsonKey(name: 'address_2') String? address2,
       String? city,
-      @JsonKey(name: 'country_code') String? countryCode,
+      @JsonKey(name: 'country_code') dynamic countryCode,
       String? province,
       @JsonKey(name: 'postal_code') String? postalCode,
       String? phone,
-      Metadata? metadata});
+      dynamic metadata});
 }
 
 /// @nodoc
-class _$ShippingAddressCopyWithImpl<$Res, $Val extends ShippingAddress>
-    implements $ShippingAddressCopyWith<$Res> {
-  _$ShippingAddressCopyWithImpl(this._value, this._then);
+class _$AddressModelCopyWithImpl<$Res, $Val extends AddressModel>
+    implements $AddressModelCopyWith<$Res> {
+  _$AddressModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -128,7 +128,7 @@ class _$ShippingAddressCopyWithImpl<$Res, $Val extends ShippingAddress>
       customerId: freezed == customerId
           ? _value.customerId
           : customerId // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as dynamic,
       company: freezed == company
           ? _value.company
           : company // ignore: cast_nullable_to_non_nullable
@@ -156,7 +156,7 @@ class _$ShippingAddressCopyWithImpl<$Res, $Val extends ShippingAddress>
       countryCode: freezed == countryCode
           ? _value.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as dynamic,
       province: freezed == province
           ? _value.province
           : province // ignore: cast_nullable_to_non_nullable
@@ -172,17 +172,17 @@ class _$ShippingAddressCopyWithImpl<$Res, $Val extends ShippingAddress>
       metadata: freezed == metadata
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
-              as Metadata?,
+              as dynamic,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$ShippingAddressImplCopyWith<$Res>
-    implements $ShippingAddressCopyWith<$Res> {
-  factory _$$ShippingAddressImplCopyWith(_$ShippingAddressImpl value,
-          $Res Function(_$ShippingAddressImpl) then) =
-      __$$ShippingAddressImplCopyWithImpl<$Res>;
+abstract class _$$AddressModelImplCopyWith<$Res>
+    implements $AddressModelCopyWith<$Res> {
+  factory _$$AddressModelImplCopyWith(
+          _$AddressModelImpl value, $Res Function(_$AddressModelImpl) then) =
+      __$$AddressModelImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -190,26 +190,26 @@ abstract class _$$ShippingAddressImplCopyWith<$Res>
       @JsonKey(name: 'created_at') DateTime? createdAt,
       @JsonKey(name: 'updated_at') DateTime? updatedAt,
       @JsonKey(name: 'deleted_at') dynamic deletedAt,
-      @JsonKey(name: 'customer_id') String? customerId,
+      @JsonKey(name: 'customer_id') dynamic customerId,
       String? company,
       @JsonKey(name: 'first_name') String? firstName,
       @JsonKey(name: 'last_name') String? lastName,
       @JsonKey(name: 'address_1') String? address1,
       @JsonKey(name: 'address_2') String? address2,
       String? city,
-      @JsonKey(name: 'country_code') String? countryCode,
+      @JsonKey(name: 'country_code') dynamic countryCode,
       String? province,
       @JsonKey(name: 'postal_code') String? postalCode,
       String? phone,
-      Metadata? metadata});
+      dynamic metadata});
 }
 
 /// @nodoc
-class __$$ShippingAddressImplCopyWithImpl<$Res>
-    extends _$ShippingAddressCopyWithImpl<$Res, _$ShippingAddressImpl>
-    implements _$$ShippingAddressImplCopyWith<$Res> {
-  __$$ShippingAddressImplCopyWithImpl(
-      _$ShippingAddressImpl _value, $Res Function(_$ShippingAddressImpl) _then)
+class __$$AddressModelImplCopyWithImpl<$Res>
+    extends _$AddressModelCopyWithImpl<$Res, _$AddressModelImpl>
+    implements _$$AddressModelImplCopyWith<$Res> {
+  __$$AddressModelImplCopyWithImpl(
+      _$AddressModelImpl _value, $Res Function(_$AddressModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -232,7 +232,7 @@ class __$$ShippingAddressImplCopyWithImpl<$Res>
     Object? phone = freezed,
     Object? metadata = freezed,
   }) {
-    return _then(_$ShippingAddressImpl(
+    return _then(_$AddressModelImpl(
       id: freezed == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -252,7 +252,7 @@ class __$$ShippingAddressImplCopyWithImpl<$Res>
       customerId: freezed == customerId
           ? _value.customerId
           : customerId // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as dynamic,
       company: freezed == company
           ? _value.company
           : company // ignore: cast_nullable_to_non_nullable
@@ -280,7 +280,7 @@ class __$$ShippingAddressImplCopyWithImpl<$Res>
       countryCode: freezed == countryCode
           ? _value.countryCode
           : countryCode // ignore: cast_nullable_to_non_nullable
-              as String?,
+              as dynamic,
       province: freezed == province
           ? _value.province
           : province // ignore: cast_nullable_to_non_nullable
@@ -296,15 +296,15 @@ class __$$ShippingAddressImplCopyWithImpl<$Res>
       metadata: freezed == metadata
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
-              as Metadata?,
+              as dynamic,
     ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
-class _$ShippingAddressImpl implements _ShippingAddress {
-  _$ShippingAddressImpl(
+class _$AddressModelImpl implements _AddressModel {
+  _$AddressModelImpl(
       {this.id,
       @JsonKey(name: 'created_at') this.createdAt,
       @JsonKey(name: 'updated_at') this.updatedAt,
@@ -322,8 +322,8 @@ class _$ShippingAddressImpl implements _ShippingAddress {
       this.phone,
       this.metadata});
 
-  factory _$ShippingAddressImpl.fromJson(Map<String, dynamic> json) =>
-      _$$ShippingAddressImplFromJson(json);
+  factory _$AddressModelImpl.fromJson(Map<String, dynamic> json) =>
+      _$$AddressModelImplFromJson(json);
 
   @override
   final String? id;
@@ -338,7 +338,7 @@ class _$ShippingAddressImpl implements _ShippingAddress {
   final dynamic deletedAt;
   @override
   @JsonKey(name: 'customer_id')
-  final String? customerId;
+  final dynamic customerId;
   @override
   final String? company;
   @override
@@ -357,7 +357,7 @@ class _$ShippingAddressImpl implements _ShippingAddress {
   final String? city;
   @override
   @JsonKey(name: 'country_code')
-  final String? countryCode;
+  final dynamic countryCode;
   @override
   final String? province;
   @override
@@ -366,26 +366,26 @@ class _$ShippingAddressImpl implements _ShippingAddress {
   @override
   final String? phone;
   @override
-  final Metadata? metadata;
+  final dynamic metadata;
 
   @override
   String toString() {
-    return 'ShippingAddress(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt, customerId: $customerId, company: $company, firstName: $firstName, lastName: $lastName, address1: $address1, address2: $address2, city: $city, countryCode: $countryCode, province: $province, postalCode: $postalCode, phone: $phone, metadata: $metadata)';
+    return 'AddressModel(id: $id, createdAt: $createdAt, updatedAt: $updatedAt, deletedAt: $deletedAt, customerId: $customerId, company: $company, firstName: $firstName, lastName: $lastName, address1: $address1, address2: $address2, city: $city, countryCode: $countryCode, province: $province, postalCode: $postalCode, phone: $phone, metadata: $metadata)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ShippingAddressImpl &&
+            other is _$AddressModelImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.createdAt, createdAt) ||
                 other.createdAt == createdAt) &&
             (identical(other.updatedAt, updatedAt) ||
                 other.updatedAt == updatedAt) &&
             const DeepCollectionEquality().equals(other.deletedAt, deletedAt) &&
-            (identical(other.customerId, customerId) ||
-                other.customerId == customerId) &&
+            const DeepCollectionEquality()
+                .equals(other.customerId, customerId) &&
             (identical(other.company, company) || other.company == company) &&
             (identical(other.firstName, firstName) ||
                 other.firstName == firstName) &&
@@ -396,15 +396,14 @@ class _$ShippingAddressImpl implements _ShippingAddress {
             (identical(other.address2, address2) ||
                 other.address2 == address2) &&
             (identical(other.city, city) || other.city == city) &&
-            (identical(other.countryCode, countryCode) ||
-                other.countryCode == countryCode) &&
+            const DeepCollectionEquality()
+                .equals(other.countryCode, countryCode) &&
             (identical(other.province, province) ||
                 other.province == province) &&
             (identical(other.postalCode, postalCode) ||
                 other.postalCode == postalCode) &&
             (identical(other.phone, phone) || other.phone == phone) &&
-            (identical(other.metadata, metadata) ||
-                other.metadata == metadata));
+            const DeepCollectionEquality().equals(other.metadata, metadata));
   }
 
   @JsonKey(ignore: true)
@@ -415,55 +414,54 @@ class _$ShippingAddressImpl implements _ShippingAddress {
       createdAt,
       updatedAt,
       const DeepCollectionEquality().hash(deletedAt),
-      customerId,
+      const DeepCollectionEquality().hash(customerId),
       company,
       firstName,
       lastName,
       address1,
       address2,
       city,
-      countryCode,
+      const DeepCollectionEquality().hash(countryCode),
       province,
       postalCode,
       phone,
-      metadata);
+      const DeepCollectionEquality().hash(metadata));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$ShippingAddressImplCopyWith<_$ShippingAddressImpl> get copyWith =>
-      __$$ShippingAddressImplCopyWithImpl<_$ShippingAddressImpl>(
-          this, _$identity);
+  _$$AddressModelImplCopyWith<_$AddressModelImpl> get copyWith =>
+      __$$AddressModelImplCopyWithImpl<_$AddressModelImpl>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ShippingAddressImplToJson(
+    return _$$AddressModelImplToJson(
       this,
     );
   }
 }
 
-abstract class _ShippingAddress implements ShippingAddress {
-  factory _ShippingAddress(
+abstract class _AddressModel implements AddressModel {
+  factory _AddressModel(
       {final String? id,
       @JsonKey(name: 'created_at') final DateTime? createdAt,
       @JsonKey(name: 'updated_at') final DateTime? updatedAt,
       @JsonKey(name: 'deleted_at') final dynamic deletedAt,
-      @JsonKey(name: 'customer_id') final String? customerId,
+      @JsonKey(name: 'customer_id') final dynamic customerId,
       final String? company,
       @JsonKey(name: 'first_name') final String? firstName,
       @JsonKey(name: 'last_name') final String? lastName,
       @JsonKey(name: 'address_1') final String? address1,
       @JsonKey(name: 'address_2') final String? address2,
       final String? city,
-      @JsonKey(name: 'country_code') final String? countryCode,
+      @JsonKey(name: 'country_code') final dynamic countryCode,
       final String? province,
       @JsonKey(name: 'postal_code') final String? postalCode,
       final String? phone,
-      final Metadata? metadata}) = _$ShippingAddressImpl;
+      final dynamic metadata}) = _$AddressModelImpl;
 
-  factory _ShippingAddress.fromJson(Map<String, dynamic> json) =
-      _$ShippingAddressImpl.fromJson;
+  factory _AddressModel.fromJson(Map<String, dynamic> json) =
+      _$AddressModelImpl.fromJson;
 
   @override
   String? get id;
@@ -478,7 +476,7 @@ abstract class _ShippingAddress implements ShippingAddress {
   dynamic get deletedAt;
   @override
   @JsonKey(name: 'customer_id')
-  String? get customerId;
+  dynamic get customerId;
   @override
   String? get company;
   @override
@@ -497,7 +495,7 @@ abstract class _ShippingAddress implements ShippingAddress {
   String? get city;
   @override
   @JsonKey(name: 'country_code')
-  String? get countryCode;
+  dynamic get countryCode;
   @override
   String? get province;
   @override
@@ -506,9 +504,9 @@ abstract class _ShippingAddress implements ShippingAddress {
   @override
   String? get phone;
   @override
-  Metadata? get metadata;
+  dynamic get metadata;
   @override
   @JsonKey(ignore: true)
-  _$$ShippingAddressImplCopyWith<_$ShippingAddressImpl> get copyWith =>
+  _$$AddressModelImplCopyWith<_$AddressModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -55,7 +55,7 @@ mixin _$Product {
   bool? get discountable => throw _privateConstructorUsedError;
   @JsonKey(name: 'external_id')
   dynamic get externalId => throw _privateConstructorUsedError;
-  dynamic? get metadata => throw _privateConstructorUsedError;
+  dynamic get metadata => throw _privateConstructorUsedError;
   @JsonKey(name: 'vendor_id')
   String? get vendorId => throw _privateConstructorUsedError;
   @JsonKey(name: 'order_quantity_min')
@@ -113,7 +113,7 @@ abstract class $ProductCopyWith<$Res> {
       @JsonKey(name: 'type_id') String? typeId,
       bool? discountable,
       @JsonKey(name: 'external_id') dynamic externalId,
-      dynamic? metadata,
+      dynamic metadata,
       @JsonKey(name: 'vendor_id') String? vendorId,
       @JsonKey(name: 'order_quantity_min') dynamic orderQuantityMin,
       @JsonKey(name: 'order_quantity_max') dynamic orderQuantityMax,
@@ -279,7 +279,7 @@ class _$ProductCopyWithImpl<$Res, $Val extends Product>
       metadata: freezed == metadata
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
-              as dynamic?,
+              as dynamic,
       vendorId: freezed == vendorId
           ? _value.vendorId
           : vendorId // ignore: cast_nullable_to_non_nullable
@@ -372,7 +372,7 @@ abstract class _$$ProductImplCopyWith<$Res> implements $ProductCopyWith<$Res> {
       @JsonKey(name: 'type_id') String? typeId,
       bool? discountable,
       @JsonKey(name: 'external_id') dynamic externalId,
-      dynamic? metadata,
+      dynamic metadata,
       @JsonKey(name: 'vendor_id') String? vendorId,
       @JsonKey(name: 'order_quantity_min') dynamic orderQuantityMin,
       @JsonKey(name: 'order_quantity_max') dynamic orderQuantityMax,
@@ -537,7 +537,7 @@ class __$$ProductImplCopyWithImpl<$Res>
       metadata: freezed == metadata
           ? _value.metadata
           : metadata // ignore: cast_nullable_to_non_nullable
-              as dynamic?,
+              as dynamic,
       vendorId: freezed == vendorId
           ? _value.vendorId
           : vendorId // ignore: cast_nullable_to_non_nullable
@@ -691,7 +691,7 @@ class _$ProductImpl implements _Product {
   @JsonKey(name: 'external_id')
   final dynamic externalId;
   @override
-  final dynamic? metadata;
+  final dynamic metadata;
   @override
   @JsonKey(name: 'vendor_id')
   final String? vendorId;
@@ -882,7 +882,7 @@ abstract class _Product implements Product {
       @JsonKey(name: 'type_id') final String? typeId,
       final bool? discountable,
       @JsonKey(name: 'external_id') final dynamic externalId,
-      final dynamic? metadata,
+      final dynamic metadata,
       @JsonKey(name: 'vendor_id') final String? vendorId,
       @JsonKey(name: 'order_quantity_min') final dynamic orderQuantityMin,
       @JsonKey(name: 'order_quantity_max') final dynamic orderQuantityMax,
@@ -959,7 +959,7 @@ abstract class _Product implements Product {
   @JsonKey(name: 'external_id')
   dynamic get externalId;
   @override
-  dynamic? get metadata;
+  dynamic get metadata;
   @override
   @JsonKey(name: 'vendor_id')
   String? get vendorId;

@@ -23,9 +23,11 @@ _$CustomerImpl _$$CustomerImplFromJson(Map<String, dynamic> json) =>
       phone: json['phone'] as String?,
       hasAccount: json['has_account'] as bool?,
       metadata: json['metadata'],
-      billingAddress: json['billing_address'],
+      orders: (json['orders'] as List<dynamic>?)
+          ?.map((e) => Order.fromJson(e as Map<String, dynamic>))
+          .toList(),
       shippingAddresses: (json['shipping_addresses'] as List<dynamic>?)
-          ?.map((e) => ShippingAddress.fromJson(e as Map<String, dynamic>))
+          ?.map((e) => AddressModel.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -42,6 +44,6 @@ Map<String, dynamic> _$$CustomerImplToJson(_$CustomerImpl instance) =>
       'phone': instance.phone,
       'has_account': instance.hasAccount,
       'metadata': instance.metadata,
-      'billing_address': instance.billingAddress,
+      'orders': instance.orders,
       'shipping_addresses': instance.shippingAddresses,
     };

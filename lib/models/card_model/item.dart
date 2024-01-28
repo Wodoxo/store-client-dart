@@ -1,7 +1,6 @@
 import 'package:collection/collection.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'metadata.dart';
 import 'tax_line.dart';
 import 'variant.dart';
 
@@ -34,7 +33,7 @@ class Item with _$Item {
 		@JsonKey(name: 'fulfilled_quantity') dynamic fulfilledQuantity,
 		@JsonKey(name: 'returned_quantity') dynamic returnedQuantity,
 		@JsonKey(name: 'shipped_quantity') dynamic shippedQuantity,
-		dynamic? metadata,
+		dynamic metadata,
 		List<dynamic>? adjustments,
 		@JsonKey(name: 'tax_lines') List<TaxLine>? taxLines,
 		Variant? variant,
