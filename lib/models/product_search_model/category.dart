@@ -1,14 +1,15 @@
+import 'package:collection/collection.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-class Category {
-	Category();
+part 'category.freezed.dart';
+part 'category.g.dart';
 
-	factory Category.fromJson(Map<String, dynamic> json) {
-		// TODO: implement fromJson
-		throw UnimplementedError('Category.fromJson($json) is not implemented');
-	}
+@freezed
+class Category with _$Category {
+	factory Category({
+		String? id,
+    String? name,
+	}) = _Category;
 
-	Map<String, dynamic> toJson() {
-		// TODO: implement toJson
-		throw UnimplementedError();
-	}
+	factory Category.fromJson(Map<String, dynamic> json) => _$CategoryFromJson(json);
 }
